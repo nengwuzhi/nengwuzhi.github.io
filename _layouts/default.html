@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    {% include head.html %}  
+<body>
+    
+ 
+ 
+    	<ul class="navbar-nav mr-auto align-items-center">            
+            		{% include menu-header.html %} 		
+    	</ul>
+
+    </nav>
+    
+    <div id="lunrsearchresults">
+        <ul class="mb-0"></ul>
+    </div>
+    
+    <main role="main">        
+        {{ content }}        
+    </main>
+    
+    <footer class="footer pt-5 pb-5 text-center">        
+    <div class="container">        
+          <div class="socials-media">    
+            <ul class="list-unstyled">
+              {% include footer-social.html %}
+            </ul>    
+          </div>
+          {% include footer-copyright.html %}
+        </div>
+    </footer>
+    
+
+
+    
+</body>
+    
+</html>
