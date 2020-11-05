@@ -23,15 +23,17 @@
                     <a href="javascript:void(0);" class="dropdown-item" cate="All">
                         All&nbsp;<span class=""> {{site.posts | size}}</span>
                     </a>
+
+            <a class="dropdown-item" href="#">Something else here</a>
             <div class="dropdown-divider"></div>
 	      {% for category in site.categories %}
 
-            <a class="dropdown-item" href="{{ root_url }}/{{ site.all_dir }}#{{ category | first }}" cate="{{ category | first }}">
+            <a class="dropdown-item" href="javascript:void(0);" cate="{{ category | first }}">
                         {{ category | first }}&nbsp;<span class="categories-badge">{{ category | last | size }}</span>
             </a>
 
               {% endfor %}  
-
+            <a class="dropdown-item" href="#">One more separated link</a>
           </div>
         </li>
       </ul>
