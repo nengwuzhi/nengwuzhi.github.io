@@ -68,7 +68,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 footer.footer {
 	border-top: 1px solid #f1f1f1;
-        background-color: white;
+        background-color: #007bff;
 }
 .nav-link,.dropdown-item {
 	font-weight: 700;
