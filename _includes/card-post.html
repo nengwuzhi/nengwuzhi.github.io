@@ -36,7 +36,20 @@
          </span> 
 
         <div class="showcat">
-            {% for category in post.categories %}
+      
+            
+            <div class="label-card">
+                {% if page.author %}<i class="fa fa-user"></i>{{ page.author }}
+                {% endif %}
+            </div>
+
+            <div class="label-card">
+            {% include category.html %}
+            </div>
+
+            <div class="label-card">
+            {% include tag.html %}
+            </div>
           <div class='post-content'>{{post.summary}}</div>
               <a class="btn btn-sm btn-danger mb-1" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">{{ category }}</a>
             {% endfor %}
