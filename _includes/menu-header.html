@@ -23,13 +23,25 @@
                         All&nbsp;<span class=""> {{site.posts | size}}</span>
                     </a>
             <div class="dropdown-divider"></div>
-	      {% for category in site.categories %}
+    {% for category in site.categories %}
+         </div> 
+    
+    <h3 class="mt-4 display-4" id="{{ category[0] | downcase }}"><small class="text-muted">#</small> {{ category[0] }}</h3><hr>
+    
+    <div class="card-columns">
 
-             <a class="dropdown-item" href="{{ root_url }}/{{ site.all_dir }}#{{ category | first }}" cate="{{ category | first }}">
-                        {{ category | first }}&nbsp;<span class="categories-badge">{{ category | last | size }}</span>
-            </a>
+        {% assign pages_list = category[1] %}
+        {% for post in pages_list %}
+          {% if post.title != null %}
+              {% if group == null or group == post.group %}
+                {% include card-post.html %}
+              {% endif %}
+          {% endif %}
+        {% endfor %}
+        {% assign pages_list = nil %}
+        {% assign group = nil %}
 
-              {% endfor %}  
+    {% endfor %}
 
           </div>
         </li>
