@@ -7,7 +7,10 @@ baseurl: ''
 avatar: 'assets/images/sal.jpg'
 disqus: 'demowebsite'
 email: 'wowthemesnet@gmail.com'
-
+paginate: 10
+paginate_path: /page/:num/
+all_dir: all/
+author_dir: /author
 include: ["_pages"]
 
 
