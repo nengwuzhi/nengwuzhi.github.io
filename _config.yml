@@ -18,22 +18,42 @@ plugins:
   - jekyll-paginate
   - jekyll-seo-tag
  
-# Defaults
-defaults:
 
-  # all posts
-  - scope:
-      path: "_posts"
+ authors:  
+  author1:
+    name: 能无知
+    site: https://nengwuzhi.github.io/
+    avatar: img/avatar1.jpg
+    bio: "嗨，我是无知，主题的作者，您当前正在预览的主题。 我希望你喜欢它！"
+    email: mailto:author1thunaseer@gmail.com
+    twitter: https://twitter.com/nengwuzhi
+    instagram: https://www.instagram.com/nengwuzhi/
+  
+  author2:
+    name: 能无为
+    site: https://nengwuwei.com/
+    avatar: img/avatar2.jpg
+    bio: "博主，时尚达人，没有作为！"
+    email: mailto:author2chemmengath@gmail.com
+    twitter: https://twitter.com/nengwuwei
+    instagram: https://www.instagram.com/nengwuwei/
+    
+    
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
     values:
-      layout: post
-      
-  # all pages
-  - scope:
-      path: "_pages"
+      layout: "post"
+  -
+    scope:
+      path: "img/gallery"
+      type: "posts"
     values:
-      layout: page
-      
-      
+      layout: "gallery" # 覆盖之前的默认布局,并设置类别。
+      author: "author1"
+ 
 # Syntax
 markdown: kramdown
 highlighter: rouge
