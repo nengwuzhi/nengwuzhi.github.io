@@ -1,0 +1,118 @@
+---
+layout: index_alt
+title: 所有文章
+permalink: /all/
+icon: all
+type: page
+---
+
+<!-- Navbar-->
+
+<div class="content_container card shadow-sm">
+<nav class="navbar navbar-expand-sm bg-light navbar-dark">
+           <button type="button" id="sidebarCollapse" class="btn btn-primary">
+              <i class="fa fa-bars"></i>
+              <span class="sr-only">Toggle Menu</span>
+            </button>
+   <a class="navbar-brand" href="#">
+    <img src="/img/favicon.png" alt="Logo" style="width:40px;">
+  </a>
+
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="#section1">归档</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#section2">分类</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#section3">标签</a>
+    </li>
+  </ul>
+</nav>
+
+<div id="section1" class="container-fluid bg-success" style="padding-top:70px;padding-bottom:70px;padding-left:70px;padding-right:70px;">
+        
+           <h1><i class="zmdi zmdi-archive">归档</i></h1>
+         <hr>
+        <ul>
+          {% for post in site.posts %}
+
+            {% unless post.next %}
+              <h3 id="y{{ post.date | date: '%Y' }}">{{ post.date | date: '%Y' }}</h3>
+            {% else %}
+              {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+              {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+              {% if year != nyear %}
+                <h3 id="y{{ post.date | date: '%Y' }}">{{ post.date | date: '%Y' }}</h3>
+              {% endif %}
+            {% endunless %}
+
+            <li>
+                <time>
+                {{ post.date | date:"%F" }} .
+                </time>
+                <a class="title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+
+                {% include category.html %}
+                {% include tag.html %}
+            </li>
+
+          {% endfor %}
+        </ul>
+</div>
+<div id="section2" class="container-fluid bg-danger" style="padding-top:70px;padding-bottom:70px;padding-left:70px;padding-right:70px;">
+      <h1><i class="fa fa-th-list" aria-hidden="true">分类</i></h1>
+        <hr>
+        <ul>
+            {% for category in site.categories %}
+            <h3 id="{{category | first}}">{{category | first}}</h3>
+                {% for posts in category  %}
+                    {% for post in posts %}
+                        {% if post.url %}
+                        <li>
+                            <time>
+                            {{ post.date | date:"%F" }} {{ post.date | date: "%a" }}.
+                            </time>
+                            <a class="title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+
+                            {% include category.html %}
+                            {% include tag.html %}
+                        </li>
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+            {% endfor %}
+        </ul>
+</div>
+<div id="section3" class="container-fluid bg-info" style="padding-top:70px;padding-bottom:70px;padding-left:70px;padding-right:70px;">
+            <h1><i class="zmdi zmdi-label-heart">标签</i></h1>
+        <hr>
+        {% capture tags %}
+          {% for tag in site.tags %}
+            {{ tag[0] }}
+          {% endfor %}
+        {% endcapture %}
+        {% assign sortedtags = tags | split:' ' | sort %}
+
+        <ul>
+        {% for tag in sortedtags %}
+          <h3 id="{{ tag }}">{{ tag }}</h3>
+          {% for post in site.tags[tag] %}
+            <li>
+                <time>
+                {{ post.date | date:"%F" }} {{ post.date | date: "%a" }}.
+                </time>
+                <a class="title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+
+                {% include category.html %}
+                {% include tag.html %}
+            </li>
+          {% endfor %}
+        {% endfor %}
+        </ul>
+ 
+</div>           
+</div>
+ 
+ {% include sidebar.html %}   
