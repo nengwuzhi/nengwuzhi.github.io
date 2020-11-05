@@ -27,11 +27,11 @@
 
   	      {% for category in site.categories %}
 
-            <a class="dropdown-item" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">{{ category }} ({{ site.tags[category].size }})
+            <a class="dropdown-item" href="{{site.baseurl}}/categories.html#{{ category | first }}" cate="{{ category | first }}">
+                        {{ category | first }}&nbsp;<span class="categories-badge">{{ category | last | size }}</span>
             </a>
 
               {% endfor %}  
-
           </div>
         </li>
       </ul>
