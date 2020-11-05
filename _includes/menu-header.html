@@ -19,8 +19,14 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="download">分类 <span class="caret"></span></a>
           <div class="dropdown-menu" aria-labelledby="download">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
+            <a href="javascript:void(0);" class="dropdown-item" cate="All">
+                        All&nbsp;<span class="categories-badge"> {{site.posts | size}}</span>
+            </a>
+              {% for category in site.categories %}
+            <a href="javascript:void(0);" class="categories-item" cate="{{ category | first }}">
+                        {{ category | first }}&nbsp;<span class="categories-badge">{{ category | last | size }}</span>
+            </a>
+              {% endfor %}
             <a class="dropdown-item" href="#">Something else here</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Separated link</a>
