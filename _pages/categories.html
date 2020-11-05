@@ -41,7 +41,7 @@ permalink: "/categories.html"
 <section class="mt-4 mb-5">
     
     <div class="container mb-1">
-        <h1 class="font-weight-bold title">分类</h1>    
+        <h1 class="font-weight-bold title">标签</h1>    
         <div class="row">
         {% include menu-tags.html %}
         </div>
@@ -56,7 +56,7 @@ permalink: "/categories.html"
     
     <div class="card-columns">
 
-        {% assign pages_list = tags[1] %}
+        {% assign pages_list = tag[1] %}
         {% for post in pages_list %}
           {% if post.title != null %}
               {% if group == null or group == post.group %}
