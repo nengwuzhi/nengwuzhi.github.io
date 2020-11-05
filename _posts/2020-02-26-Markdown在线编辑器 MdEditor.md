@@ -3,7 +3,7 @@ author: person
 layout: post_full
 title: Markdown使用教程
 image: assets/images/08.jpg
-tags: [Markdown,教程]
+tags: [Markdown]
 category: [教程]
 ---
 # 欢迎使用 Markdown在线编辑器 MdEditor
