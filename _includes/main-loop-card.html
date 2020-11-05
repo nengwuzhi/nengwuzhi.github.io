@@ -18,10 +18,10 @@
 		{{ post.date | date: '%b %d, %Y' }}
 	</small>
 </div>
-{% if post.img %}
+{% if post.image %}
 	<div class="col-md-3 pr-0 text-right">
 	<a href="{{site.baseurl}}{{post.url}}">
-	<img class="w-100" src="{{post.img}}" alt="{{ post.title }}"/>
+	<img class="w-100" src="{{post.image}}" alt="{{ post.title }}"/>
 	</a>
 	</div>
 {% endif %}
