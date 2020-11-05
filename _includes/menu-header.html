@@ -7,14 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
 	    
   		<ul class="navbar-nav">
-    		<li class="nav-item">
-      			<a class="nav-link" href="/" class="nav-link text-light">
-                	<i class="text-Inverse fa-fw"></i>主页</a>
-    		</li>
-
-    		 {% for item in site.nav %}
-                  <li class="nav-item"><a class="nav-link text-light" href="{{item.url}}"  title="{{item.description}}">{{item.title}}</a></li>
-                  {% endfor %}    
+ 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="download">分类 <span class="caret"></span></a>
           <div class="dropdown-menu" aria-labelledby="download">
@@ -29,12 +22,12 @@
       </ul>
 	    
       <ul class="nav navbar-nav ml-auto">	      
-	      <div class="search">
+	 <div class="search">
 	 <i class="search-start"></i>
     <input type="text" class="search-input" placeholder="搜索..." />
-   <i class="material-icons search-icon search-clear">clear</i>
+         <i class="material-icons search-icon search-clear">clear</i>
 	<div class="search-results"></div> 
-</div>
+        </div>
 
 
 <li class="nav-item">
