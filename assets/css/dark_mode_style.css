@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+body {
+  font-family: Raleway, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  background-color: #eaeaea;
+  color: #333;
+  -webkit-transition: background-color 800ms ease;
+  transition: background-color 800ms ease;
+}
+
+body.dark {
+     background-color: #32383d;
+     color: #464646;
+}
+body.dark .masthead,
+body.dark .footer {
+     background-color: #12121200;
+}
+body.dark img {
+  -webkit-filter: brightness(60%);
+          filter: brightness(60%);
+}
+.vertical-nav.dark {
+    background: #4e4e4e;
+}
+article.dark {
+    background-color: #ffffff;
+}
+
+h2 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+img {
+  max-width: 100%;
+}
+img.small {
+  width: 60%;
+  float: right;
+  padding: 1rem;
+}
+
+.masthead,
+.footer {
+  padding: 0 1rem;
+  -webkit-transition: background-color 800ms ease;
+  transition: background-color 800ms ease;
+}
+
+.masthead-inner,
+.footer-inner {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+          align-items: center;
+  max-width: 900px;
+  margin: auto;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  color: #4c4c4c;
+}
+button:hover {
+  background-color: rgb(140 140 140 / 50%) !important;
+}
+
+.dark-button i {
+  -webkit-transform: rotate(35deg);
+          transform: rotate(35deg);
+  margin-left: 0.3rem;
+}
+
+main {
+  padding: 1rem;
+  max-width: 900px;
+  margin: auto;
+}
