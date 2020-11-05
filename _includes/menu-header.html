@@ -24,12 +24,7 @@
                         All&nbsp;<span class=""> {{site.posts | size}}</span>
                     </a>
             <div class="dropdown-divider"></div>
-<nav class="navbar-expand-lg navbar-light bg-white pl-2 pr-2">
-    <button class="navbar-light navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExplore" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarsExplore">
-    <ul class="navbar-nav categories">
+
     {% assign categories_list = site.categories %}
       {% if categories_list.first[0] == null %}
         {% for category in categories_list %}
@@ -41,9 +36,7 @@
         {% endfor %}
       {% endif %}
     {% assign categories_list = nil %}
-    </ul>    
-    </div>
-</nav>
+
 
           </div>
         </li>
