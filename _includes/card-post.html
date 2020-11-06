@@ -1,6 +1,6 @@
             <!-- Grid sizer -->
             <div class="grid-sizer col-lg-4 col-md-6"></div>
-<div class="col-lg-4 col-md-6 grid-item mb-4" {% unless post.image %} style="min-height:250px;background:#333;" {% endunless %}>
+<div class="col-lg-4 col-md-6 grid-item mb-4" {% unless post.image %} style="min-height:250px;background:#fff;" {% endunless %}>
       
          {% if post.type == "youtube" %}
             {% if post.yt-video-id %}
@@ -46,7 +46,7 @@
     
         <a href="{{site.baseurl}}{{post.url}}">
          
-        <img class="card-img img-fluid w-100 mb-3 img-thumbnail rounded-0" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ post.image | absolute_url }}{% endif %}" alt="{{ post.title }}">             
+        <img class="card-img img-fluid w-100 mb-3 img-thumbnail shadow-sm rounded-0" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ post.image | absolute_url }}{% endif %}" alt="{{ post.title }}">             
         
             <div class="notraco">
                 <h2 class="card-title title">{{ post.title }}</h2>
