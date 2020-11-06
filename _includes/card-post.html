@@ -16,7 +16,7 @@
     
        <a href="{{site.baseurl}}{{post.url}}"  class="d-block p-3">
         <h2 class="card-title title text-white mb-3">{{ post.title }}</h2>         
-           <small class="d-block text-muted">{{ post.content | strip_html | truncatewords:25 }}</small>
+           <small class="post-content small text-muted font-italic">{{ post.content | strip_html | truncatewords:25 }}</small>
         <div class="more mr-2 mb-2">                
             <i class="fa fa-arrow-circle-right text-white" aria-hidden="true"></i>
         </div> 
