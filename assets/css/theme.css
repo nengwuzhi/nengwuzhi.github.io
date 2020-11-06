@@ -230,7 +230,7 @@ article .card-body {
     box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
     font-size:13px;
 }
-.card-pin.raco:hover .wrapcat {
+.grid-item:hover .wrapcat {
     display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
     display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
     display: -webkit-flex;     /* NEW - Chrome */
@@ -242,15 +242,13 @@ article .card-body {
     border-radius:6px;
      transition: all 0.2s;
 }
-.card-pin.raco:hover i.text-muted {
+.grid-item:hover i.text-muted {
     color:#bd081c !Important;
      transition: all 0.2s;
     position: relative;
 }
-.card-pin.raco:hover .fa:before {
-    
-}
-.car-pin.raco:hover .fa:before {    
+
+.grid-item:hover .fa:before {    
      -webkit-animation: pulse 2s ease-in;
     -moz-animation: pulse 2s ease-in;
      animation: pulse 2s ease-in;
