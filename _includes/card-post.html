@@ -27,9 +27,9 @@
         
     {% if post.image %} 
     
-    <div class="wrapcat">
+    <div class="wrapcat flex-container">
 
-        <span class="pinme flex-container">
+        <span class="pinme">
                 <h5 class="mb-3">{{post.title}}</h5>
                 <p class="mb-3 lead">
                     {{ post.excerpt | strip_html | strip_html | truncate: 30 }}
