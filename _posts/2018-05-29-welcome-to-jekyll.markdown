@@ -5,6 +5,7 @@ date:   2018-05-29 18:05:55 +0300
 image:  'assets/images/02.jpg'
 category: [佛教]
 tags:   推荐
+summary: 推荐软件、书籍等
 ---
 
 
