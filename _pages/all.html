@@ -54,8 +54,7 @@ type: page
                 </time>
                 <a class="title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
 
-                {% include category.html %}
-                {% include tag.html %}
+        {% include main-loop-card.html %}
             </li>
 
           {% endfor %}
@@ -76,8 +75,7 @@ type: page
                             </time>
                             <a class="title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
 
-                            {% include category.html %}
-                            {% include tag.html %}
+         {% include main-loop-card.html %}
                         </li>
                         {% endif %}
                     {% endfor %}
