@@ -330,11 +330,11 @@ article .card-body {
     animation-iteration-count: infinite;
 }
 .pinme {
-    position: relative;;
-    top: 6px;
-    left: 10px;
+    position: relative;
+    top: 0px;
+    left: 0px;
     flex: 1 1 auto;
-    padding: 1.25rem;
+    padding: 1.35rem;
 }
 .gotopost {
     position: absolute;
