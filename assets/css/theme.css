@@ -331,6 +331,8 @@ article .card-body {
     position: absolute;
     top: 6px;
     left: 10px;
+    flex: 1 1 auto;
+    padding: 1.25rem;
 }
 .gotopost {
     position: absolute;
