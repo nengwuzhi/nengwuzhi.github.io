@@ -5,15 +5,15 @@ body, code, pre {
 }
 
 .flex-container {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-wrap: wrap;
+    /* display: -webkit-flex; */
+    /* display: flex; */
+    -webkit-flex-wrap: wrap; 
     flex-wrap: wrap;
     -webkit-align-content: center;
     align-content: center;
     width: auto;
     height: auto;
-    background-color: lightgrey;
+    background-color: #ffffff00;
 }
 /**
  * ----------------------------------------
