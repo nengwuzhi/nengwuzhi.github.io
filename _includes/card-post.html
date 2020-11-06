@@ -27,7 +27,9 @@
     <div class="wrapcat">
 
         <span class="pinme">
-            <a data-pin-do="buttonPin" href="{{site.url}}{{site.baseurl}}{{post.url}}&media={{site.url}}{{site.baseurl}}/{{post.image}}&description={{ post.title }} - {{ post.content | strip_html | truncatewords:25 }}"></a>
+                <p class="excerpt">
+        {{ latest_post.excerpt | strip_html | strip_newlines | truncate: 50 }}
+                </p>
         </span>
 
          <span class="gotopost">
