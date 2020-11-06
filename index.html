@@ -13,8 +13,8 @@ description: "A great collection of free and premium themes and templates."
         </div>
 
     
-<div class="container-fluid boxes"> 
-    <div class="gallery-wrapper boxes__item">        
+<div class="container-fluid"> 
+    <div class="gallery-wrapper">        
         {% for post in paginator.posts reversed %}
             {% include card-post.html %}
         {% endfor %}            
