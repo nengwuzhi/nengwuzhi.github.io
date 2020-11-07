@@ -9,6 +9,19 @@ button:hover, button:focus {
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
 }
+button.submit {
+    height: 34px;
+    width: 34px;
+    line-height: 10px;
+    background: none;
+    border: none;
+    color: #adadad;
+    font-size: 1.3em;
+    position: absolute;
+    top: 2px;
+    left: 20px;
+    transform: translateY(-2px);
+}
 .separator {
   margin: 3rem 0;
   border-bottom: 1px dashed #fff;
