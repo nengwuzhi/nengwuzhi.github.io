@@ -3,6 +3,73 @@ body, code, pre {
     background-color: white;
     font-family: "Menlo", "Monaco", "Consolas", "Courier New", "monospace", "Helvetica", "Tahoma", "Arial", "WenQuanYi Micro Hei", "文泉驿微米黑", "STXihei", "华文细黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", "Heiti", "黑体", sans-serif;
 }
+.search {
+    position: relative;
+    height: 30px;
+    text-align: right;
+    line-height: 30px;
+    padding-left: 20px;
+}
+
+.search .search-icon {
+    float: none;
+    height: 100%;
+    margin: 0 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.search .search-input {
+    text-indent: 40px;
+    font-size: smaller;
+    background: #f1f1f124;
+}
+
+.search .search-clear {
+    display: none;
+}
+
+.search .search-results {
+    display: block;
+    z-index: 1000;
+    position: absolute;
+    top: 60px;
+    right: auto;
+    width: 100%;
+    max-height: 500px;
+    overflow: auto;
+    text-align: left;
+    border-radius: 5px;
+    background: #2d2d2d !important;
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    list-style: cjk-ideographic;
+}
+
+.search .search-results .result-item {
+     background: #ffffff;
+    color: #3a3a3a;
+    margin: 5px;
+    padding: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+.form-control-underlined {
+  border-width: 0;
+  border-bottom-width: 1px;
+  border-radius: 0;
+  padding-left: 0;
+}
+.form-control::placeholder {
+  font-size: 0.95rem;
+  color: #aaa;
+  font-style: italic;
+}
+
 .width-auto {
     width: auto;
 }
