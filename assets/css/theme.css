@@ -37,15 +37,15 @@ button:hover, button:focus {
     box-shadow: none !important;
 }
 button.submit {
-    height: 34px;
-    width: 34px;
+    height: 30px;
+    width: 30px;
     line-height: 10px;
     background: none;
     border: none;
     color: #adadad;
-    font-size: 1.3em;
+    font-size: 1.1rem;
     position: absolute;
-    top: 2px;
+    top: 4px;
     left: 20px;
     transform: translateY(-2px);
 }
