@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
         <div class="col-6">
-            <h3 class="mb-3">精选文章</h3>
+            <h3 class="mb-3" style="animation: text-blur-out 1.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) ;">精选文章</h3>
         </div>
         <div class="col-6 text-right">
             <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
@@ -62,7 +62,7 @@
                                 <div class="card">
                                     <img class="img-fluid" alt="{{ post.image }}" src="{{ post.image }}">
                                     <div class="card-body">
-                                        <h4 class="card-title" style="animation: text-blur-out 1.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) ;">{{post.title}}</h4>
+                                        <h4 class="card-title">{{post.title}}</h4>
                                         <p class="card-text"> {{ post.excerpt | strip_html | strip_html | truncate: 30 }}</p>
                                     </div>
                                 </div>
