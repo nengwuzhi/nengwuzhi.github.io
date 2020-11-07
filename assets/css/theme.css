@@ -3,7 +3,22 @@ body, code, pre {
     background-color: white;
     font-family: "Menlo", "Monaco", "Consolas", "Courier New", "monospace", "Helvetica", "Tahoma", "Arial", "WenQuanYi Micro Hei", "文泉驿微米黑", "STXihei", "华文细黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", "Heiti", "黑体", sans-serif;
 }
+.width-auto {
+    width: auto;
+}
 
+.text-lg {
+    font-size: 2rem;
+}
+
+.carousel-indicators li {
+    border: none;
+    background: #ccc;
+}
+
+.carousel-indicators li.active {
+    background: #28a745;
+}
 .flex-container {
     /* display: -webkit-flex; */
     /* display: flex; */
