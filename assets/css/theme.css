@@ -316,7 +316,7 @@ footer.footer {
     text-align: left;
 }
 .notraco {
-    background: #ffffff;
+    /* background: #ffffff; */
     color: #333;
     border: 0;
     border-top: 0;
