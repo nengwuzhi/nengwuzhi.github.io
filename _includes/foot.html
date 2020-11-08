@@ -37,39 +37,14 @@ $(function () {
     <!-- fancybox灯箱 -->
 
 
-<!--ztree-->
-	<script type="text/javascript" src="/assets/js/jquery.ztree.core.js"></script>
-	<script type="text/javascript" src="/assets/js/jquery.ztree.exedit.js"></script>
-	<SCRIPT type="text/javascript">
-				<!--
-		var setting = {
-			data: {
-				simpleData: {
-					enable: true
-				}
-			}
-		};
-
-		var zNodes =[
-			{ id:1, pId:0, name:"学习资源", open:true},
-			{ id:11, pId:1, name:"anki", url:"http://ankich-res.ankichina.net/anki-apps/anki-2.1.22-windows.exe", target:"_blank"},
-			{ id:12, pId:1, name:"叶子节点 1-2"},
-			{ id:13, pId:1, name:"叶子节点 1-3"},
-			{ id:2, pId:0, name:"父节点 2", open:false},
-			{ id:21, pId:2, name:"叶子节点 2-1"},
-			{ id:22, pId:2, name:"叶子节点 2-2"},
-			{ id:23, pId:2, name:"叶子节点 2-3"},
-			{ id:3, pId:0, name:"父节点 3", open:false},
-			{ id:31, pId:3, name:"叶子节点 3-1"},
-			{ id:32, pId:3, name:"叶子节点 3-2"},
-			{ id:33, pId:3, name:"叶子节点 3-3"}
-		];
-
-		$(document).ready(function(){
-			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+<!--fancytree-->
+<script src="{{site.baseurl}}/assets/js/jquery.fancytree.ui-deps.js"></script>
+<script src="{{site.baseurl}}/assets/js/jquery.fancytree.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			// using default options
+			$("#tree").fancytree();
 		});
-		//-->
-	</SCRIPT>
-
+	</script>
 
 </footer>
