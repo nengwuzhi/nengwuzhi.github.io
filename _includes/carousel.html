@@ -58,7 +58,7 @@
 
 {% for post in site.posts %} 
 {% if post.tags contains "精选" %}
-                            <div class="col-md-4 mb-3">
+                            <div class="col-md-4 mb-3 grid-item">
                                 <div class="card">
                                     <img class="img-fluid" alt="{{ post.image }}" src="{{ post.image }}">
                                     <div class="card-body notraco">
@@ -67,6 +67,25 @@
                                     </div>
                                 </div>
                           </div>
+                          
+    <div class="wrapcat">
+        <span class="pinme">
+            <a data-pin-do="buttonPin" href="https://www.pinterest.com/pin/create/button/?url={{site.url}}{{site.baseurl}}{{post.url}}&media={{site.url}}{{site.baseurl}}/{{post.image}}&description={{ post.title }} - {{ post.content | strip_html | truncatewords:25 }}"></a>
+        </span>
+
+         <span class="gotopost">
+             <a href="{{site.baseurl}}{{post.url}}" class="text-dark"><i class="fa fa-arrow-circle-right"></i> More
+             </a>
+         </span> 
+
+        <div class="showcat">
+            {% for category in post.categories %}
+              <a class="btn btn-sm btn-danger mb-1" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">
+                {{ category }}
+              </a>
+            {% endfor %}
+        </div>
+    </div>
 {% endif %}
 {% endfor %}                          
                           
