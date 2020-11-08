@@ -59,16 +59,9 @@
 {% for post in site.posts %} 
 {% if post.tags contains "精选" %}
                             <div class="col-md-4 mb-3">
-                                <div class="card grid-item">
-                                    <img class="img-fluid" alt="{{ post.image }}" src="{{ post.image }}">
-                                    <div class="card-body notraco">
-        <a href="{{site.baseurl}}{{post.url}}"><h4 class="card-title title">{{ post.title }}</h4></a>
-                                        <p class="card-text text-sm-left"> {{ post.excerpt | strip_html | strip_html | truncate: 30 }}</p>
-                                    </div>
-
-                
-                          
-     <div class="wrapcat flex-container">
+                                <div class="card">
+                                    <img class="img-fluid grid-item" alt="{{ post.image }}" src="{{ post.image }}">
+          <div class="wrapcat flex-container">
 
         <span class="pinme">
                 <h5 class="mb-3">{{post.title}}</h5>
@@ -82,8 +75,15 @@
              <a href="{{site.baseurl}}{{post.url}}" class="text-dark"><i class="fa fa-arrow-circle-right"></i> More
              </a>
          </span> 
-          </div>
-               </div>                                  
+          </div>       
+               </div>                      
+                                    <div class="card-body notraco">
+        <a href="{{site.baseurl}}{{post.url}}"><h4 class="card-title title">{{ post.title }}</h4></a>
+                                        <p class="card-text text-sm-left"> {{ post.excerpt | strip_html | strip_html | truncate: 30 }}</p>
+                                    </div>
+
+                        
+                                
     </div>
 {% endif %}
 {% endfor %}                          
