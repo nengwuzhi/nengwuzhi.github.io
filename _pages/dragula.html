@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: muuri
 permalink: /dragula/
 icon: dragula
@@ -13,7 +13,7 @@ type: page
   </head>
 
 <div class="card shadow-sm">        
-<article>
+
   
   {% for post in site.posts %} 
 {% if post.tags contains "止观main" %}
@@ -794,11 +794,8 @@ type: page
     <script src="https://cdn.jsdelivr.net/npm/web-animations-js@2.3.2/web-animations.min.js"></script>
     <script src="https://muuri.dev/js/demo-grid.js?v103"></script>
     <script src="https://muuri.dev/js/demo-kanban.js?v103"></script>
-  
 
-
-      </article>
-       </div> 
+ </div> 
   
 <script src="/assets/js/muuri.min.js"></script>
 <script>var grid = new Muuri('.grid');</script>
