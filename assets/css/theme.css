@@ -429,8 +429,6 @@ article .card-body {
     -webkit-box-flex-direction: row;
     -moz-box-flex-direction: row;
     -webkit-flex-direction: row;
-	height: auto;
-	margin: auto;
     flex-direction: row;
     border-radius:6px;
      transition: all 0.2s;
