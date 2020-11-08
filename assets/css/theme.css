@@ -415,7 +415,8 @@ article .card-body {
 }
 .showcat {
     margin: auto;
-    padding: 0 15px 40px 15px;
+    padding: 10px 15px 40px 15px;
+    border-top: 1px solid rgba(160, 160, 160, 0.2);
 }
 .wrapcat .btn {
     border: 0;
