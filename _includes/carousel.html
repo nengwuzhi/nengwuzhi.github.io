@@ -68,9 +68,14 @@
                                 </div>
                           </div>
                           
-    <div class="wrapcat">
+     <div class="wrapcat flex-container">
+
         <span class="pinme">
-            <a data-pin-do="buttonPin" href="https://www.pinterest.com/pin/create/button/?url={{site.url}}{{site.baseurl}}{{post.url}}&media={{site.url}}{{site.baseurl}}/{{post.image}}&description={{ post.title }} - {{ post.content | strip_html | truncatewords:25 }}"></a>
+                <h5 class="mb-3">{{post.title}}</h5>
+                <p class="mb-3 lead">
+                    {{ post.excerpt | strip_html | strip_html | truncate: 30 }}
+                </p>
+                <a href="{{site.baseurl}}{{post.url}}" class="btn btn-dark">阅读全部</a>
         </span>
 
          <span class="gotopost">
@@ -78,13 +83,6 @@
              </a>
          </span> 
 
-        <div class="showcat">
-            {% for category in post.categories %}
-              <a class="btn btn-sm btn-danger mb-1" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">
-                {{ category }}
-              </a>
-            {% endfor %}
-        </div>
     </div>
 {% endif %}
 {% endfor %}                          
