@@ -35,157 +35,27 @@ type: page
 {% endfor %}
  
   
-<h3 class="tagline"><span class="tagline-text">拖放是如此简单，很痛</span></h3>
-
-<div class="examples">
-  <div class="parent">
-    <label for="hy"在这两个容器之间移动东西。请注意如何将这些东西插入鼠标指针附近？好东西。</label>
-    <div class="wrapper">
-      <div id="left-defaults" class="container">
-        {% include fancytree.html %}
-        <div>将它们移到其他地方是不可能的</div>
-        <div>任何东西都可以移动。其中包括图片，<a href="https://github.com/bevacqua/dragula">links</a>, 或任何其他嵌套元素。
-        <div class="image-thing"><img src="/assets/images/resources/icon.svg" onerror="this.src=&quot;resources/icon.png&quot;" alt="dragula"></div><sub>(您仍然可以照常单击链接！)</sub>
-        </div>
-      </div>
-      <div id="right-defaults" class="container">
-        <div>也有可能在同一容器中移动元素，从而改变其位置</div>
-        <div>这是默认用例。您只需要指定要使用的容器</div>
-        <div>未来将出现更多交互式用例</div>
-        <div>Moving <code>&lt;input/&gt;</code> 元素工作正常。您仍然可以集中精力。 <input placeholder="See?"></div>
-        <div>确保检查出 <a href="https://github.com/bevacqua/dragula#readme">GitHub上的文档！</a></div>
-        <div><textarea id="conBox" class="" style="margin: 0px; height: 93px; width: 466px;"></textarea></div>
-        
-      </div>
-    </div>
+<div class="grid">
+<div class="item">
+  <div class="item-content">
+    <!-- Safe zone, enter your custom markup -->
+    This can be anything.
+    <!-- Safe zone ends -->
   </div>
-  <div class="parent">
-    <label for="hy">在拖动事件的生命周期中，有很多事件。退房 <a href="https://github.com/bevacqua/dragula#drakeon-events">all of them</a> 在文档中！</label>
-    <div class="wrapper">
-      <div id="left-events" class="container">
-        <div>As soon as you start dragging an element, a <code>drag</code> event is fired</div>
-        <div>Whenever an element is cloned because <code>copy: true</code>, a <code>cloned</code> event fires</div>
-        <div>The <code>shadow</code> 每当将放置元素的占位符移动到其他容器或位置时，就会触发事件</div>
-        <div>A <code>drop</code> 每当将元素放置到其起源以外的任何位置时，都会触发事件 <em>(where it was initially dragged from)</em></div>
-      </div>
-      <div id="right-events" class="container">
-        <div>如果该元素由于掉落到任何容器之外而从DOM中删除，则 <code>remove</code> 事件被解雇</div>
-        <div>A <code>cancel</code> event is fired when an element would be dropped onto an invalid target, but retains its original placement instead</div>
-        <div>The <code>over</code> event fires when you drag something over a container, and <code>out</code> fires when you drag it away from the container</div>
-        <div>Lastly, a <code>dragend</code> event is fired whenever a drag operation ends, regardless of whether it ends in a cancellation, removal, or drop</div>
-      </div>
+</div>
+<div class="item">
+  <div class="item-content">
+    <!-- Safe zone, enter your custom markup -->
+    <div class="my-custom-content">
+      Yippee!
     </div>
+    <!-- Safe zone ends -->
   </div>
-  <div class="parent">
-    <label for="hy">Need to be able to quickly delete stuff when it spills out of the chosen containers? Note how you can easily sort the items in any containers by just dragging and dropping.</label>
-    <div class="wrapper">
-      <div id="left-rm-spill" class="container">
-        <div>Anxious Cab Driver</div>
-        <div>Thriving Venture</div>
-        <div>Such <a href="http://ponyfoo.com">a good blog</a></div>
-        <div></div>
-      </div>
-      <div id="right-rm-spill" class="container">
-        <div>Banana Boat</div>
-        <div>Orange Juice</div>
-        <div>Cuban Cigar</div>
-        <div>Terrible Comedian</div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="parent">
-    <label for="hy">仅从其中一个容器复制内容，然后在另一个容器上排序？没问题！</label>
-    <div class="wrapper">
-      <div id="left-copy-1tomany" class="container">
-        <div>当元素是可复制的时，无法在其原始容器中排序</div>
-        <div>复制可防止拖动原始元素。复制副本并创建 <em>然后</em> 将其移动</div>
-        <div>每当发生这种情况， 一个 <code>克隆</code> 事件引发</div>
-        <div>请注意，如果克隆未放入另一个容器中，则会被破坏。</div>
-        <div>您将拖动一个副本，因此当将它们放入另一个容器中时，您会看到重复项。</div>
-      </div>
-      
-      <div id="right-copy-1tomany" class="container">
-      </div>
-    </div>
-  </div>
-
-  <div class="parent">
-    <label><strong>单击或拖动！</strong> 在 <code> 鼠标移动 </code> 事件之前释放鼠标按钮时触发单击，否则触发拖动事件。无需额外的配置。</label>
-    <div class="wrapper">
-      <div id="sortable" class="container">
-        <div>单击这些元素会触发常规<code>点击</code>您可以听的活动</div>
-        <div>尝试拖动或单击此元素。</div>
-        <div>请注意如何正常单击？</div>
-        <div>拖动不会触发点击事件。</div>
-        <div>点击也不会拖累。</div>
-        <div>如果您具有可以单击或拖动的元素，这将很有用。</div>
-      </div>
-    </div>
-    <pre>      <code>
-        dragula([document.getElementById(container)]);
-      </code>
-    </pre>
-  </div>
+</div>
 </div>
       </article>
        </div> 
   
-<script src="/assets/js/dragula.min.js"></script>
-<script> 'use strict';
-
-var crossvent = require('crossvent');
-var sortable = $('sortable');
-
-dragula([$('left-defaults'), $('right-defaults')]);
-dragula([$('left-copy'), $('right-copy')], { copy: true });
-dragula([$('left-events'), $('right-events')])
-  .on('drag', function (el) {
-    el.className = el.className.replace('ex-moved', '');
-  })
-  .on('drop', function (el) {
-    el.className += ' ex-moved';
-  })
-  .on('over', function (el, container) {
-    container.className += ' ex-over';
-  })
-  .on('out', function (el, container) {
-    container.className = container.className.replace('ex-over', '');
-  });
-dragula([$('left-rollbacks'), $('right-rollbacks')], { revertOnSpill: true });
-dragula([$('left-lovehandles'), $('right-lovehandles')], {
-  moves: function (el, container, handle) {
-    return handle.classList.contains('handle');
-  }
-});
-
-dragula([$('left-rm-spill'), $('right-rm-spill')], { removeOnSpill: true });
-dragula([$('left-copy-1tomany'), $('right-copy-1tomany')], {
-  copy: function (el, source) {
-    return source === $('left-copy-1tomany');
-  },
-  accepts: function (el, target) {
-    return target !== $('left-copy-1tomany');
-  }
-});
-
-dragula([sortable]);
-
-crossvent.add(sortable, 'click', clickHandler);
-
-function clickHandler (e) {
-  var target = e.target;
-  if (target === sortable) {
-    return;
-  }
-  target.innerHTML += ' [click!]';
-
-  setTimeout(function () {
-    target.innerHTML = target.innerHTML.replace(/ \[click!\]/g, '');
-  }, 500);
-}
-
-function $ (id) {
-  return document.getElementById(id);
-}</script>
+<script src="/assets/js/muuri.min.js"></script>
+<script> </script>
 
