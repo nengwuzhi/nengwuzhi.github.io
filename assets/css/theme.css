@@ -5,6 +5,9 @@ body, code, pre {
     font-weight: 300;
     line-height: 1.5;
 }
+.sticky-top-offset {
+    top: 0;
+}
 a.nav-link.tags {
     display: block;
     font-size: 15px;
