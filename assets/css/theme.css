@@ -54,7 +54,7 @@ button.submit {
 
 .search .search-input {
     text-indent: 40px;
-    background: #f5f5f5 url(/assets/css/images/search-icon.png) no-repeat 9px center;
+    background: #f5f5f5 no-repeat 9px center;
 }
 
 .search .search-clear {
