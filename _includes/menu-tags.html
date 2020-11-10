@@ -9,11 +9,11 @@
     {% assign tags_list = site.tags %}
       {% if tags_list.first[0] == null %}
         {% for tag in tags_list %}
-          <li class="nav-item"><a class="nav-link tags" href="{{site.baseurl}}/categories.html#{{ tag | downcase }}"><i class="zmdi zmdi-label-heart"></i>{{ tag }} </a></li>
+          <li class="nav-item px-2"><a class="nav-link tags" href="{{site.baseurl}}/categories.html#{{ tag | downcase }}"><i class="zmdi zmdi-label-heart"></i>{{ tag }} </a></li>
         {% endfor %}
       {% else %}
         {% for tag in tags_list %}
-          <li class="nav-item"><a class="nav-link tags" href="{{site.baseurl}}/categories.html#{{ tag[0] | downcase }}"><i class="zmdi zmdi-label-heart"></i>{{ tag[0] }} </a></li>
+          <li class="nav-item px-2"><a class="nav-link tags" href="{{site.baseurl}}/categories.html#{{ tag[0] | downcase }}"><i class="zmdi zmdi-label-heart"></i>{{ tag[0] }} </a></li>
         {% endfor %}
       {% endif %}
     {% assign tags_list = nil %}
