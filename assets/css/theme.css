@@ -5,6 +5,28 @@ body, code, pre {
     font-weight: 300;
     line-height: 1.5;
 }
+a.nav-link.tags {
+    display: block;
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: -webkit-inline-box;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,.08);
+    color: #5e5e5e;
+    padding: .4rem;
+    padding-right: 1.85rem;
+    text-decoration: none;
+    text-transform: capitalize;
+    -webkit-transition: .1s all ease;
+    transition: .1s all ease;
+}
 p.mb-3.lead {
     font-size: small;
 }
