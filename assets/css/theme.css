@@ -8,6 +8,27 @@ body, code, pre {
 .sticky-top-offset {
     top: 0;
 }
+
+.widget {
+	background: #FDFDFD;
+	box-sizing: border-box;
+	padding: 35px;
+}
+
+
+.widget .title {
+	font-weight: 300;
+        color: #505879;
+}
+
+.widget ul {
+	list-style: disc;
+}
+
+.widget ul li {
+	    padding: 0;
+}
+
 /*
 *
 * ==========================================
