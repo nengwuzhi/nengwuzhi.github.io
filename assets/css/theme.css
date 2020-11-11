@@ -8,7 +8,12 @@ body, code, pre {
 .sticky-top-offset {
     top: 0;
 }
-
+.content_container {
+	width: 75%;
+        margin-left: 15px;
+        float: left;
+        text-indent: 0px;
+}
 .content_container .post_nav:after {
 	content: "";
 	display: table;
