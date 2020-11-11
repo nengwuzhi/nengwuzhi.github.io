@@ -136,6 +136,31 @@ article ol {
     width: calc(22% - 20px);
     float: right;
 }
+.sidebar.side.content.sticky-top.sticky-top-offset {
+    top: 0px;
+    height: 600px;
+    overflow-y: auto;
+    z-index: auto;
+}
+a.sidebar {
+    padding: 0.4rem 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.001em;
+    color: #495057;
+    margin-bottom: 1px;
+    font-weight: 400;
+    font-size: 14px;;
+    border: 1px solid #dee2e6;
+    transition: all 0.3s;
+    display: contents;
+    width: auto;
+}
+a.sidebar:hover, a.sidebar:focus {
+    border-color: #dd1144;
+    background: #ef9696;
+    color: #ef9696;
+    text-decoration: none;
+}
 .widget {
 	margin: 0;
 }
