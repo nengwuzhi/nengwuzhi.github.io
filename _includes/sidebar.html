@@ -19,7 +19,7 @@
                     <i class="fa fa-th-list"></i>
                     分类
                 </div>
-                    <ul class="content-ul" cate>
+                    <div class="content-ul" cate>
                   {% for category in site.categories %}
               
                         <a class="sidebar" href="{{ root_url }}/{{ site.all_dir }}#{{ category | first }}" cate="{{ category | first }}">
@@ -30,7 +30,7 @@
                         </a>
          
                     {% endfor %}
-                     </ul>
+                     </div>
             </div>
             </div>  
               
