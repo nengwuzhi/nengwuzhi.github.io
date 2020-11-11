@@ -136,6 +136,9 @@ article ol {
     width: calc(22% - 20px);
     float: right;
 }
+.widget {
+	margin: 0;
+}
 
 .widget {
 	background: #FDFDFD;
