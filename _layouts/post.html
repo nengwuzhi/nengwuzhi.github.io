@@ -1,65 +1,100 @@
 ---
 layout: default
 ---
-<section class="bg-gray200 pt-5 pb-5">    
-    <div class="container">
-    	<div class="row justify-content-center">
-    		<div class="col-md-8">
-                
-    			<article class="card">
-                    
-                 {% if page.image %} 
-                    <span class="pinme">
-                        <a data-pin-do="buttonPin" data-pin-tall="true" href="https://www.pinterest.com/pin/create/button/?url={{site.url}}{{site.baseurl}}{{page.url}}&media={{site.url}}{{site.baseurl}}/{{page.image}}&description={{ page.title }}- {{ page.content | strip_html | truncatewords:25 }}"></a>
-                    </span>
-                    <img class="card-img-top mb-2" src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ page.image | absolute_url }}{% endif %}" alt="{{ page.title }}"> 
-                {% endif %}
-                    
-    			<div class="card-body">
-                    
-    				<h1 class="display-4">
-    				    {{page.title}} 
-                    </h1>                    
-                     
-                    <small class="text-muted d-block mb-3">
-                        {% unless page.metadate == "hide" %} 
-                            {{ page.date | date: '%B %d, %Y' }} 
-                        {% endunless %}
-                        {% if page.author %}
-                            , by {{page.author | capitalize}} 
+    {% assign author = site.authors[page.author] %}
+                <div class="content_container">
+                    <div class="card shadow-sm">
+                    <article>
+			
+                        {% if page.type == "youtube" %}
+                            {% if page.yt-video-id %}
+                                <div class="video_container">
+                                    <iframe src="https://www.youtube.com/embed/{{page.yt-video-id}}?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                            {% endif %}
+                        {% elsif page.type == "image" or page.type == "gallery" %}
+                            {% if page.featimg %}
+                                <img class="featimg" src="{{ site.media_folder | prepend: site.baseurl | replace: '', ''}}{{ page.featimg }}" alt="{{ page.featimg }}">
+                            {% endif %}
+                            {% endif %}
+                      
+                       	  <h4 class="post_title">
+                            {{ page.title }}
+                          </h4>
+			        			
+		    
+                        <div class="meta d-flex align-items-center">
+                        {% if author.avatar %}
+                        <img class="rounded-circle" src="/{{author.avatar}}" alt="{{author.name}}" width="70"/>
                         {% endif %}
-                    </small>                    
-                    
-    				{{ content }}
-                    
-                    {% if page.visit %}
-                    <p><a target="_blank" href="{{page.visit}}" class="btn btn-gray d-block font-weight-bold">
-                        访问 <i class="fas fa-external-link-alt"></i></a>
-                    </p>
-                    {% endif %}
-                    
-                    {% for category in page.categories %}
-                      <a class="btn btn-sm btn-primary mt-2" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">
-                        # {{ category | downcase }}
-                      </a>
-                    {% endfor %}
-                    
-    				{% include comments.html %}
-                    
-    			</div>  
-                    
-    			</article>
-                
-                <div class="PageNavigation">
-                  {% if page.next.url %}
-                    <a class="prev" href="{{site.baseurl}}{{page.next.url}}"><i class="fa fa-angle-left"></i> </a>
-                  {% endif %}
-                  {% if page.previous.url %}
-                    <a class="next" href="{{site.baseurl}}{{page.previous.url}}"><i class="fa fa-angle-right"></i></a>
-                  {% endif %}
-                </div>
-                
-    		</div>
-    	</div>
+						<small class="ml-3">{{ author.name }} <span><a target="_blank" href="{{ author.twitter }}" class="btn btn-outline-success btn-sm btn-round ml-1">Follow</a></span>
+                            <span class="text-muted d-block mt-1"><i class="fa fa-calendar"></i>{{ page.date | date: "%F" }} · 字数-{{ content | strip_html | strip_newlines | split: "" | size }} · 预计{% include meta-read-time.html %}</span>
+						</small>
+                        </div>
+                        {% if page.type == "standard" %}
+                            {% if page.featimg %}
+                                <img class="image" src="{{ site.media_folder | prepend: site.baseurl | replace: '', ''}}{{ page.featimg }}" alt="{{ page.featimg }}">
+                            {% endif %}
+                        {% endif %}
+                        <div class="post_content">
+                            {{ content }}
+			<hr data-content="AND" class="hr-text">
+                        </div>
+                        
+                      
+                        <div class="catsandtags">
+                           
+                            {% if page.tags %}
+                            <p class="tags">
+                                <span class="sidebar-tag-link">Tags:</span>
+                                {% for tag in page.tags %}
+                                  <a class="btn btn-outline-success btn-sm btn-round ml-1" href="{{ root_url }}/{{ site.tag_dir }}#{{ tag }}">{{ tag | join: "/" }}</a>
+                                {% endfor %}
+                            </p>
+                            {% endif %}
+                        </div>
+        
+                    </article>
+	     <!-- hr -->		    
+     <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <div class="mb-4">
+     <!-- Dashed divider -->
+                <hr class="dashed">
+            </div>
+            <div class="mb-4">
+
+                <!-- Dotted divider -->
+                <hr class="dotted">
+            </div>
+            <div class="mb-4">
+   
+                <!-- Solid divider -->
+                <hr class="solid">
+            </div>
+            <div class="mb-4">
+                <!-- Gradient divider -->
+                <hr data-content="AND" class="hr-text">
+            </div>
+           
+      
     </div>
-</section>
+</div>                            
+			    
+			    
+       {% include related-posts.html %}      
+                       <div class="post_nav">
+                        {% if page.previous.url %}
+                        <a class="prev" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}"><i class="fa fa-angle-left"></i><span class="short">上一篇</span></a>
+                        {% endif %}
+                        {% if page.next.url %}
+                        <a class="next" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}"><span class="short">下一篇</span><i class="fa fa-angle-right"></i></a>
+                        {% endif %}
+                      </div>  
+            </div> 
+            </div> 
+       
+       {% include sidebar.html %}
+
+
+
