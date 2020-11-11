@@ -9,13 +9,85 @@ body, code, pre {
     top: 0;
 }
 
+.content_container .post_nav:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.content_container article {
+    padding: 40px;
+    width: 100%;
+}
+
+.content_container article p {
+    padding: 0;
+    font-weight: 400;
+    font-family: "WenQuanYi Micro Hei", "STXihei", "华文细黑", "Microsoft YaHei", "微软雅黑";
+}
+article .archive {
+	list-style: none;
+	padding: 0;
+}
+article {
+    box-sizing: border-box;
+    background: #FDFDFD;
+    margin-bottom: 0px;
+    margin-right: auto;
+    position: relative;
+    width: auto;
+}
+.archive .date {
+	opacity: 0.5;
+	font-size: 0.8em;
+}
+
+.archive h3 {
+	padding: 10px;
+}
+article img {
+	transition: 0.3s all ease;
+}
+article a:hover img,article a:hover footer .backtotop:hover,footer article a:hover .backtotop:hover {
+	opacity: 0.5;
+}
+
+article .category,article .tags {
+	text-transform: uppercase;
+}
+.index article .date {
+	font-size: 0.7em;
+	opacity: 0.6;
+	position: absolute;
+	bottom: 10px;
+	left: 5px;
+}
+
+.index article .post_content {
+	padding-bottom: 50px;
+}
+
+article ul,article ol {
+	list-style: circle;
+	padding: 0 40px;
+}
+
+article ul li,article ol li {
+	padding-left: 0px;
+}
+
+article ol {
+	list-style: decimal;
+}
+.sidebar {
+    width: calc(22% - 20px);
+    float: right;
+}
+
 .widget {
 	background: #FDFDFD;
 	box-sizing: border-box;
 	padding: 35px;
 }
-
-
 .widget .title {
 	font-weight: 300;
         color: #505879;
@@ -104,26 +176,6 @@ hr.hr-text::before {
 }
 html {
   scroll-behavior: smooth;
-}
-article .archive {
-	list-style: none;
-	padding: 0;
-}
-article {
-    box-sizing: border-box;
-    background: #FDFDFD;
-    margin-bottom: 0px;
-    margin-right: auto;
-    position: relative;
-    width: auto;
-}
-.archive .date {
-	opacity: 0.5;
-	font-size: 0.8em;
-}
-
-.archive h3 {
-	padding: 10px;
 }
 
 blockquote {
