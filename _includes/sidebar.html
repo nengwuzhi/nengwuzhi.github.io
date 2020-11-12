@@ -21,7 +21,7 @@
             <a href="#" aria-expanded="false">
                      分类<span class="fa arrow"></span>
             </a>
-            <ul class="content-ul" cate>           
+            <ul class="animated bounceIn content-ul" cate>           
               <li>
                     {% for category in site.categories %}
               
@@ -37,16 +37,16 @@
             </ul>
           </li>
                 
-                
-            
-            <div class="card shadow-sm">
-            <div class="widget">
-                 <div>
-                    <i class="fa fa-tags"></i>
-                    标签
-                </div>
-                <div class="tags-cloud">
-                    {% assign first = site.tags.first %}
+                   <li>
+            <a href="#" aria-expanded="false">
+                  标签<span class="fa fa-tags"></span>
+                </a>
+            <ul>
+              <li>
+                <a href="#">Sub Menu 2</a>
+                <ul class="animated bounceIn class="tags-cloud"">
+                  <li>
+              {% assign first = site.tags.first %}
                     {% assign max = first[1].size %}
                     {% assign min = max %}
                     {% for tag in site.tags offset:1 %}
@@ -80,9 +80,12 @@
                       {% endif %}
                       <a class="sidebar" href="{{ root_url }}/{{ site.categories_dir }}#{{ tag[0] }}">{{ tag[0] }}</a>
                     {% endfor %}
-                </div>
-                </div>
-   </div>
+              </li>
+            </ul>
+          </li>
+                
+                
+ 
             </ul>
             </nav>
         </div>
