@@ -30,6 +30,16 @@ layout: default
 						<small class="ml-3">{{ author.name }} <span><a target="_blank" href="{{ author.twitter }}" class="btn btn-outline-success btn-sm btn-round ml-1">Follow</a></span>
                             <span class="text-muted d-block mt-1"><i class="fa fa-calendar"></i>{{ page.date | date: "%F" }} · 字数-{{ content | strip_html | strip_newlines | split: "" | size }} · 预计{% include meta-read-time.html %}</span>
 						</small>
+				
+	    <div class="card shadow-sm">
+            <div class="widget">
+                <div>
+                    <i class="fa fa-list"></i>
+                     页内搜索
+                </div>
+            <input type="text" id="text-search" />
+            </div>
+            </div>  
                         </div>
                         {% if page.type == "standard" %}
                             {% if page.featimg %}
