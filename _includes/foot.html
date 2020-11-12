@@ -32,24 +32,7 @@ $(function () {
 <script src="{{site.baseurl}}/assets/js/bootstrap-toc.min.js"></script>
 <!--search-->
 <script src="{{site.baseurl}}/assets/js/search/search.js"></script>
-<script src="{{site.baseurl}}/assets/js/search/highlight.js"></script>
-<script type="text/javascript">
-$(function() {
-    $('#text-search').bind('keyup change', function(ev) {
-        // pull in the new value
-        var searchTerm = $(this).val();
 
-        // remove any old highlighted terms
-        $('body').removeHighlight();
-
-        // disable highlighting if empty
-        if ( searchTerm ) {
-            // highlight the new term
-            $('body').highlight( searchTerm );
-        }
-    });
-});
-</script>
 <!--dark-mode-style-->
 <script src="{{site.baseurl}}/assets/js/dark_mode_style.js"></script>
     <!-- fancybox灯箱 -->
