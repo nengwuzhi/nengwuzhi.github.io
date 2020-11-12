@@ -275,7 +275,7 @@ p {
   max-width: max-content;
   font-size: 22px;
   font-weight: 300;
-  line-height: 1.9;
+  line-height: 1.7;
 }
 .jumbotron:hover {
     opacity: 0.5;
