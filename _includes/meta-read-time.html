@@ -1,28 +1,10 @@
- <span class="post-date">
-    {% if page.date.enable %}
-    {{ page.date.prepend }}
-    {{ page.date | date_to_string }}
-    {% endif %}
-    {% if page.wordcount.enable %}
-    {{ page.wordcount.prepend }}
-    {{ page.content | strip_html | strip_newlines | remove: " " | size }}{{ page.post.wordcount.unit }}
-    {% endif %}
-    {% if page.post.readtime.enable %}
-    {{ page.post.readtime.prepend }}
-    {{ page.content | strip_html | strip_newlines | remove: " " | size | divided_by: page.post.readtime.divided_by | plus: 1 }}{{ page.post.readtime.unit }}
-    {% endif %}
-    {% if page.post.visitor.enable %}
-    <span class="leancloud-visitors" id="{{ page.url | relative_url }}" data-xid="{{ page.url | relative_url }}" data-flag-title="{{ page.title }}">
-      {{ page.post.visitor.prepend }}
-      <span class="leancloud-visitors-count">
-        <i class="fas fa-spinner fa-pulse"></i>
-      </span>{{ page.post.visitor.unit }}
-    </span>
-    {% endif %}
-    {% if page.post.tags.enable %}
-    {% if page.tags.size > 0 %}
-    {{ page.post.tags.prepend }}
-    {{ page.tags | array_to_sentence_string }}
-    {% endif %}
-    {% endif %}
-  </span>
+<span class="reading-time">
+  {% assign words = content | number_of_words %}
+  {% if words < 360 %}
+    1 min read
+  {% else %}
+    {{ words | divided_by:180 }} 分钟 读完
+  {% endif %}
+</span>
+    
+
