@@ -1,6 +1,10 @@
 ---
 layout: default
 ---
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/metismenu/dist/metisMenu.min.css" />
+  <script src="https://unpkg.com/metismenu"></script>
+</head>
     {% assign author = site.authors[page.author] %}
                 <div class="content_container">
                     <div class="card shadow-sm">
@@ -106,5 +110,6 @@ layout: default
        
        {% include sidebar.html %}
 
-
+<script src="https://cdn.jsdelivr.net/npm/jump.js"></script>
+<script src="/assets/js/mm-event2.js"></script>
 
