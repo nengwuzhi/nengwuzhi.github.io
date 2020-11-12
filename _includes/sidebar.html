@@ -1,51 +1,49 @@
 
-
             <!-- Content -->
-    <div class="sidebar side content">
-    <link href="/assets/css/mm-vertical.css" rel="stylesheet" type="text/css"/>  
-      
-    <nav class="sidebar-nav">  
-    <ul class="metismenu" id="menu">
-            <li class="mm-active">
-            <a href="#" aria-expanded="true">
-              <span class="sidebar-nav-item-icon fa fa-github fa-lg"></span>
-              <span class="sidebar-nav-item">目录</span>
-              <span class="fa arrow"></span>
-            </a>
-             <ul>
+    <div class="container sidebar side content sticky-top sticky-top-offset">
+            
+            
+            <div class="card shadow-sm">
+            <div class="widget">
+                <div>
+                    <i class="fa fa-list"></i>
+                     目录
+                </div>
             <nav id="toc" data-toggle="toc"></nav>
-            </ul>
-          </li>   
- 
-                
-              <li>
-            <a href="#" aria-expanded="false">
-                     分类<span class="fa arrow"></span>
-            </a>
-            <ul class="content-ul" cate>           
-              <li>
-                      <ul class="animated bounceIn">    
-                    {% for category in site.categories %}
-                            <a class="sidebar" href="{{ root_url }}/{{ site.all_dir }}#{{ category | first }}" cate="{{ category | first }}">
+            </div>
+            </div>    
+           
+            
+            <div class="card shadow-sm">
+            <div class="widget">
+                <div>
+                    <i class="fa fa-th-list"></i>
+                    分类
+                </div>
+                    <div class="content-ul" cate>
+                  {% for category in site.categories %}
+              
+                        <a class="sidebar" href="{{ root_url }}/{{ site.all_dir }}#{{ category | first }}" cate="{{ category | first }}">
                             <span class="name">
                                 {{ category | first }}
                             </span>
                             <span class="badge">{{ category | last | size }}</span>
                         </a>
+         
                     {% endfor %}
-                        </ul>
-              </li>
-            </ul>
-          </li>
-                
-                   <li>
-                <a href="#" aria-expanded="false">
-                  标签<span class="fa fa-tags fa arrow"></span>
-                </a>
-                <ul class="class="tags-cloud"">
-              <li>
-                      <ul class="animated bounceIn">   
-              {% assign first = site.tags.first %}
+                     </div>
+            </div>
+            </div>  
+              
+            
+            <div class="card shadow-sm">
+            <div class="widget">
+                 <div>
+                    <i class="fa fa-tags"></i>
+                    标签
+                </div>
+                <div class="tags-cloud">
+                    {% assign first = site.tags.first %}
                     {% assign max = first[1].size %}
                     {% assign min = max %}
                     {% for tag in site.tags offset:1 %}
@@ -79,13 +77,7 @@
                       {% endif %}
                       <a class="sidebar" href="{{ root_url }}/{{ site.categories_dir }}#{{ tag[0] }}">{{ tag[0] }}</a>
                     {% endfor %}
-                        </ul>
-              </li>
-            </ul>
-          </li>
-                
-                
- 
-            </ul>            
-            </nav>
+                </div>
+                </div>
+   </div>
         </div>
