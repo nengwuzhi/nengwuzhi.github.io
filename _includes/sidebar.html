@@ -15,16 +15,15 @@
             <nav id="toc" data-toggle="toc"></nav>
             </ul>
           </li>   
+ 
                 
-            
-            <div class="card shadow-sm">
-            <div class="widget">
-                <div>
-                    <i class="fa fa-th-list"></i>
-                    分类
-                </div>
-                    <div class="content-ul" cate>
-                  {% for category in site.categories %}
+              <li>
+            <a href="#" aria-expanded="false">
+                     分类<span class="fa arrow"></span>
+            </a>
+            <ul class="content-ul" cate>           
+              <li>
+                    {% for category in site.categories %}
               
                         <a class="sidebar" href="{{ root_url }}/{{ site.all_dir }}#{{ category | first }}" cate="{{ category | first }}">
                             <span class="name">
@@ -34,10 +33,11 @@
                         </a>
          
                     {% endfor %}
-                     </div>
-            </div>
-            </div>  
-              
+              </li>
+            </ul>
+          </li>
+                
+                
             
             <div class="card shadow-sm">
             <div class="widget">
