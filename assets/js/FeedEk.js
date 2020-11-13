@@ -53,7 +53,7 @@
 					<div class="card-title"><a href="' + itm.link + '" target="' + def.TitleLinkTarget + '" >' + itm.title + '</a></div>'
 				});
 
-				$("#" + id).append('<ul class="feedEkList">' + s + '</ul>');
+				$("#" + id).append('<div class="feedEkList">' + s + '</div>');
 			}
 		});
 	};
