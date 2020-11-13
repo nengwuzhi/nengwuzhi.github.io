@@ -44,13 +44,14 @@
 						s += '<div class="itemContent">';
 						if (def.DescCharacterLimit > 0 && itm.description.length > def.DescCharacterLimit) {
 							s += itm.description.substring(0, def.DescCharacterLimit) + '...';
+							<div class="card-title"><a href="' + itm.link + '" target="' + def.TitleLinkTarget + '" >' + itm.title + '</a></div>';
 						}
 						else {
 							s += itm.description;
 						}
 						s += '</div>';
 					}
-					<div class="card-title"><a href="' + itm.link + '" target="' + def.TitleLinkTarget + '" >' + itm.title + '</a></div>'
+					
 				});
 
 				$("#" + id).append('<div class="feedEkList">' + s + '</div>');
