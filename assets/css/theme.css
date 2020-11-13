@@ -46,11 +46,10 @@ article .archive {
 }
 article {
     box-sizing: border-box;
-    background: #FDFDFD;
-    margin-bottom: 0px;
-    margin-right: auto;
+    background: #ffffff;
     position: relative;
     width: auto;
+    padding: 49px;
 }
 .archive .date {
 	opacity: 0.5;
