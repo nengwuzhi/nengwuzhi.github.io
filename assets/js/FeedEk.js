@@ -27,7 +27,7 @@
 					return;
 
 				$.each(result.data, function (e, itm) {
-					s += '<li><div class="card-title"><a href="' + itm.link + '" target="' + def.TitleLinkTarget + '" >' + itm.title + '</a></div>';
+					s += '<li>;
 
 					if (def.ShowPubDate) {
 						dt = new Date(itm.publishDate);
@@ -50,6 +50,7 @@
 						}
 						s += '</div>';
 					}
+					<div class="card-title"><a href="' + itm.link + '" target="' + def.TitleLinkTarget + '" >' + itm.title + '</a></div>'
 				});
 
 				$("#" + id).append('<ul class="feedEkList">' + s + '</ul>');
