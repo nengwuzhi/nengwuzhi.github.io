@@ -97,7 +97,7 @@ article ol {
     width: calc(25% - 20px);
     float: left;
 }
-.sidebar.side.content.sticky-top.sticky-top-offset {
+.sidebar.sticky-top.sticky-top-offset {
     top: 0px;
     height: 3000px;
     overflow-x: hidden;
