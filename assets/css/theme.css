@@ -16,7 +16,12 @@ body, code, pre {
         float: right;
         text-indent: 0px;
 }
-
+.content_container .meta {
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid rgb(0 0 0 / 20%);
+    border-bottom: 1px solid rgb(0 0 0 / 20%);
+}
 .content_container article p {
     padding: 0;
     font-weight: 400;
@@ -25,16 +30,6 @@ body, code, pre {
 .content_container .post_title {
 	color: #505879;
 	padding: 10px 0;
-}
-.content_container .meta {
-    margin: 20px 0;
-    padding: 10px 0;
-    border-top: 1px solid rgb(0 0 0 / 20%);
-    border-bottom: 1px solid rgb(0 0 0 / 20%);
-}
-
-.content_container .post_nav {
-	margin: 10px 0px 10px;
 }
 
 .content_container .post_nav .prev {
@@ -131,24 +126,6 @@ a.sidebar:hover, a.sidebar:focus {
 }
 .widget {
 	margin: 0;
-}
-
-.widget {
-	background: #FDFDFD;
-	box-sizing: border-box;
-	padding: 35px;
-}
-.widget .title {
-	font-weight: 300;
-        color: #505879;
-}
-
-.widget ul {
-	list-style: disc;
-}
-
-.widget ul li {
-	    padding: 0;
 }
 
 /*
