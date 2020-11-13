@@ -17,15 +17,6 @@ body, code, pre {
         float: left;
         text-indent: 0px;
 }
-.content_container .post_nav:after {
-	content: "";
-	display: table;
-	clear: both;
-}
-.content_container article {
-    padding: 40px;
-    width: 100%;
-}
 
 .content_container article p {
     padding: 0;
@@ -43,32 +34,8 @@ body, code, pre {
     border-bottom: 1px solid rgb(0 0 0 / 20%);
 }
 
-
-.content_container .catsandtags {
-    margin: 20px 0;
-    padding: 10px 0;
-    border-bottom: 1px solid rgb(0 0 0 / 20%);
-    line-height: 2.5;
-}
-
-.content_container .catsandtags .category .name,.content_container .catsandtags .tags .name {
-	font-weight: 500;
-}
-
-.content_container .catsandtags a,.content_container .catsandtags footer .backtotop,footer .content_container .catsandtags .backtotop {
-	padding: 5px;
-	background: #FDFDFD;
-	border: 1px solid #E6DED6;
-}
-
 .content_container .post_nav {
 	margin: 10px 0px 10px;
-}
-
-.content_container .post_nav a,.content_container .post_nav footer .backtotop,footer .content_container .post_nav .backtotop {
-	padding: 5px 10px;
-	border: 1px solid #E6DED6;
-	background: #FDFDFD;
 }
 
 .content_container .post_nav .prev {
