@@ -19,7 +19,7 @@ nav[data-toggle="toc"] .nav > li > a:focus {
   color: #563d7c;
   text-decoration: none;
   background-color: transparent;
-  border-left: 1px solid #563d7c;
+  border-right: 1px solid #563d7c;
 }
 nav[data-toggle="toc"] .nav-link.active,
 nav[data-toggle="toc"] .nav-link.active:hover,
@@ -28,7 +28,7 @@ nav[data-toggle="toc"] .nav-link.active:focus {
   font-weight: bold;
   color: #ef9696!important;
   background-color: transparent;
-  border-left: 2px solid #3e4449;
+  border-right: 2px solid #3e4449;
 }
 
 /* Nav: second level (shown on .active) */
