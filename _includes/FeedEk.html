@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+img {
+    width: 290px;
+}
+.feedEkList{width:450px; list-style:none outside none;background-color:#FFFFFF; border:1px solid #D3CAD7; padding:4px 6px; color:#3E3E3E;}
+.feedEkList li{border-bottom:1px solid #D3CAD7; padding:5px;}
+.feedEkList li:last-child{border-bottom:none;}
+.itemTitle a{font-weight:bold; color:#4EBAFF !important; text-decoration:none }
+.itemTitle a:hover{ text-decoration:underline }
+.itemDate{font-size:11px;color:#AAAAAA;} 
+
+    .rssDiv{float: left;padding-right: 35px;}
+    ul{width: 300px !important;}
+</style>
+</head>
+<body>
+
+    <div class="rssDiv">
+        <p><strong>福克斯新闻</strong></p>
+        <div id="divRss"></div>  
+    </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/FeedEk.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+       		$('#divRss').FeedEk({
+				FeedUrl: 'http://www.ftchinese.com/rss/feed', MaxCount: 1, ShowDesc: true, ShowPubDate: true, DescCharacterLimit: 200
+			});
+
+			$('#divRss2').FeedEk({
+				FeedUrl: 'https://cn.nytimes.com/rss/', MaxCount: 1, ShowDesc: true, ShowPubDate: true, DescCharacterLimit: 200
+			});
+			$('#divRss3').FeedEk({
+				FeedUrl: 'https://jquery-plugins.net/rss', MaxCount: 4, ShowDesc: true
+			});
+
+			$('#divRss10').FeedEk({
+				FeedUrl: 'https://jquery-plugins.net/rss', MaxCount: 2, DateFormat: 'MM-dd-yyyy HH:mm', DateFormatLang: 'en'
+			});
+
+    });
+
+</script>
+</body>
+
+</html>
