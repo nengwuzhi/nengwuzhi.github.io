@@ -27,7 +27,7 @@
 					return;
 
 				$.each(result.data, function (e, itm) {
-					s += '<li>;
+					s += '<li><div class="card-title"><a href="' + itm.link + '" target="' + def.TitleLinkTarget + '" >' + itm.title + '</a></div>';
 
 					if (def.ShowPubDate) {
 						dt = new Date(itm.publishDate);
@@ -44,7 +44,6 @@
 						s += '<div class="itemContent">';
 						if (def.DescCharacterLimit > 0 && itm.description.length > def.DescCharacterLimit) {
 							s += itm.description.substring(0, def.DescCharacterLimit) + '...';
-							<div class="card-title"><a href="' + itm.link + '" target="' + def.TitleLinkTarget + '" >' + itm.title + '</a></div>';
 						}
 						else {
 							s += itm.description;
