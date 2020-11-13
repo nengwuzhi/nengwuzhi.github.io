@@ -11,6 +11,9 @@ body, code, pre {
 .sticky-top-offset {
     top: 0;
 }
+.content {
+    padding: 20px;
+}
 .content_container {
 	width: 75%;
         float: right;
