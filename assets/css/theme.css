@@ -704,7 +704,6 @@ article .card-body {
     -moz-box-flex-direction: row;
     -webkit-flex-direction: row;
     flex-direction: row;
-    border-radius:6px;
      transition: all 0.2s;
 }
 .grid-item:hover i.text-muted {
