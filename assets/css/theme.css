@@ -106,7 +106,8 @@ article ol {
 }
 .sidebar.side.content.sticky-top.sticky-top-offset {
     top: 0px;
-    height: 600px;
+    height: 1000px;
+    overflow-x: hidden;
     overflow-y: auto;
     z-index: auto;
 }
