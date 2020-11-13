@@ -5,80 +5,186 @@ permalink: /dragula/
 icon: dragula
 type: page
 ---
-
-  <head>
-    <meta charset="utf-8">
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:400,300,300italic,400italic,500,500italic,700,700italic">
-    <link rel="stylesheet" href="https://muuri.dev/css/main.css?v103">
-    <link rel="stylesheet" href="https://muuri.dev/css/demo-kanban.css?v103">
-  </head>
-  <body>
-   
-    <div class="drag-container"></div>
- {% include blockquote.html %}
-    
-    <section class="kanban-demo">
-      <h2 class="section-title"><span>Kanban Demo</span></h2>
-
- <div class="demo">
-        <template class="board-item-template">
-          <div class="board-item">
-            <div class="board-item-content">
-              <div class="board-item-title">标题</div>
-              <div class="board-item-handle">处理</div>
-              <div class="board-item-action edit">
-                <svg class="board-item-action-icon icon-edit" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                  <path fill="currentColor" d="M402.6 83.2l90.2 90.2c3.8 3.8 3.8 10 0 13.8L274.4 405.6l-92.8 10.3c-12.4 1.4-22.9-9.1-21.5-21.5l10.3-92.8L388.8 83.2c3.8-3.8 10-3.8 13.8 0zm162-22.9l-48.8-48.8c-15.2-15.2-39.9-15.2-55.2 0l-35.4 35.4c-3.8 3.8-3.8 10 0 13.8l90.2 90.2c3.8 3.8 10 3.8 13.8 0l35.4-35.4c15.2-15.3 15.2-40 0-55.2zM384 346.2V448H64V128h229.8c3.2 0 6.2-1.3 8.5-3.5l40-40c7.6-7.6 2.2-20.5-8.5-20.5H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V306.2c0-10.7-12.9-16-20.5-8.5l-40 40c-2.2 2.3-3.5 5.3-3.5 8.5z"></path>
-                </svg>
-                <svg class="board-item-action-icon icon-save" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                  <path fill="currentColor" d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"></path>
-                </svg>
-              </div>
-              <div class="board-item-action delete">
-                <svg class="board-item-action-icon icon-delete" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                  <path fill="currentColor" d="M439.15 453.06L297.17 384l141.99-69.06c7.9-3.95 11.11-13.56 7.15-21.46L432 264.85c-3.95-7.9-13.56-11.11-21.47-7.16L224 348.41 37.47 257.69c-7.9-3.95-17.51-.75-21.47 7.16L1.69 293.48c-3.95 7.9-.75 17.51 7.15 21.46L150.83 384 8.85 453.06c-7.9 3.95-11.11 13.56-7.15 21.47l14.31 28.63c3.95 7.9 13.56 11.11 21.47 7.15L224 419.59l186.53 90.72c7.9 3.95 17.51.75 21.47-7.15l14.31-28.63c3.95-7.91.74-17.52-7.16-21.47zM150 237.28l-5.48 25.87c-2.67 12.62 5.42 24.85 16.45 24.85h126.08c11.03 0 19.12-12.23 16.45-24.85l-5.5-25.87c41.78-22.41 70-62.75 70-109.28C368 57.31 303.53 0 224 0S80 57.31 80 128c0 46.53 28.22 86.87 70 109.28zM280 112c17.65 0 32 14.35 32 32s-14.35 32-32 32-32-14.35-32-32 14.35-32 32-32zm-112 0c17.65 0 32 14.35 32 32s-14.35 32-32 32-32-14.35-32-32 14.35-32 32-32z"></path>
-                </svg>
-              </div>
-            </div>
-          </div>
-        </template>
-
-        <template class="board-column-template">
-          <div class="board-column">
-            <div class="board-column-content">
-              <div class="board-column-header">
-                <div class="board-column-title"></div>
-                <button class="board-column-action add">
-                  <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                    <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
-                  </svg>
-                </button>
-              </div>
-              <div class="board-column-items-container">
-                <div class="board-column-items"></div>
-              </div>
-            </div>
-          </div>
-        </template>
-
-        <div class="board-container">
-          <div class="board muuri">
-          
-          </div>
-     </div>
-    
-    </section>
+ <head>
+<link href="/css/dragula.css" rel="stylesheet" type="text/css">
+<link href="/css/example.css" rel="stylesheet" type="text/css">
+</head>
 
 
 
+<div class="card shadow-sm">        
+<article>
+  
+<h1><a href="https://github.com/bevacqua/dragula"><img src="/img/resources/logo.svg" onerror="this.src=&quot;resources/logo.png&quot;" alt="dragula"></a></h1>
+<h3 class="tagline"><span class="tagline-text">拖放是如此简单，很痛</span><a class="slack-join" href="https://dragula-slackin.herokuapp.com/" target="_blank">加入我们的Slack</a></h3>
 
-    <script src="https://cdn.jsdelivr.net/npm/web-animations-js@2.3.2/web-animations.min.js"></script>
-    <script src="/assets/js/muuri.min.js"></script>
-    <script src="/assets/js/demo-kanban.js"></script>
+<div class="examples">
+  <script async="" type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&amp;serve=CKYI5KJW&amp;placement=githubcombevacqua" id="_carbonads_js"></script>
+  <div class="parent">
+    <label for="hy"在这两个容器之间移动东西。请注意如何将这些东西插入鼠标指针附近？好东西。</label>
+    <div class="wrapper">
+      <div id="left-defaults" class="container">
+        <div>您可以在这两个容器之间移动这些元素</div>
+        <div>将它们移到其他地方是不可能的</div>
+        <div>任何东西都可以移动。其中包括图片，<a href="https://github.com/bevacqua/dragula">links</a>, 或任何其他嵌套元素。
+        <div class="image-thing"><img src="/img/resources/icon.svg" onerror="this.src=&quot;resources/icon.png&quot;" alt="dragula"></div><sub>(您仍然可以照常单击链接！)</sub>
+        </div>
+      </div>
+      <div id="right-defaults" class="container">
+        <div>也有可能在同一容器中移动元素，从而改变其位置</div>
+        <div>这是默认用例。您只需要指定要使用的容器</div>
+        <div>未来将出现更多交互式用例</div>
+        <div>Moving <code>&lt;input/&gt;</code> 元素工作正常。您仍然可以集中精力。 <input placeholder="See?"></div>
+        <div>确保检查出 <a href="https://github.com/bevacqua/dragula#readme">GitHub上的文档！</a></div>
+      </div>
+    </div>
+    <pre>      <code>
+dragula([document.getElementById(left), document.getElementById(right)]);
+              </code>
+    </pre>
+  </div>
+  <div class="parent">
+    <label for="hy">在拖动事件的生命周期中，有很多事件。退房 <a href="https://github.com/bevacqua/dragula#drakeon-events">all of them</a> 在文档中！</label>
+    <div class="wrapper">
+      <div id="left-events" class="container">
+        <div>As soon as you start dragging an element, a <code>drag</code> event is fired</div>
+        <div>Whenever an element is cloned because <code>copy: true</code>, a <code>cloned</code> event fires</div>
+        <div>The <code>shadow</code> 每当将放置元素的占位符移动到其他容器或位置时，就会触发事件</div>
+        <div>A <code>drop</code> 每当将元素放置到其起源以外的任何位置时，都会触发事件 <em>(where it was initially dragged from)</em></div>
+      </div>
+      <div id="right-events" class="container">
+        <div>如果该元素由于掉落到任何容器之外而从DOM中删除，则 <code>remove</code> 事件被解雇</div>
+        <div>A <code>cancel</code> event is fired when an element would be dropped onto an invalid target, but retains its original placement instead</div>
+        <div>The <code>over</code> event fires when you drag something over a container, and <code>out</code> fires when you drag it away from the container</div>
+        <div>Lastly, a <code>dragend</code> event is fired whenever a drag operation ends, regardless of whether it ends in a cancellation, removal, or drop</div>
+      </div>
+    </div>
+    <pre>      <code>
+dragula([document.getElementById(left), document.getElementById(right)])
+  .on('drag', function (el) {
+    el.className = el.className.replace('ex-moved', '');
+  }).on('drop', function (el) {
+    el.className += ' ex-moved';
+  }).on('over', function (el, container) {
+    container.className += ' ex-over';
+  }).on('out', function (el, container) {
+    container.className = container.className.replace('ex-over', '');
+  });
+      </code>
+    </pre>
+  </div>
+  <div class="parent">
+    <label for="hy">Need to be able to quickly delete stuff when it spills out of the chosen containers? Note how you can easily sort the items in any containers by just dragging and dropping.</label>
+    <div class="wrapper">
+      <div id="left-rm-spill" class="container">
+        <div>Anxious Cab Driver</div>
+        <div>Thriving Venture</div>
+        <div>Such <a href="http://ponyfoo.com">a good blog</a></div>
+        <div>Calm Clam</div>
+      </div>
+      <div id="right-rm-spill" class="container">
+        <div>Banana Boat</div>
+        <div>Orange Juice</div>
+        <div>Cuban Cigar</div>
+        <div>Terrible Comedian</div>
+      </div>
+    </div>
+    <pre>      <code>
+dragula([document.getElementById(single)], {
+  removeOnSpill: true
+});
+      </code>
+    </pre>
+  </div>
+  <div class="parent">
+    <label for="hy">By default, dropping an element outside of any known containers will keep the element in the last place it went over. You can make elements go back to origin if they're dropped outside of known containers, too.</label>
+    <div class="wrapper">
+      <div id="left-rollbacks" class="container">
+        <div>Moving items between containers works as usual</div>
+        <div>If you try to drop an item outside of any containers, though, it'll retain its original position</div>
+        <div>When that happens, a <code>cancel</code> event will be raised</div>
+      </div>
+      <div id="right-rollbacks" class="container">
+        <div>Note that the dragged element will go back to the place you originally dragged it from, even if you move it over other containers</div>
+        <div>This is useful if you want to ensure drop events only happen when the user intends for them to happen explicitly, avoiding surprises</div>
+      </div>
+    </div>
+    <pre>      <code>
+dragula([document.getElementById(left), document.getElementById(right)], {
+  revertOnSpill: true
+});
+      </code>
+    </pre>
+  </div>
+  <div class="parent">
+    <label for="hy">Copying stuff is common too, so we made it easy for you.</label>
+    <div class="wrapper">
+      <div id="left-copy" class="container">
+        <div>When elements are copyable, they can't be sorted in their origin container</div>
+        <div>Copying prevents original elements from being dragged. A copy gets created and <em>that</em> gets dragged instead</div>
+        <div>Whenever that happens, a <code>cloned</code> event is raised</div>
+      </div>
+      <div id="right-copy" class="container">
+        <div>Note that the clones get destroyed if they're not dropped into another container</div>
+        <div>You'll be dragging a copy, so when they're dropped into another container you'll see the duplication.</div>
+      </div>
+    </div>
+    <pre>      <code>
+dragula([document.getElementById(left), document.getElementById(right)], {
+  copy: true
+});
+      </code>
+    </pre>
+  </div>
+  <div class="parent">
+    <label for="hy">Copying stuff from only one of the containers and sorting on the other one? No problem!</label>
+    <div class="wrapper">
+      <div id="left-copy-1tomany" class="container">
+        <div>When elements are copyable, they can't be sorted in their origin container</div>
+        <div>Copying prevents original elements from being dragged. A copy gets created and <em>that</em> gets dragged instead</div>
+        <div>Whenever that happens, a <code>cloned</code> event is raised</div>
+        <div>Note that the clones get destroyed if they're not dropped into another container</div>
+        <div>You'll be dragging a copy, so when they're dropped into another container you'll see the duplication.</div>
+      </div>
+      <div id="right-copy-1tomany" class="container">
+      </div>
+    </div>
+    <pre>      <code>
+dragula([document.getElementById(left), document.getElementById(right)], {
+  copy: function (el, source) {
+    return source === document.getElementById(left)
+  },
+  accepts: function (el, target) {
+    return target !== document.getElementById(left)
+  }
+});
+      </code>
+    </pre>
+  </div>
 
-</body>
-</html>
+  <div class="parent">
+    <label><strong>单击或拖动！</strong> 在 <code> 鼠标移动 </code> 事件之前释放鼠标按钮时触发单击，否则触发拖动事件。无需额外的配置。</label>
+    <div class="wrapper">
+      <div id="sortable" class="container">
+        <div>单击这些元素会触发常规<code>点击</code>您可以听的活动</div>
+        <div>尝试拖动或单击此元素。</div>
+        <div>请注意如何正常单击？</div>
+        <div>拖动不会触发点击事件。</div>
+        <div>点击也不会拖累。</div>
+        <div>如果您具有可以单击或拖动的元素，这将很有用。</div>
+      </div>
+    </div>
+    <pre>      <code>
+        dragula([document.getElementById(container)]);
+      </code>
+    </pre>
+  </div>
+</div>
+      </article>
+       </div> 
+  
+<script src="/js/dragula.min.js"></script>
+<script src="/js/example.min.js"></script>
 
 
 
