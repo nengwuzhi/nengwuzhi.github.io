@@ -101,7 +101,7 @@ article ol {
 	list-style: decimal;
 }
 .sidebar {
-    width: calc(22% - 20px);
+    width: calc(25% - 20px);
     float: right;
 }
 .sidebar.side.content.sticky-top.sticky-top-offset {
