@@ -8,12 +8,13 @@
             {% if post.yt-video-id %}
                 <div class="video_container">
                     <iframe width="100%" height="315" src="https://www.youtube.com/embed/{{ post.yt-video-id }}?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>                
-        <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}" class="noline">
+     <div class="postcontent">
+                            <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}" class="noline">
                 </a>
                   </div>
             {% endif %}
           {% endif %}
-        
+      </div> 
     {% unless post.image %}
     
        <a href="{{site.baseurl}}{{post.url}}"  class="d-block p-3">
