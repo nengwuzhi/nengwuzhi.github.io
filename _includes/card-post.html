@@ -1,28 +1,30 @@
 
 <!-- Grid sizer -->
-            <div class="grid-sizer col-lg-4 col-md-6"></div>
-<div class="col-lg-4 grid-item mb-4" {% unless post.image %} style="min-height:250px;background:#fff;" {% endunless %}>
+            <div class="grid-sizer col-md-4"></div>
+
+<div class="col-md-4 grid-item mb-3" {% unless post.image %} style="min-height:250px;" {% endunless %}>
       
-         {% if post.type == "youtube" %}
+            {% if post.type == "youtube" %}
             {% if post.yt-video-id %}
-                <div class="video_container">
+                   <div class="video_container">
                     <iframe width="100%" height="315" src="https://www.youtube.com/embed/{{ post.yt-video-id }}?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>                
-        <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}" class="noline">
+ <div class="postcontent">   
+                  <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}" class="noline">
                 </a>
                   </div>
             {% endif %}
-          {% endif %}
-        
+            {% endif %}
+
     {% unless post.image %}
     
-       <a href="{{site.baseurl}}{{post.url}}"  class="d-block p-3">
+        <a href="{{site.baseurl}}{{post.url}}"  class="d-block p-3">
         <h2 class="card-title title">{{ post.title }}</h2>         
            <small class="post-content small text-muted font-italic">{{ post.content | strip_html | truncatewords:25 }}</small>
         <div class="more mr-2 mb-2">                
             <i class="fa fa-arrow-circle-right text-white" aria-hidden="true"></i>
         </div> 
         </a>
-        
+</div>                            
     {% endunless %}
         
     {% if post.image %} 
@@ -72,6 +74,5 @@
     {% endif %}
       
 </div>
-
 
 
