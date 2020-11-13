@@ -14,7 +14,7 @@ body, code, pre {
 .content_container {
 	width: 75%;
         margin-left: 15px;
-        float: left;
+        float: right;
         text-indent: 0px;
 }
 
@@ -102,7 +102,7 @@ article ol {
 }
 .sidebar {
     width: calc(25% - 20px);
-    float: right;
+    float: left;
 }
 .sidebar.side.content.sticky-top.sticky-top-offset {
     top: 0px;
