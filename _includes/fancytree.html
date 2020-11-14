@@ -1,4 +1,14 @@
-	<div id="tree">
+	<!--fancytree-->
+<script src="{{site.baseurl}}/assets/js/jquery.fancytree.ui-deps.js"></script>
+<script src="{{site.baseurl}}/assets/js/jquery.fancytree.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			// using default options
+			$("#tree").fancytree();
+		});
+	</script>
+
+<div id="tree">
 		<ul id="treeData"  style="display: none;">
 			<li id="id1" class="folder" title="看，工具提示！">item1 带按键和工具提示
 				<ul>
@@ -44,12 +54,4 @@
 				</ul>
 		</ul>
 	</div>
-<!--fancytree-->
-<script src="{{site.baseurl}}/assets/js/jquery.fancytree.ui-deps.js"></script>
-<script src="{{site.baseurl}}/assets/js/jquery.fancytree.min.js"></script>
-	<script type="text/javascript">
-		$(function(){
-			// using default options
-			$("#tree").fancytree();
-		});
-	</script>
+
