@@ -161,7 +161,7 @@ a.sidebar:hover, a.sidebar:focus {
 .heart_img img {
     animation: 2.5s ease 0s normal none infinite running animateHeartBeat;
     overflow: inherit;
-    position: relative; display:inline-block; max-width:100px;
+    position: relative; display:inline-block; max-width:20px;
 }
 
 @keyframes animateHeartBeat {
