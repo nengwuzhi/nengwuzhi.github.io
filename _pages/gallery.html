@@ -1,0 +1,26 @@
+---
+title: "photos"
+layout: default
+permalink: "/gallery"
+---
+          <div class="element-item col-sm-3 col-6 graphics people p-0 data-category="people">
+            <div class="inner-portfolio">
+							<img src="/img/avatar1.jpg" alt=""></a>    	      	
+            </div>
+          </div>
+
+<!-- Gallery Section-->
+    <section class="gallery no-padding">    
+      <div class="row">
+          {% for image in site.static_files %}
+    {% if image.path contains 'photos' %}
+                <div class="mix col-lg-3 col-md-3 col-sm-6">
+                    <div class="item">
+                        <a href="{{ site.baseurl }}{{ image.path }}" data-fancybox="gallery" class="image">
+                <img src="{{ site.baseurl }}{{ image.path }}" alt="..." class="img-fluid">
+                    <div class="overlay d-flex align-items-center justify-content-center"><i class="fa fa-search-plus"></i></div></a></div>
+                    </div>
+   {% endif %}
+         {% endfor %}
+            </div>
+    </section>
