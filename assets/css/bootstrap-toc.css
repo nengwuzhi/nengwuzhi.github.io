@@ -27,7 +27,6 @@ nav[data-toggle="toc"] .nav-link.active:focus {
   padding-left: 18px;
   font-weight: bold;
   color: #ef9696!important;
-  background-color: #ef96962e;
   border-right: 2px solid #3e4449;
 }
 
