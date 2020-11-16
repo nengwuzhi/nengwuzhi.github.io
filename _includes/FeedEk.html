@@ -24,12 +24,12 @@ img {
     </div>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/FeedEk.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
        		$('#divRss').FeedEk({
-				FeedUrl: 'http://www.ftchinese.com/rss/feed', MaxCount: 1, ShowDesc: true, ShowPubDate: true, DescCharacterLimit: 200
+				FeedUrl: 'http://www.ftchinese.com/rss/feed', MaxCount: 5, ShowDesc: false, ShowPubDate: true, DescCharacterLimit: 200
 			});
 
 			$('#divRss2').FeedEk({
