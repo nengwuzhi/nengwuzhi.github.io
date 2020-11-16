@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/css/APlayer.min.css">
+<div id="aplayer"></div>
+<script src="/js/APlayer.min.js"></script>
+</head>
+<body>
+    
+    <script>
+const ap = new APlayer({
+    container: document.getElementById('aplayer'),
+    mini: false,
+    fixed: false,
+    autoplay: false,
+    theme: '#FADFA3',
+    loop: 'all',
+    lrcType: 3,
+    order: 'random',
+    preload: 'auto',
+    volume: 0.7,
+    mutex: true,
+    listFolded: false,
+    listMaxHeight: 90,
+  audio: [
+        {
+            name: '天空之城',
+            artist: 'artist1',
+            url: 'music/天空之城.mp3',
+            cover: 'music/天空之城.jpg',
+            lrc: '天空之城.lrc',
+            theme: '#ebd0c2'
+        },
+        {
+            name: '王菲+-+传奇',
+            artist: 'artist2',
+            url: 'music/王菲+-+传奇.mp3',
+            cover: 'music/王菲+-+传奇.jpg',
+            lrc: 'music/chuanqi.lrc',
+            theme: '#46718b'
+        },
+       {
+            name: '张津涤·云菲菲-泛水荷塘',
+            artist: 'artist2',
+            url: 'music/张津涤·云菲菲-泛水荷塘.mp3',
+            cover: 'music/张津涤·云菲菲-泛水荷塘.jpg',
+            lrc: 'music/张津涤·云菲菲-泛水荷塘.lrc',
+            theme: '#333'
+        }
+    ]
+});
+
+    </script>
+</body>
