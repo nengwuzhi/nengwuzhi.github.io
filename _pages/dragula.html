@@ -43,10 +43,9 @@ type: page
     <div class="wrapper">
       <div id="left-defaults" class="container">
         {% include fancytree.html %}
-        <div>任何东西都可以移动。其中包括图片，<a href="https://github.com/bevacqua/dragula">links</a>, 或任何其他嵌套元素。
-        <div class="image-thing"><img src="{{site.baseurl}}/assets/css/resources/icon.svg" onerror="this.src=&quot;resources/icon.png&quot;" alt="dragula"></div><sub>(您仍然可以照常单击链接！)</sub>
-        </div>
-      </div>
+        <div><p><strong>福克斯新闻</strong></p>
+        <div id="divRss"></div>  
+       </div>
       <div id="right-defaults" class="container">
         <div>{% include music-Player.html %}</div>
      <div>Moving <code>&lt;input/&gt;</code> 元素工作正常。您仍然可以集中精力。 <input placeholder="See?"></div>
@@ -93,5 +92,13 @@ type: page
 </div>
       </article>
        </div> 
+<script type="text/javascript">
+    $(document).ready(function () {
+       		$('#divRss').FeedEk({
+				FeedUrl: 'http://www.ftchinese.com/rss/feed', MaxCount: 5, ShowDesc: false, ShowPubDate: true, DescCharacterLimit: 120
+			});
 
+    });
+
+</script>
 
