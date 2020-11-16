@@ -33,14 +33,14 @@ layout: alt
                             <span class="text-muted d-block mt-1"><i class="fa fa-calendar"></i>{{ page.date | date: "%F" }} · 字数-{{ content | strip_html | strip_newlines | split: "" | size }} · 预计{% include meta-read-time.html %}</span>
 						</small>
 				
-	    <div class="card shadow-sm">
+
             <div class="widget">
           <div class="form-group mb-4">
-            <input type="text" id="text-search" type="email" placeholder="页内搜索?" class="form-control form-control-underlined border-primary">
+            <input type="text" id="text-search exampleFormControlInput2" placeholder="页内搜索?" class="form-control form-control-underlined border-primary">
           </div>
 
             </div>
-            </div>  
+ 
                         </div>
 			    
                         {% if page.type == "standard" %}
