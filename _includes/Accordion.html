@@ -60,7 +60,7 @@
                      目录</a></h6>
           </div>
           <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample" class="collapse show">
-            <div class="card-body p-5">
+            <div class="card-body p-4">
               <nav id="toc" data-toggle="toc"></nav>
             </div>
           </div>
@@ -73,7 +73,7 @@
                     tree</a></h6>
           </div>
         <div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample" class="collapse">
-        <div class="card-body p-5">
+        <div class="card-body p-4">
             {% include fancytree.html %}
             </div>
             </div> 
@@ -86,8 +86,8 @@
                     分类</a></h6>
           </div>
           <div id="collapseThree" aria-labelledby="headingThree" data-parent="#accordionExample" class="collapse">
-            <div class="card-body p-5">
-             <ul class="content-ul" cate>
+            <div class="card-body p-4">
+             <div class="content-ul" cate>
                   {% for category in site.categories %}
               
                         <a class="sidebar categories-list-item" href="{{ root_url }}/{{ site.all_dir }}#{{ category | first }}" cate="{{ category | first }}">
@@ -98,7 +98,7 @@
                         </a>
          
                     {% endfor %}
-                     </ul>
+                     </div>
             </div>
           </div>
         </div>
@@ -110,7 +110,7 @@
                     标签</a></h6>
           </div>
           <div id="collapseFour" aria-labelledby="headingFour" data-parent="#accordionExample" class="collapse">
-            <div class="card-body p-5">
+            <div class="card-body p-4">
                   <div class="tags-cloud">
                     {% assign first = site.tags.first %}
                     {% assign max = first[1].size %}
