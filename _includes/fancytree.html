@@ -1,5 +1,12 @@
-
-<div id="tree">
+<table>
+	<colgroup>
+		<col width="300px" valign="top">
+		<col width="90%">
+	</colgroup>
+	<tr>
+		<td valign="top">
+			<!-- Add a <div> element where the tree should appear: -->
+			<div id="tree">
 			<ul>
 				<li class="expanded folder">Search engines
 				<ul>
@@ -21,5 +28,14 @@
 					<li><a href="sample-iframe-1.html" target="contentFrame">Welcome</a>
 				</ul>
 			</ul>
-</div>
-</td>
+			</div>
+		</td>
+
+		<td>
+			<iframe src="{{site.baseurl}}/all" name="contentFrame" width="100%" height="500"
+					scrolling="yes" marginheight="0" marginwidth="0" frameborder="0">
+			  <p>您的浏览器不支持iframe</p>
+			</iframe>
+		</td>
+	</tr>
+	</table>
