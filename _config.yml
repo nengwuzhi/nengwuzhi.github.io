@@ -19,7 +19,7 @@ nav:
     - {title: 作者, description: 关于作者, url: 'https://nengwuzhi.github.io/authors-list'} 
     - {title: 全部, description: 全部文章, url: 'https://nengwuzhi.github.io/all'}
     - {title: 分享, description: dragula, url: 'https://nengwuzhi.github.io/dragula'}
-    - {title: tab, description: tab, url: 'https://nengwuzhi.github.io/tab'}
+    - {title: tab, description: tab, url: 'https://nengwuzhi.github.io/tree'}
     - {title: gallery, description: gallery, url: 'https://nengwuzhi.github.io/gallery'}    
 authors:
   
