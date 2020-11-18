@@ -60,24 +60,21 @@ type: page
 <div id="section2" class="container-fluid bg-danger" style="padding-top:70px;padding-bottom:70px;padding-left:70px;padding-right:70px;">
       <h1><i class="fa fa-th-list" aria-hidden="true">分类</i></h1>
         <hr>
-        <ul>
-            {% for category in site.categories %}
-            <h3 id="{{category | first}}">{{category | first}}</h3>
-                {% for posts in category  %}
-                    {% for post in posts %}
-                        {% if post.url %}
-                        <li>
-                            <time>
-                            {{ post.date | date:"%F" }} {{ post.date | date: "%a" }}.
-                            </time>
-                            <a class="title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <ul>  
+          {% for category in site.categories %} 
+          {% for post in pages_list %}
+        {% if post.title != null %}
+          {% if group == null or group == post.group %}
+         
+            {% include main-loop-card.html %}
+          {% endif %}
+        {% endif %}
+        {% endfor %}
+        {% assign pages_list = nil %}
+        {% assign group = nil %}
 
-         {% include main-loop-card.html %}
-                        </li>
-                        {% endif %}
-                    {% endfor %}
-                {% endfor %}
-            {% endfor %}
+        {% endfor %}
+
         </ul>
 </div>
 <div id="section3" class="container-fluid bg-info" style="padding-top:70px;padding-bottom:70px;padding-left:70px;padding-right:70px;">
