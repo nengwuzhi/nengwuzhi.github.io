@@ -1,22 +1,18 @@
 <!-- Don't edit anything here, categories are dynamically generated -->
 
-<nav class="navbar-expand-lg navbar-light bg-white pl-2 pr-2">
-    <button class="navbar-light navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExplore" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarsExplore">
+    <div class="tags-cloud">
     <ul class="navbar-nav categories">
     {% assign tags_list = site.tags %}
       {% if tags_list.first[0] == null %}
         {% for tag in tags_list %}
-          <li class="nav-item px-1"><a class="nav-link tags" href="{{site.baseurl}}/categories.html#{{ tag | downcase }}"><i class="zmdi zmdi-label-heart"></i>{{ tag }} </a></li>
+<a class="nav-link tags" href="{{site.baseurl}}/categories.html#{{ tag | downcase }}"><i class="zmdi zmdi-label-heart"></i>{{ tag }} </a>
         {% endfor %}
       {% else %}
         {% for tag in tags_list %}
-          <li class="nav-item px-1"><a class="nav-link tags" href="{{site.baseurl}}/categories.html#{{ tag[0] | downcase }}"><i class="zmdi zmdi-label-heart"></i>{{ tag[0] }} </a></li>
+<a class="nav-link tags" href="{{site.baseurl}}/categories.html#{{ tag[0] | downcase }}"><i class="zmdi zmdi-label-heart"></i>{{ tag[0] }} </a>
         {% endfor %}
       {% endif %}
     {% assign tags_list = nil %}
     </ul>    
     </div>
-</nav>
+
