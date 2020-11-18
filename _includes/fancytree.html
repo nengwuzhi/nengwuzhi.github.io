@@ -1,41 +1,46 @@
-<table>
-	<colgroup>
-		<col width="300px" valign="top">
-		<col width="90%">
-	</colgroup>
-	<tr>
-		<td valign="top">
-			<!-- Add a <div> element where the tree should appear: -->
-			<div id="tree">
-			<ul>
-				<li class="expanded folder">Search engines
+	<div id="tree">
+		<ul id="treeData"  style="display: none;">
+			<li id="id1" class="folder" title="看，工具提示！">item1 带按键和工具提示
 				<ul>
-					<li><a href="https://nengwuzhi.github.io/dragula/" target="contentFrame">DuckDuckGo</a>
-					<li><a href="//duckduckgo.com" target="_self">DuckDuckGo (target='_self')</a>
-					<li><a href="http://duckduckgo.com" target="_top" title="This link replaces the current page">DuckDuckGo (target='_top')</a>
-					<li><a href="https://www.bing.com" target="contentFrame">Bing</a>
-					<li><a href="//www.wolframalpha.com/" target="contentFrame">WolframAlpha</a>
+					<li id="id1.1">Sub-item 3.1
+						<ul>
+							<li id="id1.1.1">Sub-item 3.1.1
+							<li id="id1.1.2">Sub-item 3.1.2
+							<li id="id1.1.3">Sub-item 3.1.3
+						</ul>
+					<li id="id1.2">Sub-item 3.2
+						<ul>
+							<li id="id1.2.1">Sub-item 3.2.1
+							<li id="id1.2.2">Sub-item 3.2.2
+						</ul>
 				</ul>
-				<li class="expanded folder">jQuery
+			<li id="id2">item2
+			<li id="id3" class="folder">Folder <em>with some</em> 子项
 				<ul>
-					<li><a href="//www.jquery.com/" target="contentFrame">jQuery</a>
-					<li><a href="//ui.jquery.com/" target="contentFrame">jQuery UI</a>
-					<li><a href="//api.jquery.com/" target="contentFrame">API browser</a>
-					<li><a href="//wwwendt.de/tech/fancytree/doc/jsdoc/index.html" target="contentFrame">Fancytree</a>
+					<li id="id3.1">Sub-item 3.1
+						<ul>
+							<li id="id3.1.1">Sub-item 3.1.1
+							<li id="id3.1.2">Sub-item 3.1.2
+							<li id="id3.1.3">Sub-item 3.1.3
+						</ul>
+					<li id="id3.2">Sub-item 3.2
+						<ul>
+							<li id="id3.2.1">Sub-item 3.2.1
+							<li id="id3.2.2">Sub-item 3.2.2
+						</ul>
 				</ul>
-				<li class="expanded folder">Misc
+			<li id="id4" class="expanded">Document with some children (expanded on init)
 				<ul>
-					<li><a href="sample-iframe-1.html" target="contentFrame">Welcome</a>
+					<li id="id4.1"  class="active focused">Sub-item 4.1 (active and focus on init)
+						<ul>
+							<li id="id4.1.1">Sub-item 4.1.1
+							<li id="id4.1.2">Sub-item 4.1.2
+						</ul>
+					<li id="id4.2">Sub-item 4.2
+						<ul>
+							<li id="id4.2.1">Sub-item 4.2.1
+							<li id="id4.2.2">Sub-item 4.2.2
+						</ul>
 				</ul>
-			</ul>
-			</div>
-		</td>
-
-		<td>
-			<iframe src="{{site.baseurl}}/all" name="contentFrame" width="100%" height="500"
-					scrolling="yes" marginheight="0" marginwidth="0" frameborder="0">
-			  <p>您的浏览器不支持iframe</p>
-			</iframe>
-		</td>
-	</tr>
-	</table>
+		</ul>
+	</div>
