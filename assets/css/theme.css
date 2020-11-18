@@ -6,6 +6,10 @@ body, code, pre {
     font-weight: 300;
     line-height: 1.5;
 }
+.spanborder {
+    border-bottom: 1px solid #e8f3ec;
+    margin-bottom: 2rem;
+}
 .spanborder span {
     border-bottom: 1px solid rgba(0, 0, 0, 0.44);
     display: inline-block;
