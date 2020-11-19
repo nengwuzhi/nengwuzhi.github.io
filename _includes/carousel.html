@@ -19,9 +19,38 @@
                     <div class="carousel-item active">
                         <div class="row">
 
+   {% for post in site.posts %} 
+{% if post.tags contains "精选main" %}
                             <div class="col-md-4 mb-3">
-                                <div class="card">
-                                     <div id="divRss2"></div> 
+                                <div class="card grid-item">
+                                   <img class="img-fluid" alt="{{ post.image }}" src="{{ post.image }}">
+      
+   
+                                  <div class="wrapcat flex-container">
+    
+	<figcaption>
+        <span class="pinme">
+                <h5 class="mb-3">{{post.title}}</h5>
+                <p class="mb-3 lead">
+                    {{ post.excerpt | strip_html | strip_html | truncate: 30 }}
+                </p>
+             <div class="btn-group">
+		 <button type="button" class="btn btn-success"><a href="{{site.baseurl}}{{post.url}}">阅读全部</a></button>
+		 <button type="button" class="btn btn-default">Samsung</button>
+	     </div>             
+        </span>
+  </figcaption>                                    
+          </div>
+         </div>     
+                                    <div class="card-body postcontent">
+                                    <div class="notraco">
+        <a href="{{site.baseurl}}{{post.url}}"><h4 class="card-title title">{{ post.title }}</h4></a>
+                                        <p class="card-text text-sm-left"> {{ post.excerpt | strip_html | strip_html | truncate: 30 }}</p>
+                                    </div>
+                                    </div>                      
+    </div>
+{% endif %}
+{% endfor %}                          
                                 </div>
                             </div>
                             <div class="col-md-4 mb-3">
@@ -70,27 +99,21 @@
 		 <button type="button" class="btn btn-default">Samsung</button>
 	     </div>             
         </span>
-
   </figcaption>                                    
-                                    
-    
-          </div>               </div>    
-                 
+          </div>
+         </div>     
                                     <div class="card-body postcontent">
                                     <div class="notraco">
         <a href="{{site.baseurl}}{{post.url}}"><h4 class="card-title title">{{ post.title }}</h4></a>
                                         <p class="card-text text-sm-left"> {{ post.excerpt | strip_html | strip_html | truncate: 30 }}</p>
                                     </div>
-                                    </div> 
-
-                        
-                                
+                                    </div>                      
     </div>
 {% endif %}
 {% endfor %}                          
                           
                           
-                        </div>
+                    </div>
                     </div>
                   
                     <div class="carousel-item">
