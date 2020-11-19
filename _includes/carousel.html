@@ -58,13 +58,22 @@
       
    
                                   <div class="wrapcat flex-container">
+    
+	<figcaption>
         <span class="pinme">
                 <h5 class="mb-3">{{post.title}}</h5>
-                <p class="mb-3 lead text-sm-left">
-                    {{ post.excerpt | strip_html | strip_html | truncate: 20 }}
+                <p class="mb-3 lead">
+                    {{ post.excerpt | strip_html | strip_html | truncate: 30 }}
                 </p>
-                <a href="{{site.baseurl}}{{post.url}}" class="btn btn-dark">阅读全部</a>
+             <div class="btn-group">
+		 <button type="button" class="btn btn-success"><a href="{{site.baseurl}}{{post.url}}">阅读全部</a></button>
+		 <button type="button" class="btn btn-default">Samsung</button>
+	     </div>             
         </span>
+
+  </figcaption>                                    
+                                    
+    
           </div>               </div>    
                  
                                     <div class="card-body postcontent">
