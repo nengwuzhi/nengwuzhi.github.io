@@ -654,9 +654,7 @@ button.submit {
 a:hover {
 	text-decoration: none;
 }
-img {
-	max-width: 100%;
-}
+
 a,.a:hover {
 	-webkit-transition:all 0.2s;
 	transition: all 0.2s;
