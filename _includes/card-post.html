@@ -36,7 +36,12 @@
                 <p class="mb-3 lead">
                     {{ post.excerpt | strip_html | strip_html | truncate: 30 }}
                 </p>
-                <a href="{{site.baseurl}}{{post.url}}" class="btn btn-dark">阅读全部</a>
+               	<div class="btn-group">
+				  <button type="button" class="btn btn-success"><a href="{{site.baseurl}}{{post.url}}">阅读全部</a></button>
+				  <button type="button" class="btn btn-default">Samsung</button>
+		</div
+		
+		
         </span>
 
          <span class="gotopost">
