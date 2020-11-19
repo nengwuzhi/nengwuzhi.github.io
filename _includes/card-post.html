@@ -29,14 +29,9 @@
         
     {% if post.image %} 
     
+    <div class="wrapcat flex-container">
 
- 
-<div class="postcontent">
-<figure class="imghvr-fade">   
-        <a href="{{site.baseurl}}{{post.url}}">      
-        <img class="card-img img-responsive img-fluid w-100 mb-3 img-thumbnail shadow-sm rounded-0" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ post.image | absolute_url }}{% endif %}" alt="{{ post.title }}">             
-     	  <figcaption>
-                 <span class="pinme">
+        <span class="pinme">
                 <h5 class="mb-3">{{post.title}}</h5>
                 <p class="mb-3 lead">
                     {{ post.excerpt | strip_html | strip_html | truncate: 30 }}
@@ -47,10 +42,15 @@
          <span class="gotopost">
              <a href="{{site.baseurl}}{{post.url}}" class="text-dark"><i class="fa fa-arrow-circle-right"></i> More
              </a>
-         </span>          
-              </figcaption>           
-</figure>                  
-                    
+         </span> 
+
+    </div>
+           
+    
+<div class="postcontent">
+        <a href="{{site.baseurl}}{{post.url}}">       
+        <img class="card-img img-fluid w-100 mb-3 img-thumbnail shadow-sm rounded-0" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ post.image | absolute_url }}{% endif %}" alt="{{ post.title }}">             
+        
             <div class="notraco">
                 <h2 class="card-title title">{{ post.title }}</h2>     </a>
                 <div class='post-content small text-muted font-italic'>{{post.summary}}</div>
@@ -67,11 +67,9 @@
                     <i class="fas fa-link m-1 text-primary" aria-hidden="true"></i>
                 </div> 
             </div>
-           </div>
-    
+           </div> 
     
     {% endif %}
       
 </div>
-
 
