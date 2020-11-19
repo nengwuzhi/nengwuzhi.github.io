@@ -815,24 +815,8 @@ article .card-body {
     -moz-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
 }
-.pinme {
-    position: relative;
-    top: 0px;
-    left: 0px;
-    flex: 1 1 auto;
-    padding: 1.35rem;
-}
-.gotopost {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: #fff;
-    font-size: 12px;
-    font-weight: 700;
-    padding: 0px 5px 1px 5px;
-    border-radius: 2px;
-    box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
-}
+
+
 .PageNavigation a {
     position: fixed;
     top: 47%;
