@@ -349,7 +349,8 @@ hr.hr-text::before {
 */
 .custom-scrollbar-js,
 .custom-scrollbar-css {
-  height: 200px;
+	overflow-y: auto;
+  height: 700px;
 }
 
 /* Custom Scrollbar using CSS */
