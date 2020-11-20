@@ -326,13 +326,13 @@ hr.hr-text::before {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 1.5px grey; 
+  box-shadow: inset 0 0 1.5px gray-dark; 
   border-radius: 0px;
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #c5c5c5; 
+  background: light; 
   border-radius: 0px;
 }
 
