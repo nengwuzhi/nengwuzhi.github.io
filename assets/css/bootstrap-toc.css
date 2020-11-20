@@ -26,7 +26,7 @@ nav[data-toggle="toc"] .nav-link.active:hover,
 nav[data-toggle="toc"] .nav-link.active:focus {
   padding-left: 18px;
   font-weight: bold;
-  color: #ef9696!important;
+  color: #ff6262!important;
   border-right: 2px solid #3e4449;
 }
 
