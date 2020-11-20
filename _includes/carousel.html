@@ -44,7 +44,7 @@
                                     <div class="card-body postcontent">
                                     <div class="notraco">
         <a href="{{site.baseurl}}{{post.url}}"><h4 class="card-title title">{{ post.title }}</h4></a>
-                                        <p class="card-text text-sm-left"> {{ post.excerpt | strip_html | strip_html | truncate: 30 }}</p>
+                             <p class="card-text text-sm-left"> {{post.summary | strip_html | strip_html | truncate: 30 }}</p>
                                     </div>
                                     </div>                      
     </div>
