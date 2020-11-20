@@ -360,7 +360,7 @@ hr.hr-text::before {
 
 /* scrollbar width */
 .custom-scrollbar-css::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 
 /* scrollbar track */
