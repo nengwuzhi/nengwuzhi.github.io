@@ -5,6 +5,10 @@ body, code, pre {
     font-weight: 300;
     line-height: 1.5;
 }
+div#accordionExample {
+    overflow-y: auto;
+    height: 700px;
+}
 .wrapcat {
     background-color: rgb(255 255 255 / 60%);
     display: none;
