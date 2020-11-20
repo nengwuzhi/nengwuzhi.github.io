@@ -334,7 +334,7 @@ hr.hr-text::before {
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: light; 
+  background: dark; 
   border-radius: 0px;
 }
 
@@ -374,7 +374,7 @@ hr.hr-text::before {
 .custom-scrollbar-css::-webkit-scrollbar-thumb {
   border-radius: 1rem;
   background-color: #00d2ff;
-  background-image: linear-gradient(to top, rgb(168, 237, 234) 0%, rgb(254, 214, 227) 100%);
+  background-image: linear-gradient(to top, rgb(132 234 230) 0%, rgb(253 161 191) 100%);
 }
 
 ::marker {
