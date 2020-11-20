@@ -83,6 +83,8 @@ i {
 .itemDate{font-size:11px;color:#AAAAAA;} 
 .content {
     padding: 20px;
+    margin-left: auto!important;
+    margin-right: auto!important;
 }
 .content_container {
 	width: 75%;
