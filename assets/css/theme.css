@@ -509,9 +509,8 @@ button.submit {
 .search .search-results .result-item {
     background: #ffffff;
     color: #3a3a3a;
-    background-size: cover;
     margin: 5px;
-    padding: 3px;
+    text-align: center;
     border-radius: 3px;
     cursor: pointer;
 }
