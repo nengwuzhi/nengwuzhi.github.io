@@ -333,7 +333,7 @@ hr.hr-text::before {
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: black; 
+  background: #f77171; 
 }
 
 /* Handle on hover */
