@@ -511,6 +511,7 @@ button.submit {
     color: #3a3a3a;
     margin: 5px;
     text-align: center;
+	    padding: 2px;
     border-radius: 3px;
     cursor: pointer;
 }
