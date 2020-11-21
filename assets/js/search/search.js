@@ -131,7 +131,7 @@ function searchMatching(arr1, arr2, input) {
 
     // 输出总共匹配到的数目
     var totalDiv = tmpDiv.cloneNode(true);
-    totalDiv.innerHTML = '总匹配：<p class="font-weight-bold">' + indexItem.length + '</p> 项';
+    totalDiv.innerHTML = '总匹配：<p>' + indexItem.length + '</p> 项';
     searchResults.appendChild(totalDiv);
 
     // 未匹配到内容的情况
