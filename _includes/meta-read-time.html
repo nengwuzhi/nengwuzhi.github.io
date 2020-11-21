@@ -1,4 +1,12 @@
 
+{%- if include.params.name -%}
+  {%- assign name = include.params.name -%}
+{%- endif -%}
+
+{% if include.params.article %}
+  {% assign article = include.params.article %}
+{% endif %}
+
 {% if include.params.speed %}
   {% assign speed = include.params.speed %}
 {% else %}
