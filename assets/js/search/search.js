@@ -154,8 +154,8 @@ function searchMatching(arr1, arr2, input) {
 function changeHref(href) {
 
     // 在当前页面点开链接的情况
-    location.href = href;
+    // location.href = href;
 
     // 在新标签页面打开链接的代码，与上面二者只能取一个，自行决定
-    // window.open(href);
+       window.open(href);
 }
