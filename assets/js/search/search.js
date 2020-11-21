@@ -144,8 +144,8 @@ function searchMatching(arr1, arr2, input) {
     // 将所有匹配内容进行组合
     for (i = 0; i < arrResults.length; i++) {
         var itemDiv = tmpDiv.cloneNode(true);
-        itemDiv.innerHTML = '<b>《' + arrTitles[indexItem[i]] +
-            '》</b><hr />' + arrResults[i];
+        itemDiv.innerHTML = '<p class="font-weight-bold">《' + arrTitles[indexItem[i]] +
+            '》</p><hr />' + arrResults[i];
         itemDiv.setAttribute('onclick', 'changeHref(arrLinks[indexItem[' + i + ']])');
         searchResults.appendChild(itemDiv);
     }
