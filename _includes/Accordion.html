@@ -163,12 +163,12 @@
 <aside class="related">
   <ul class="related-posts">
     {% for post in site.related_posts limit:3 %}
-
+      <li>
         <a href="{{ post.url | relative_url }}">
          <small class="text-dark"> {{ post.title }}
-          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></small>
+        </small>
         </a>
-
+      </li>
     {% endfor %}
   </ul>
 </aside>
