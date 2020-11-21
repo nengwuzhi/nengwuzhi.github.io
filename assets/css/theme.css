@@ -509,8 +509,6 @@ button.submit {
 .search .search-results .result-item {
     background: #ffffff;
     color: #3a3a3a;
-    background-image: url($img), linear-gradient(#fff, #ccc);
-    background-blend-mode: darken;
     background-size: cover;
     margin: 5px;
     padding: 3px;
