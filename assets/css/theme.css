@@ -328,12 +328,12 @@ hr.hr-text::before {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #dd1144ad;
+  background: #eee;
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background-image: #f77171; 
+  background-image: #dd1144ad; 
 }
 
 /* Handle on hover */
