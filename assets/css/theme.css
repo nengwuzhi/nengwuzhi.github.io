@@ -334,7 +334,7 @@ hr.hr-text::before {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background-color: #00d2ff;
-  background-image: linear-gradient(to top, rgb(132 234 230) 0%, rgb(253 161 191) 100%); 
+  background: linear-gradient(to bottom, rgba(252,236,252,1) 0%,rgba(251,166,225,1) 50%,rgba(253,137,215,1) 51%,rgba(255,124,216,1) 100%); 
 }
 
 /* Handle on hover */
