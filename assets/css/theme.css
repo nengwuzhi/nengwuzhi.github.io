@@ -207,7 +207,7 @@ a.sidebar:hover, a.sidebar:focus {
 
 .header {
     background-color: #00d2ff;
-    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    background-image: linear-gradient(to right, rgb(170, 75, 107), rgb(107, 107, 131), rgb(59, 141, 153));
 }
 
 .section-1 {
