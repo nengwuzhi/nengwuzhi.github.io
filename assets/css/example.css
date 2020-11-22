@@ -1,9 +1,3 @@
-*, *:before, *:after {
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
-  box-sizing: inherit;
-}
-
 .tagline {
   position: relative;
   margin-top: 0;
