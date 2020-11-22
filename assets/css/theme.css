@@ -328,7 +328,7 @@ hr.hr-text::before {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #eee; 
+  background: #ffd1d196;
 }
  
 /* Handle */
