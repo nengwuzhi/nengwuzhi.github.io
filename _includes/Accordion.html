@@ -113,7 +113,7 @@
             <div class="card-body p-4">
                       <div class="tags-cloud">
       {% for tag in site.tags %}
-    <a href="#{{ tag | first }}">{{ tag | first }}</a>
+    <a class="sidebar" href="#{{ tag | first }}">{{ tag | first }}</a>
     {% endfor %}
                        
                 </div>
