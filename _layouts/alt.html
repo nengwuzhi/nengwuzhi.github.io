@@ -24,11 +24,11 @@
     	$( document ).ready( function() {
 
             var entries = [ 
-                
-                { label:  {% for tag in site.tags %}
+                 {% for tag in site.tags %}
+                { label: 
     <a href="#{{ tag | first }}">{{ tag | first }}</a>
-    {% endfor %} , target: '_top' },
-
+    , target: '_top' },
+ {% endfor %}
             ];
 
             var settings = {
