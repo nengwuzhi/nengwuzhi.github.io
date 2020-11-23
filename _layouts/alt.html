@@ -18,59 +18,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>		
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 	
-<script src='{{site.baseurl}}/assets/js/jquery.svg3dtagcloud.min.js'></script>
-	 <script>
-
-    	$( document ).ready( function() {
-
-            var entries = [ 
-                 {% for tag in site.tags %}
-                { label: 
-    <a href="#{{ tag | first }}">{{ tag | first }}</a>
-    , target: '_top' },
- {% endfor %}
-            ];
-
-            var settings = {
-
-                entries: entries,
-                width: 300,
-                height: 300,
-                radius: '65%',
-                radiusMin: 75,
-                bgDraw: true,
-                bgColor: '#111',
-                opacityOver: 1.00,
-                opacityOut: 0.05,
-                opacitySpeed: 6,
-                fov: 800,
-                speed: 1,
-                fontFamily: 'Oswald, Arial, sans-serif',
-                fontSize: '15',
-                fontColor: '#fff',
-                fontWeight: 'normal',//bold
-                fontStyle: 'normal',//italic 
-                fontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
-                fontToUpperCase: true,
-                tooltipFontFamily: 'Oswald, Arial, sans-serif',
-                tooltipFontSize: '11',
-                tooltipFontColor: '#fff',
-                tooltipFontWeight: 'normal',//bold
-                tooltipFontStyle: 'normal',//italic 
-                tooltipFontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
-                tooltipFontToUpperCase: false,
-                tooltipTextAnchor: 'left',
-                tooltipDiffX: 0,
-                tooltipDiffY: 10
-
-            };
-
-            //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
-            $( '#holder' ).svg3DTagCloud( settings );
-
-		} );   
-    </script>
-	
 <script src="{{site.baseurl}}/assets/js/jquery.fancytree.ui-deps.js"></script>
 <script src="{{site.baseurl}}/assets/js/jquery.fancytree.min.js"></script>
 	<script type="text/javascript">
