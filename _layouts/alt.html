@@ -25,7 +25,9 @@
 
             var entries = [ 
                 
-                { label: '{{ tag | first }}', url: '#{{ tag | first }}', target: '_top' },
+                { label:  {% for tag in site.tags %}
+    <a href="#{{ tag | first }}">{{ tag | first }}</a>
+    {% endfor %} , target: '_top' },
 
             ];
 
