@@ -112,8 +112,9 @@
           <div id="collapseFour" aria-labelledby="headingFour" data-parent="#accordionExample" class="collapse">
             <div class="card-body p-4">
                       <div class="tags-cloud">
-             <div id='holder'>
-             </div>
+      {% for tag in site.tags %}
+    <a href="#{{ tag | first }}">{{ tag | first }}</a>
+    {% endfor %}
                        
                 </div>
             </div>
