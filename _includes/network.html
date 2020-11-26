@@ -1,106 +1,281 @@
-<p>Create a simple network with some nodes and edges.</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Vis Network | Manipulation | Edit Edge Without Drag</title>
 
-<div id="mynetwork"></div>
+    <style type="text/css">
+      body,
+      select {
+        font: 10pt sans;
+      }
+      #mynetwork {
+        position: relative;
+        width: 800px;
+        height: 600px;
+        border: 1px solid lightgray;
+      }
+      table.legend_table {
+        font-size: 11px;
+        border-width: 1px;
+        border-color: #d3d3d3;
+        border-style: solid;
+      }
+      table.legend_table,
+      td {
+        border-width: 1px;
+        border-color: #d3d3d3;
+        border-style: solid;
+        padding: 2px;
+      }
+      div.table_content {
+        width: 80px;
+        text-align: center;
+      }
+      div.table_description {
+        width: 100px;
+      }
 
-<script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
-<!--
-  Including other packages like Vis Timeline or Vis Graph3D here won't work.
-  You need the peer build to do that.
--->
+      #operation {
+        font-size: 28px;
+      }
+      #node-popUp {
+        display: none;
+        position: absolute;
+        top: 350px;
+        left: 170px;
+        z-index: 299;
+        width: 250px;
+        height: 120px;
+        background-color: #f9f9f9;
+        border-style: solid;
+        border-width: 3px;
+        border-color: #5394ed;
+        padding: 10px;
+        text-align: center;
+      }
+      #edge-popUp {
+        display: none;
+        position: absolute;
+        top: 350px;
+        left: 170px;
+        z-index: 299;
+        width: 250px;
+        height: 90px;
+        background-color: #f9f9f9;
+        border-style: solid;
+        border-width: 3px;
+        border-color: #5394ed;
+        padding: 10px;
+        text-align: center;
+      }
+    </style>
 
-<script type="text/javascript">
- // create an array with nodes
-var nodes = new vis.DataSet([
-  { id: 1, label: "Node 1" },
-  { id: 2, label: "Node 2" },
-  { id: 3, label: "Node 3" },
-  { id: 4, label: "Node 4" },
-  { id: 5, label: "Node 5" },
-]);
+    <script
+      type="text/javascript"
+      src="../../../standalone/umd/vis-network.min.js"
+    ></script>
 
-// create an array with edges
-var edges = new vis.DataSet([
-  { from: 1, to: 3 },
-  { from: 1, to: 2 },
-  { from: 2, to: 4 },
-  { from: 2, to: 5 },
-  { from: 3, to: 3 },
-]);
-  
-// DOT edge styles
-var arrow_types = [
-  "arrow",
-  "curve",
-  "inv_curve",
-  "diamond",
-  "triangle",
-  "inv_triangle",
-  "vee",
-];
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/alea@1.0.0/alea.js"
+    ></script>
+    <script type="text/javascript" src="../exampleUtil.js"></script>
 
-// update list of arrow types in html body
-var nof_types = arrow_types.length;
-var list_contents = [];
-for (var i = 0; i < nof_types; i++) {
-  list_contents.push("<code>'" + arrow_types[i] + "'</code>");
-}
-var mylist = document.getElementById("arrow_type_list");
-mylist.innerHTML = list_contents.join(", ");
+    <script type="text/javascript">
+      var nodes = null;
+      var edges = null;
+      var network = null;
+      // randomly create some nodes and edges
+      var data = getScaleFreeNetwork(25);
+      var seed = 2;
 
-// create an array with nodes
-var node_attrs = new Array();
-var nodes = arrow_types.slice();
-nodes.push("end");
-console.log(nodes);
-var nof_nodes = nodes.length;
-for (var i = 0; i < nof_nodes; i++) {
-  node_attrs[i] = {
-    id: i + 1,
-    label: nodes[i],
-  };
-}
-
-var nodes = new vis.DataSet(node_attrs);
-
-// create an array with edges
-var edge_attrs = new Array();
-var nof_edges = nof_nodes - 1;
-for (var i = 0; i < nof_edges; i++) {
-  edge_attrs[i] = {
-    from: i + 1,
-    to: i + 2,
-    arrows: {
-      to: {
-        enabled: true,
-        type: arrow_types[i],
-      },
-    },
-  };
-}
-
-var edges = new vis.DataSet(edge_attrs);
-
-// create a network
-var container = document.getElementById("mynetwork");
-var data = {
-  nodes: nodes,
-  edges: edges,
-};
-
-var options = {
-  /*
-    // Enable this to make the endpoints smaller/larger
-    edges: {
-      arrows: {
-        to: {
-          scaleFactor: 5
+      function setDefaultLocale() {
+        var defaultLocal = navigator.language;
+        var select = document.getElementById("locale");
+        select.selectedIndex = 0; // set fallback value
+        for (var i = 0, j = select.options.length; i < j; ++i) {
+          if (select.options[i].getAttribute("value") === defaultLocal) {
+            select.selectedIndex = i;
+            break;
+          }
         }
       }
-    }
-*/
-};
 
-var network = new vis.Network(container, data, options);
+      function destroy() {
+        if (network !== null) {
+          network.destroy();
+          network = null;
+        }
+      }
 
-</script>
-      
+      function draw() {
+        destroy();
+        nodes = [];
+        edges = [];
+
+        // create a network
+        var container = document.getElementById("mynetwork");
+        var options = {
+          layout: { randomSeed: seed }, // just to make sure the layout is the same when the locale is changed
+          locale: document.getElementById("locale").value,
+          manipulation: {
+            addNode: function (data, callback) {
+              // filling in the popup DOM elements
+              document.getElementById("node-operation").innerHTML = "Add Node";
+              editNode(data, clearNodePopUp, callback);
+            },
+            editNode: function (data, callback) {
+              // filling in the popup DOM elements
+              document.getElementById("node-operation").innerHTML = "Edit Node";
+              editNode(data, cancelNodeEdit, callback);
+            },
+            addEdge: function (data, callback) {
+              if (data.from == data.to) {
+                var r = confirm("Do you want to connect the node to itself?");
+                if (r != true) {
+                  callback(null);
+                  return;
+                }
+              }
+              document.getElementById("edge-operation").innerHTML = "Add Edge";
+              editEdgeWithoutDrag(data, callback);
+            },
+            editEdge: {
+              editWithoutDrag: function (data, callback) {
+                document.getElementById("edge-operation").innerHTML =
+                  "Edit Edge";
+                editEdgeWithoutDrag(data, callback);
+              },
+            },
+          },
+        };
+        network = new vis.Network(container, data, options);
+      }
+
+      function editNode(data, cancelAction, callback) {
+        document.getElementById("node-label").value = data.label;
+        document.getElementById("node-saveButton").onclick = saveNodeData.bind(
+          this,
+          data,
+          callback
+        );
+        document.getElementById(
+          "node-cancelButton"
+        ).onclick = cancelAction.bind(this, callback);
+        document.getElementById("node-popUp").style.display = "block";
+      }
+
+      // Callback passed as parameter is ignored
+      function clearNodePopUp() {
+        document.getElementById("node-saveButton").onclick = null;
+        document.getElementById("node-cancelButton").onclick = null;
+        document.getElementById("node-popUp").style.display = "none";
+      }
+
+      function cancelNodeEdit(callback) {
+        clearNodePopUp();
+        callback(null);
+      }
+
+      function saveNodeData(data, callback) {
+        data.label = document.getElementById("node-label").value;
+        clearNodePopUp();
+        callback(data);
+      }
+
+      function editEdgeWithoutDrag(data, callback) {
+        // filling in the popup DOM elements
+        document.getElementById("edge-label").value = data.label;
+        document.getElementById("edge-saveButton").onclick = saveEdgeData.bind(
+          this,
+          data,
+          callback
+        );
+        document.getElementById(
+          "edge-cancelButton"
+        ).onclick = cancelEdgeEdit.bind(this, callback);
+        document.getElementById("edge-popUp").style.display = "block";
+      }
+
+      function clearEdgePopUp() {
+        document.getElementById("edge-saveButton").onclick = null;
+        document.getElementById("edge-cancelButton").onclick = null;
+        document.getElementById("edge-popUp").style.display = "none";
+      }
+
+      function cancelEdgeEdit(callback) {
+        clearEdgePopUp();
+        callback(null);
+      }
+
+      function saveEdgeData(data, callback) {
+        if (typeof data.to === "object") data.to = data.to.id;
+        if (typeof data.from === "object") data.from = data.from.id;
+        data.label = document.getElementById("edge-label").value;
+        clearEdgePopUp();
+        callback(data);
+      }
+
+      function init() {
+        setDefaultLocale();
+        draw();
+      }
+    </script>
+  </head>
+
+  <body onload="init();">
+    <h2>Editing the nodes and edges-without-drag (localized)</h2>
+    <p style="width: 700px; font-size: 14px; text-align: justify">
+      The localization is only relevant to the manipulation buttons.
+    </p>
+
+    <p>
+      <label for="locale">Select a locale:</label>
+      <select id="locale" onchange="draw();">
+        <option value="en">en</option>
+        <option value="cn">cn</option>
+        <option value="cs">cs</option>
+        <option value="de">de</option>
+        <option value="es">es</option>
+        <option value="fr">fr</option>
+        <option value="it">it</option>
+        <option value="nl">nl</option>
+        <option value="pt-br">pt</option>
+        <option value="ru">ru</option>
+        <option value="uk">uk</option>
+      </select>
+    </p>
+
+    <div id="node-popUp">
+      <span id="node-operation">node</span> <br />
+      <table style="margin: auto">
+        <tr>
+          <td>id</td>
+          <td><input id="node-id" value="new value" /></td>
+        </tr>
+        <tr>
+          <td>label</td>
+          <td><input id="node-label" value="new value" /></td>
+        </tr>
+      </table>
+      <input type="button" value="save" id="node-saveButton" />
+      <input type="button" value="cancel" id="node-cancelButton" />
+    </div>
+
+    <div id="edge-popUp">
+      <span id="edge-operation">edge</span> <br />
+      <table style="margin: auto">
+        <tr>
+          <td>label</td>
+          <td><input id="edge-label" value="new value" /></td>
+        </tr>
+      </table>
+      <input type="button" value="save" id="edge-saveButton" />
+      <input type="button" value="cancel" id="edge-cancelButton" />
+    </div>
+
+    <br />
+    <div id="mynetwork"></div>
+  </body>
+</html>
