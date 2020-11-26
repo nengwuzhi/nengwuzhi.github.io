@@ -30,9 +30,8 @@ var edges = new vis.DataSet([
 // DOT edge styles
 var arrow_types = [
   "arrow",
-  "bar",
-  "circle",
-  "crow",
+  "curve",
+  "inv_curve",
   "diamond",
   "triangle",
   "inv_triangle",
@@ -81,22 +80,26 @@ for (var i = 0; i < nof_edges; i++) {
 
 var edges = new vis.DataSet(edge_attrs);
 
-var network = new vis.Network(container, data, options);
-
-  
 // create a network
 var container = document.getElementById("mynetwork");
 var data = {
   nodes: nodes,
   edges: edges,
 };
+
 var options = {
-  physics: {
-    stabilization: false,
-    barnesHut: {
-      springLength: 200,
-    },
-  },};
+  /*
+    // Enable this to make the endpoints smaller/larger
+    edges: {
+      arrows: {
+        to: {
+          scaleFactor: 5
+        }
+      }
+    }
+*/
+};
+
 var network = new vis.Network(container, data, options);
 
 </script>
