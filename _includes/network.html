@@ -26,16 +26,8 @@ var edges = new vis.DataSet([
   { from: 2, to: 5 },
   { from: 3, to: 3 },
 ]);
-
-// create a network
-var container = document.getElementById("mynetwork");
-var data = {
-  nodes: nodes,
-  edges: edges,
-};
-var options = {};
-var network = new vis.Network(container, data, options);
-
+  
+// DOT edge styles
 var dotDefault =
   "digraph {\n" +
   " // Parent nodes\n" +
@@ -64,21 +56,24 @@ var dotDefault =
   ' ahs -> dot[label="both dot", dir=both, arrowhead=dot, arrowtail=dot]; \n' +
   ' ahs -> tee[label="tee", arrowhead=tee]; \n' +
   ' ahs -> vee[label="back vee", dir=back, arrowtail=vee]; \n' +
-  "}";
-
+  "}";  
+  
 // create a network
 var container = document.getElementById("mynetwork");
+var data = {
+  nodes: nodes,
+  edges: edges,
+};
 var options = {
   physics: {
     stabilization: false,
     barnesHut: {
       springLength: 200,
     },
-  },
-};
-var data = {};
+  },};
 var network = new vis.Network(container, data, options);
-  
+
+
 // DOT edge styles
 $("#draw").click(draw);
 $("#reset").click(reset);
@@ -134,6 +129,5 @@ window.onload = function () {
   reset();
 };
 
-  
 </script>
       
