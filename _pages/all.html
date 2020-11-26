@@ -10,7 +10,7 @@ type: page
 
 <div class="content_container card shadow-sm">
 {% include sticky_navbar.html  %}  
-	{% include network.html  %}   
+  
 <div id="section1" class="py-5 section-1 container-fluid" style="padding-top:70px;padding-bottom:70px;padding-left:70px;padding-right:70px;">
         
            <h1><i class="zmdi zmdi-archive"> 归档</i></h1>			
@@ -37,8 +37,8 @@ type: page
         {% include main-loop-card.html %}
             <hr class="dotted">   
             </li>
-
           {% endfor %}
+			{% include network.html  %} 
         </ul>
 </div>
 <div id="section2" class="py-5 section-2 container-fluid" style="padding-top:70px;padding-bottom:70px;padding-left:70px;padding-right:70px;">
