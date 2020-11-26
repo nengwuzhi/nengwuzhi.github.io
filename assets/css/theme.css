@@ -11,6 +11,16 @@ body, code, pre {
   border: 1px solid lightgray;
   background-color: #333333;
 }
+
+.grid-stack {
+  background: #FAFAD2;
+}
+
+.grid-stack-item-content {
+  color: #2c3e50;
+  text-align: center;
+  background-color: #18bc9c;
+}
 div#accordionExample {
     overflow-y: auto;
     height: 700px;
