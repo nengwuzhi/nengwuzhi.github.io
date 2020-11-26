@@ -12,9 +12,13 @@
       src="https://unpkg.com/alea@1.0.0/alea.js"
     ></script>
 
+  </head>
 
+  <body>
+    <div id="mynetwork"></div>
+ 
     <script type="text/javascript">
-     var len = undefined;
+      var len = undefined;
 
 var nodes = [
   { id: 0, label: "0", group: 0 },
@@ -103,11 +107,7 @@ var options = {
 };
 network = new vis.Network(container, data, options);
 
-    </script>
-  </head>
-
-  <body>
-
-    <div id="mynetwork"></div>
+    </script>   
+    
   </body>
 </html>
