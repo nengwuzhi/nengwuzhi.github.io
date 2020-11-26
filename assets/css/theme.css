@@ -5,6 +5,12 @@ body, code, pre {
     font-weight: 300;
     line-height: 1.5;
 }
+#mynetwork {
+  width: 800px;
+  height: 800px;
+  border: 1px solid lightgray;
+  background-color: #333333;
+}
 div#accordionExample {
     overflow-y: auto;
     height: 700px;
