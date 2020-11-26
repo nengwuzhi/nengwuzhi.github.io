@@ -5,90 +5,20 @@ permalink: /dragula/
 icon: dragula
 type: page
 ---
-<!doctype html>
-<head>
- <link rel="stylesheet" href="{{site.baseurl}}/assets/css/dragula.css">
-<link rel="stylesheet" href="{{site.baseurl}}/assets/css/example.css">
- </head> 
+<script src="node_modules/gridstack/dist/gridstack.all.js"></script>
 
-<div class="card shadow-sm">        
-<article>
-  
-{% for post in site.posts %} 
-{% if post.tags contains "止观main" %}
-<div class="jumbotron jumbotron-fluid jumbotron-home pt-0 pb-0 mt-3 mb-2rem bg-lightblue position-relative">
-    <div class="pl-4 pr-4 pb-4 h-100 tofront">
-        <div class="row justify-content-between">
-     <div class="col-md-6 pt-6 pb-6 pr-lg-4 align-self-center">
-                <h1 class="mb-3">{{post.title}}</h1>
-                <p class="mb-3 lead">
-                    {{ post.excerpt | strip_html | strip_html | truncate: 30 }}
-                </p>
-                <a href="{{site.baseurl}}{{post.url}}" class="btn btn-light">阅读全部</a>
-            </div>
-<div class="col-md-6 d-none d-md-block pr-0">
-<h1><a href="{{site.baseurl}}{{post.url}}"><img src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ post.image | absolute_url }}{% endif %}" width="516" height="214"  alt='{{ post.image }}'/></a></h1> </div>
-        </div>
-    </div>
-</div> 
-{% endif %}
-{% endfor %}
- 
+<style type="text/css">
+  .grid-stack { background: #FAFAD2; }
+  .grid-stack-item-content { background-color: #18BC9C; }
+</style>
 
-{% include sticky_navbar.html %}
-<div class="examples">
-  <div class="parent">
-    <label for="hy"在这两个容器之间移动东西。请注意如何将这些东西插入鼠标指针附近？好东西。</label>
-    <div class="wrapper">
-      <div id="left-defaults" class="container">
-        {% include fancytree.html %}
-        {% include FeedEk.html %}
-       {% include network.html %}
-     </div>
-      <div id="right-defaults" class="container">
-        <div>{% include music-Player.html %}</div>
-     <div>Moving <code>&lt;input/&gt;</code> 元素工作正常。您仍然可以集中精力。 <input placeholder="See?"></div>
-        
-      </div>
-    </div>
-  </div>
+<div class="grid-stack"></div>
 
-  <div class="parent">
-    <label for="hy">当物品溢出所选容器时，是否需要能够快速删除？请注意如何通过拖放轻松地对任何容器中的项目进行排序。</label>
-    <div class="wrapper">
-      <div id="left-rm-spill" class="container">
-        <div>Anxious Cab Driver</div>
-        <div>Thriving Venture</div>
-        <div>Such <a href="http://ponyfoo.com">a good blog</a></div>
-        <div>Such</div>
-      </div>
-      <div id="right-rm-spill" class="container">
-        <div>Banana Boat</div>
-        <div>Orange Juice</div>
-        <div>Cuban Cigar</div>
-        <div>Terrible Comedian</div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="parent">
-    <label for="hy">仅从其中一个容器复制内容，然后在另一个容器上排序？没问题！</label>
-    <div class="wrapper">
-      <div id="left-copy-1tomany" class="container">
-        <div>当元素是可复制的时，无法在其原始容器中排序</div>
-        <div>复制可防止拖动原始元素。复制副本并创建 <em>然后</em> 将其移动</div>
-        <div>每当发生这种情况， 一个 <code>克隆</code> 事件引发</div>
-        <div>请注意，如果克隆未放入另一个容器中，则会被破坏。</div>
-        <div>您将拖动一个副本，因此当将它们放入另一个容器中时，您会看到重复项。</div>
-      </div>
-      
-      <div id="right-copy-1tomany" class="container">
-      </div>
-    </div>
-  </div>
-
-  </div>
-</div>
-      </article>
-       </div> 
-
+<script type="text/javascript">
+  var items = [
+    {content: 'my first widget'}, // will default to location (0,0) and 1x1
+    {width: 2, content: 'another longer widget!'} // will be placed next at (1,0) and 2x1
+  ];
+  var grid = GridStack.init();
+  grid.load(items);
+</script>
