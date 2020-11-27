@@ -84,7 +84,7 @@
                                     <div class="card-body postcontent">
                                     <div class="notraco">
         <a href="{{site.baseurl}}{{post.url}}"><h4 class="card-title title">{{ post.title }}</h4></a>
-                                        <p class="card-text text-sm-left"> {{ post.excerpt | strip_html | strip_html | truncate: 30 }}</p>
+                             <p class="card-text text-sm-left"> &nbsp;&nbsp; {{post.summary |  strip_html | strip_html | truncate: 32 }}</p>
                                     </div>
                                     </div>                      
     </div>
@@ -103,8 +103,7 @@
                                     <img class="img-fluid" alt="{{ post.image }}" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=ee8417f0ea2a50d53a12665820b54e23">
                                     <div class="card-body">
                                         <h4 class="card-title">{{post.title}}</h4>
-                                        <p class="card-text"> {{ post.excerpt | strip_html | strip_html | truncate: 30 }}</p>
-
+                             <p class="card-text text-sm-left"> &nbsp;&nbsp; {{post.summary |  strip_html | strip_html | truncate: 32 }}</p>
                                     </div>
 
                                 </div>
