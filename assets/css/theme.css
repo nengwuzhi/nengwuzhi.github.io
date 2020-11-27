@@ -1,5 +1,5 @@
 body, code, pre {
-	background: #eee;
+    background: #eee;
     background-image: linear-gradient(to top, rgb(168, 237, 234) 0%, rgb(254, 214, 227) 100%);
     font-family: roboto,PingFang,Microsoft JhengHei,noto sans sc,noto sans tc,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,sans-serif,"Menlo", "Monaco", "Consolas", "Courier New", "monospace", "Helvetica", "Tahoma", "Arial", "WenQuanYi Micro Hei", "文泉驿微米黑", "STXihei", "华文细黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", "Heiti", "黑体", "sans-serif";
     font-weight: 300;
@@ -115,8 +115,7 @@ i {
 }
 .content_container article p {
     padding: 0;
-    font-weight: 300;
-    font-family: roboto,PingFang,Microsoft JhengHei,noto sans sc,noto sans tc,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,sans-serif,"Menlo", "Monaco";
+    font-family: Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,"Menlo", "Monaco"roboto,PingFang,Microsoft JhengHei,noto sans sc,noto sans tc;
 }
 .content_container .post_title {
 	color: #505879;
@@ -415,7 +414,7 @@ code {
 }
 p {
   max-width: max-content;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 300;
   line-height: 1.7;
 }
