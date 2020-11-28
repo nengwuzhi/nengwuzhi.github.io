@@ -417,7 +417,7 @@ p,li {
   max-width: max-content;
   font-size: 24px;
   font-weight: 300;
-  font-family: Menlo;
+  font-family: "Menlo", "Monaco", "Consolas", "Courier New", "monospace", "Helvetica";
   line-height: 1.6;
 }
 .jumbotron:hover {
