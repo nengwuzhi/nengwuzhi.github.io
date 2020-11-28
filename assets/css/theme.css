@@ -27,7 +27,7 @@ body, code, pre {
 }
 div#accordionExample {
     overflow-y: auto;
-    height: 700px;
+    height: 630px;
 }
 .wrapcat {
     background-color: rgb(255 255 255 / 60%);
