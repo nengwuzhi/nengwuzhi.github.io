@@ -1,7 +1,7 @@
 body, code, pre {
     background: #eee;
     background-image: linear-gradient(to top, rgb(168, 237, 234) 0%, rgb(254, 214, 227) 100%);
-    font-family: roboto,PingFang,Microsoft JhengHei,noto sans sc,noto sans tc,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,sans-serif,"Menlo", "Monaco", "Consolas", "Courier New", "monospace", "Helvetica", "Tahoma", "Arial", "WenQuanYi Micro Hei", "文泉驿微米黑", "STXihei", "华文细黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", "Heiti", "黑体", "sans-serif";
+    font-family: Arial,roboto,PingFang,Microsoft JhengHei,noto sans sc,noto sans tc,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,sans-serif,Menlo,Monaco,Consolas,Courier New,monospace, Helvetica,Tahom,WenQuanYi Micro Hei,文泉驿微米黑,STXihei,华文细黑,Microsoft YaHei,微软雅黑, SimSun, 宋体, Heiti, 黑体,sans-serif;
     font-weight: 300;
     line-height: 1.5;
 }
