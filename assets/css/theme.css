@@ -139,7 +139,7 @@ article .archive {
 }
 article {
     box-sizing: border-box;
-    background: #ffffff;
+    background: #f8f8fd;
     position: relative;
     width: auto;
     padding: 49px;
