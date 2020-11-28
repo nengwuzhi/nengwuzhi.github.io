@@ -1,3 +1,7 @@
+@font-face{
+  font-family: 汉呈刀锋楷书;
+  src: url("/assets/fonts/汉呈刀锋楷书.ttf");
+}
 body, code, pre {
     background: #eee;
     background-image: linear-gradient(to top, rgb(168, 237, 234) 0%, rgb(254, 214, 227) 100%);
