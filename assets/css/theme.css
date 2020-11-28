@@ -415,7 +415,7 @@ code {
     border-radius: 0.1rem;
     text-shadow: none;
 }
-p {
+p,li {
   max-width: max-content;
   font-size: 24px;
   font-weight: 300;
