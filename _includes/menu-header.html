@@ -19,7 +19,7 @@
 
                 {% for my_page in site.pages %}
                     {% if my_page.type == 'page' %}
-                    <li>
+                    <li class="nav-item">
                         {% if my_page.url == page.url %}
                         <a class="active nav-link" href="{{ my_page.url | prepend: site.baseurl }}">
                             {% else %}
