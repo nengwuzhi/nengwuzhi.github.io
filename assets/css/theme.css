@@ -417,10 +417,10 @@ code {
 }
 p {
   max-width: max-content;
-  font-size: 25px;
+  font-size: 32px;
   font-weight: 300;
   font-family: 一意孤行,Arial;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 .jumbotron:hover {
     opacity: 0.5;
