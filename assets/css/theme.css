@@ -119,7 +119,6 @@ i {
 }
 .content_container article p {
     padding: 0;
-    font-family: Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,"Menlo", "Monaco"roboto,PingFang,Microsoft JhengHei,noto sans sc,noto sans tc;
 }
 .content_container .post_title {
 	color: #505879;
@@ -420,6 +419,7 @@ p {
   max-width: max-content;
   font-size: 25px;
   font-weight: 300;
+  font-family: 一意孤行,Arial;
   line-height: 1.7;
 }
 .jumbotron:hover {
