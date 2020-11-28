@@ -1,6 +1,6 @@
 @font-face{
-  font-family: 一意孤行,汉呈刀锋楷书;
-  src: url("/assets/fonts/汉呈刀锋楷书.ttf");
+  font-family: 一意孤行;
+  src: url("/assets/fonts/一意孤行.ttf");
 }
 body, code, pre {
     background: #eee;
