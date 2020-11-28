@@ -226,7 +226,10 @@ a.sidebar:hover, a.sidebar:focus {
     background: linear-gradient(to right, #ece9e6, #ffffff);
     background-image: linear-gradient(to right, rgb(222 222 222) 0%,#d14 100%);
 }
-
+span.badge {
+    color: #fff;
+    background-color: #ffd4d9;
+}
 .section-1 {
     background: #f5f5f5;
 }
