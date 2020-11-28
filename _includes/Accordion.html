@@ -128,7 +128,7 @@
             <div class="card-body p-4">
                       <p class="tags-cloud">
       {% for tag in site.tags %}
-    <a class="sidebar" href="#{{ tag | first }}">#{{ tag | first }}</a>
+    <a class="sidebar" href="#{{ tag | first }}">#{{ tag | first }} style="font-size: {{ size }}pt; color: #{{ color }}{{ color }}{{ color }};">{{ tag[0] }}</a>
     {% endfor %}            
                      </p>
             </div>
