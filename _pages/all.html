@@ -39,7 +39,6 @@ type: page
             <hr class="dotted">   
             </li>
           {% endfor %}
-			{% include network.html  %} 	
         </ul>
 </div>
 <div id="section2" class="py-5 section-2 container-fluid" style="padding-top:70px;padding-bottom:70px;padding-left:70px;padding-right:70px;">
@@ -84,8 +83,7 @@ type: page
                 <time>
                 {{ post.date | date:"%F" }} {{ post.date | date: "%a" }}.
                 </time>
-                <a class="title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-               
+                <a class="title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>          
                 {% include main-loop-card.html %}
             <hr class="dotted">  
             </li>
