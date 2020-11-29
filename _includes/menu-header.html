@@ -21,9 +21,9 @@
                     {% if my_page.type == 'page' %}
                     <li class="nav-item">
                         {% if my_page.url == page.url %}
-                        <a class="active nav-link" href="{{ my_page.url | prepend: site.baseurl }}">
+                        <a class="active nav-link" href="{{ my_page.url | prepend: site.baseurl }}" data-hover={{ my_page.title }}>
                             {% else %}
-                        <a class="nav-link" href="{{ my_page.url | prepend: site.baseurl }}">
+                        <a class="nav-link" href="{{ my_page.url | prepend: site.baseurl }}" data-hover={{ my_page.title }}>
                         {% endif %}
                             <i class="fas fa-{{my_page.icon}} mr-1"></i>{{ my_page.title }}
                         </a>
