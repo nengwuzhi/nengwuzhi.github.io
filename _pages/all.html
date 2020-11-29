@@ -20,7 +20,7 @@ type: page
           {% for post in site.posts %}
 
             {% unless post.next %}
-              <h3 id="y{{ post.date | date: '%Y' }}">{{ post.date | date: '%Y' }}</h3>
+              <h3 class="btn btn-sm btn-danger mb-1" id="y{{ post.date | date: '%Y' }}">{{ post.date | date: '%Y' }}</h3>
             {% else %}
               {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
               {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
@@ -77,7 +77,7 @@ type: page
 
         <ul>
         {% for tag in sortedtags %}
-          <h3 id="{{ tag }}">{{ tag }}</h3>
+          <h3 class="btn btn-sm btn-danger mb-1" id="{{ tag }}">{{ tag }}</h3>
           {% for post in site.tags[tag] %}
             <li>
                 <time>
