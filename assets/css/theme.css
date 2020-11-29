@@ -415,9 +415,6 @@ code {
     border-radius: 0.1rem;
     text-shadow: none;
 }
-li.nav-item {
-    font-size: 22px;
-}
 p,li {
   max-width: max-content;
   font-size: 24px;
