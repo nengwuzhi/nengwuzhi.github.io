@@ -1,3 +1,4 @@
+  
 ---
 title: "作者"
 layout: default
@@ -5,12 +6,7 @@ icon: address-card
 permalink: /authors-list/
 type: page
 ---
-<div class="card pt-5 shadow-sm">
-  
-<div id="section1" class="py-5 section-1 container-fluid" style="padding-top:70px;padding-bottom:70px;padding-left:70px;padding-right:70px;"> 
-           <h1><i class="fas fa-address-card mr-1">作者</i></h1>			
-         <hr>
-        <ul>
+
 <section class="pt-5 pb-5">
     <div class="container">
         <div class="row">
@@ -34,6 +30,7 @@ type: page
                             <div class="media"><img class="rounded-circle img-thumbnail" src="{{site.baseurl}}/{{ site.authors.author1.avatar }}" alt="{{ site.authors.author1.name }}" width="75">
                                 <div class="media-body ml-3">
                                      <blockquote class="blockquote border-0 p-0">
+  
                                 <a  class="text-dark mb-0" href="{{site.baseurl}}/author-{{ site.authors.author1.name }}" alt="{{ site.authors.author1.name }}">   
                                     <h4> {{ site.authors.author1.name }} </h4> 
                                 </a>
@@ -69,7 +66,8 @@ type: page
             </div>
             </div>
         </div>
-               
+                
+
                         <!-- Bootstrap controls [dots]-->
                         <a class="carousel-control-prev width-auto" href="#carouselExampleIndicators" role="button" data-slide="prev">
                             <i class="fa fa-angle-left text-dark text-lg"></i>
@@ -85,57 +83,3 @@ type: page
         </div>
     </div>
 </section>
-        </ul>
-</div>
-<div id="section2" class="py-5 section-2 container-fluid" style="padding-top:70px;padding-bottom:70px;padding-left:70px;padding-right:70px;">
-      <h1><i class="fa fa-th-list"> 分类</i></h1>
-        <hr>
-        <ul>  
-             {% for category in site.categories %}
-            <h3 class="btn btn-sm btn-danger mb-1" id="{{category | first}}">{{category | first}}</h3>
-                {% for posts in category  %}
-                    {% for post in posts %}
-                        {% if post.url %}
-                        <li>
-                            <time>
-                            {{ post.date | date:"%F" }} {{ post.date | date: "%a" }}.
-                            </time>
-                            <a class="title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-
-         {% include main-loop-card.html %}
-                           <hr class="dotted">
-                        </li>
-                        {% endif %}
-                    {% endfor %}
-                {% endfor %}
-              {% endfor %}
-        </ul>
-</div>
-<div id="section3" class="py-5 section-3 container-fluid" style="padding-top:70px;padding-bottom:70px;padding-left:70px;padding-right:70px;">
-            <h1><i class="zmdi zmdi-label-heart"> 标签</i></h1>
-        <hr>
-        {% capture tags %}
-          {% for tag in site.tags %}
-            {{ tag[0] }}
-          {% endfor %}
-        {% endcapture %}
-        {% assign sortedtags = tags | split:' ' | sort %}
-
-        <ul>
-        {% for tag in sortedtags %}
-          <h3 class="btn btn-sm btn-danger mb-1" id="{{ tag }}">{{ tag }}</h3>
-          {% for post in site.tags[tag] %}
-            <li>
-                <time>
-                {{ post.date | date:"%F" }} {{ post.date | date: "%a" }}.
-                </time>
-                <a class="title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>          
-                {% include main-loop-card.html %}
-            <hr class="dotted">  
-            </li>
-          {% endfor %}
-        {% endfor %}
-        </ul>
-
-</div>           
-</div>
