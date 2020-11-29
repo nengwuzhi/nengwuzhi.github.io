@@ -194,7 +194,7 @@ article ol {
 }
 .sidebar.sticky-top.sticky-top-offset {
     top: 0px;
-    height: 3000px;
+    height: max-content;
     overflow-x: hidden;
     overflow-y: auto;
     z-index: auto;
