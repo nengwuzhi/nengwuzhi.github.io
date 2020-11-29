@@ -19,8 +19,9 @@ permalink: '/author-能无知.html'
         <h4 class="font-weight-bold spanborder"><span>Posts by {{page.title}}</span></h4>
             {% assign posts = site.posts | where:"author","author1" %}
             {% for post in posts %} 
+            <a class="title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
             {% include main-loop-card.html %}
- <a class="title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>  
+            <hr class="dotted"> 
             {% endfor %}
     </div>
 </div>
