@@ -3,13 +3,12 @@ title: '能无为'
 layout: default
 permalink: '/author-能无为.html'
 ---
-<div class="container">
-<div class="row justify-content-center">
+<div class="container pt-5">
+<div class="row pt-5 justify-content-center">
     <div class="col-md-8">        
         <div class="row align-items-center mb-5">
             <div class="col-md-9">
                 <h2 class="font-weight-bold">{{page.title}} <span class="small btn btn-outline-success btn-sm btn-round"><a href="{{ site.authors.author2.twitter }}">Follow</a></span></h2>
-                <p><a href="{{ site.authors.author2.site }}">{{ site.authors.author2.site }}</a></p>
                 <p class="excerpt">{{ site.authors.author2.bio }}</p>
             </div>
             <div class="col-md-3 text-right">
@@ -18,8 +17,10 @@ permalink: '/author-能无为.html'
         </div>
         <h4 class="font-weight-bold spanborder"><span>Posts by {{page.title}}</span></h4>
             {% assign posts = site.posts | where:"author","author2" %}
-            {% for post in posts %}
+            {% for post in posts %} 
+            <a class="title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
             {% include main-loop-card.html %}
+            <hr class="dotted"> 
             {% endfor %}
     </div>
 </div>
