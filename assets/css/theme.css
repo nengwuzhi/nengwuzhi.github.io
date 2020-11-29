@@ -15,18 +15,6 @@ body, code, pre {
   border: 1px solid lightgray;
   background-color: #333333;
 }
-.navbar-nav a:after {
-  left: 0;
-  top: 0;
-  padding: 0.5em 0;
-  position: absolute;
-  content: attr(data-hover);
-  color: #ffffff;
-  white-space: nowrap;
-  max-width: 0%;
-  line-height: unset;
-  overflow: hidden;
-}
 .grid-stack {
   background: #FAFAD2;
 }
