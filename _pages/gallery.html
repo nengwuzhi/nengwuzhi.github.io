@@ -8,15 +8,15 @@ type: page
 <!-- Gallery Section-->
     <section class="gallery no-padding">    
       <div class="row">
-          {% for image in site.static_files %}
-    {% if image.path contains '_posts/gallery' %}
+		       {% for post in site.categories.gallery %}
+                              {% if post.image %}
                 <div class="mix col-lg-3 col-md-3 col-sm-6">
                     <div class="item">
                         <a href="{{ site.baseurl }}{{ image.path }}" data-fancybox="gallery" class="image">
                 <img src="{{ site.baseurl }}{{ image.path }}" alt="..." class="img-fluid">
                     <div class="overlay d-flex align-items-center justify-content-center"><i class="fa fa-search-plus"></i></div></a></div>
                     </div>
-   {% endif %}
+          		{% endif %}
          {% endfor %}
             </div>
     </section>
