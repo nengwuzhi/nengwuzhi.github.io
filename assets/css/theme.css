@@ -23,12 +23,10 @@ body, code, pre {
   box-shadow:
     0 2px 1px rgba(0, 0, 0, 0.2), 
     inset 0 2px 1px rgba(0, 0, 0, 0.2);
-    
-  /* Font styles */
   text-decoration: none;
   font-size: 14px;
   text-transform: uppercase;
-  color: #222;
+  color: #222!important;
 }
 .bordered-link:hover  { border-color: #FDD68B; }
 .bordered-link:active { border-color: #FEE8BD; }
