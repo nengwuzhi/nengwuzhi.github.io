@@ -38,7 +38,7 @@
                 <h2 class="card-title title">{{ post.title }}</h2>     </a>
               <p class='post-content small text-muted font-italic'>{{post.summary}}</p>
                  <div class="showcat">
-{% for post in site.categories.blog %}
+{% for post in site.categories.博客 %}
               <a class="btn btn-sm btn-danger mb-1" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">
                 {{ category }}
               </a>
