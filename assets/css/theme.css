@@ -19,12 +19,6 @@ body, code, pre {
   --shadow-color: #FF9E9E;
   --shadow-color-light: white;
 }
-
-* {
-  margin: 0;
-  box-sizing: border-box;
-}
-
 h1 {
   margin: calc(25vh - 40px) auto 0 auto;
   font-size: 65px;
