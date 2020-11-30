@@ -27,7 +27,7 @@ body, code, pre {
 }
 
 h1 {
-  margin: calc(20vh - 40px) auto 0 auto;
+  margin: calc(25vh - 40px) auto 0 auto;
   font-size: 65px;
   text-align: center;
 }
