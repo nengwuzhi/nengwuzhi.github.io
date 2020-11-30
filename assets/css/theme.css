@@ -708,6 +708,7 @@ footer.footer {
 }
 .nav-link,.dropdown-item {
 	font-weight: 700;
+	font-size: medium;
 }
 .navbar {
 	padding: 0.5rem 2rem;
