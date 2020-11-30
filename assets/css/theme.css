@@ -15,10 +15,6 @@ body, code, pre {
   border: 1px solid lightgray;
   background-color: #333333;
 }
-:root {
-  --shadow-color: #FF9E9E;
-  --shadow-color-light: white;
-}
 h1 {
   margin: calc(25vh - 40px) auto 0 auto;
   font-size: 65px;
