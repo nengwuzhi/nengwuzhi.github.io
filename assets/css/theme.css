@@ -58,7 +58,6 @@ h1 {
   text-decoration: none;
   font-size: 14px;
   text-transform: uppercase;
-  color: #222!important;
 }
 .bordered-link:hover  { border-color: #FDD68B; }
 .bordered-link:active { border-color: #FEE8BD; }
@@ -697,6 +696,7 @@ a:hover {
 a,.a:hover {
 	-webkit-transition:all 0.2s;
 	transition: all 0.2s;
+	color: #fff!important;
 }
 .container-fluid {
 	width:94%;
