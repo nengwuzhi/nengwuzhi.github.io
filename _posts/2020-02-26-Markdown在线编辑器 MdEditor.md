@@ -1,10 +1,10 @@
 ---
-author: person
+author: someone
 layout: post_full
 title: Markdown使用教程
 image: assets/images/08.jpg
 tags: [Markdown]
-category: [教程]
+category: [博客,教程]
 ---
 # 欢迎使用 Markdown在线编辑器 MdEditor
 
