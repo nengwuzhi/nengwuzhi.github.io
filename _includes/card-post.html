@@ -1,6 +1,5 @@
 
 <!-- Grid sizer -->
-{% for post in site.categories.博客 %}
             <div class="grid-sizer col-md-4"></div>
 <div class="col-md-4 grid-item mb-3" {% unless post.image %} style="min-height:250px;" {% endunless %}>     
             {% if post.type == "youtube" %}
@@ -14,7 +13,7 @@
             {% endif %}
 
     {% unless post.image %}
-    
+ {% for post in site.categories.博客 %}   
         <a href="{{site.baseurl}}{{post.url}}"  class="d-block p-3">
         <h2 class="card-title title">{{ post.title }}</h2>         
            <small class="post-content small text-muted font-italic">{{ post.content | strip_html | truncatewords:25 }}</small>
