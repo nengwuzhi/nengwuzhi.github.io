@@ -22,8 +22,7 @@ layout: alt
                       
                        	  <h4 class="post_title">
                             {{ page.title }}
-                          </h4>
-			        			
+                          </h4>	        			
 		    
                         <div class="meta d-flex align-items-center">
                         {% if author.avatar %}
@@ -58,8 +57,7 @@ layout: alt
                             {{ content }}
 			<hr data-content="AND" class="hr-text">
                         </div>
-                        
-                      
+                              
                         <div class="catsandtags">        
                             {% if page.tags %}
                             <p class="tags">
@@ -71,7 +69,6 @@ layout: alt
                             {% endif %}
                         </div>
     
-              
                        <div class="post_nav">
                         {% if page.previous.url %}
                         <a class="prev" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}"><i class="fa fa-angle-left"></i><span class="short">上一篇</span></a>
