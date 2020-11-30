@@ -696,7 +696,6 @@ a:hover {
 a,.a:hover {
 	-webkit-transition:all 0.2s;
 	transition: all 0.2s;
-	color: #fff!important;
 }
 .container-fluid {
 	width:94%;
