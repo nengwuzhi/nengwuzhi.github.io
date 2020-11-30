@@ -13,17 +13,15 @@
             {% endif %}
  {% unless post.image %}
            <small class="post-content small text-muted font-italic">{{ post.content | strip_html | truncatewords:25 }}</small>
-        <div class="more mr-2 mb-2">                
-            <i class="fa fa-arrow-circle-right text-white" aria-hidden="true"></i>
-        </div> 
-        </a>
+                 <div class="more">                
+                    <a href="{{site.baseurl}}{{post.url}}"><i class="fas fa-link m-1 text-primary" aria-hidden="true"></i></a> 
+                </div>  
+
 </div>                  
 </div>                          
 {% endunless %}
         
     {% if post.image %} 
-    
-    
 <div class="postcontent">
         <a href="{{site.baseurl}}{{post.url}}">
          
