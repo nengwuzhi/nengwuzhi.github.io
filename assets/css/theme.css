@@ -132,7 +132,7 @@ div#accordionExample {
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;}
 .nav-link,.dropdown-item {
-	font-weight: 700;
+	font-weight: 500;
 	font-size: medium;
 }
 .nav-item:hover::after{  width: 100%;  left: 0; }
