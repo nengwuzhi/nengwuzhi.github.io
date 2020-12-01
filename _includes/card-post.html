@@ -20,7 +20,8 @@
 </div>                  
 </div>                          
 {% endunless %}
-        
+
+{% for post in site.categories.blog %}
     {% if post.image %} 
 <div class="postcontent">
         <a href="{{site.baseurl}}{{post.url}}">
@@ -45,6 +46,6 @@
            </div>
 
     {% endif %}
-
+{% endfor %}
 </div>
 			
