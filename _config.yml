@@ -10,11 +10,13 @@ weibo_username: nengwuzhi
 email: 'miandenglu@protonmail.com'
 paginate: 10
 paginate_path: /page/:num/
+all_dir: all/
+categories_dir: categories
+author_dir: /author
 include: ["_pages"]
 
 
-authors:
-  
+authors:  
   author1:
     name: 能无知
     site: https://nengwuzhi.github.io/
@@ -23,8 +25,7 @@ authors:
     Source-Title: "道可道，非常道。"
     email: mailto:author1thunaseer@gmail.com
     twitter: https://twitter.com/nengwuzhi
-    instagram: https://www.instagram.com/nengwuzhi/
-  
+    instagram: https://www.instagram.com/nengwuzhi/  
   author2:
     name: 能无为
     site: https://nengwuwei.com/
@@ -54,13 +55,11 @@ defaults:
   - scope:
       path: "_pages"
     values:
-      layout: page
-      
+      layout: page      
       
 # Syntax
 markdown: kramdown
 highlighter: rouge
-
 
 # Exclude metadata and development time dependencies (like Grunt plugins)
 exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]
