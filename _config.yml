@@ -7,7 +7,7 @@ favicon: 'assets/images/china-01_01.png'
 baseurl: ''
 disqus: 'demowebsite'
 email: 'wowthemesnet@gmail.com'
-paginate: 10
+paginate: 8
 paginate_path: /page/:num/
 all_dir: all/
 categories_dir: categories
