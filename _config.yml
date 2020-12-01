@@ -7,7 +7,7 @@ favicon: 'assets/images/china-01_01.png'
 baseurl: ''
 disqus: 'demowebsite'
 email: 'wowthemesnet@gmail.com'
-paginate: 8
+paginate: 10
 paginate_path: /page/:num/
 all_dir: all/
 categories_dir: categories
@@ -62,9 +62,6 @@ defaults:
 # Syntax
 markdown: kramdown
 highlighter: rouge
-
-# Pagination
-paginate: 20
 
 
 # Exclude metadata and development time dependencies (like Grunt plugins)
