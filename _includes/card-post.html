@@ -1,4 +1,4 @@
-
+{% for post in site.categories.博客 %}
 <!-- Grid sizer -->
             <div class="grid-sizer col-md-4"></div>
 <div class="col-md-4 grid-item mb-3" {% unless post.image %} style="min-height:250px;" {% endunless %}>     
@@ -22,7 +22,7 @@
 </div>                          
 {% endunless %}
 
-{% for post in site.categories.博客 %}
+
     {% if post.image %} 
 <div class="postcontent">
         <a href="{{site.baseurl}}{{post.url}}">
@@ -47,6 +47,6 @@
            </div>
 
     {% endif %}
-{% endfor %}
+
 </div>
-			
+{% endfor %}			
