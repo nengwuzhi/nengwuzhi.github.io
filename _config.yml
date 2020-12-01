@@ -9,9 +9,6 @@ disqus: 'demowebsite'
 email: 'miandenglu@protonmail.com'
 paginate: 10
 paginate_path: /page/:num/
-all_dir: all/
-categories_dir: categories
-author_dir: /author
 include: ["_pages"]
 
 
