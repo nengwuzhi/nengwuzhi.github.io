@@ -1,4 +1,4 @@
-{% for post in site.categories.博客 %}
+
 <!-- Grid sizer -->
             <div class="grid-sizer col-md-4"></div>
 <div class="col-md-4 grid-item mb-3" {% unless post.image %} style="min-height:250px;" {% endunless %}>     
@@ -22,13 +22,13 @@
 </div>                          
 {% endunless %}
 
-
+{% for post in site.categories.博客 %}
     {% if post.image %} 
 <div class="postcontent">
         <a href="{{site.baseurl}}{{post.url}}">
          
         <img class="card-img img-fluid w-100 mb-3 img-thumbnail shadow-sm rounded-0" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ post.image | absolute_url }}{% endif %}" alt="{{ post.title }}">             
-        
+{% endif %}   
             <div class="notraco">
                 <h2 class="card-title title">{{ post.title }}</h2>     </a>
               <p class='post-content small text-muted font-italic'>{{post.summary}}</p>
@@ -45,8 +45,6 @@
                 </div> 
             </div>
            </div>
-
-    {% endif %}
-
+{% endfor %}
 </div>
-{% endfor %}			
+			
