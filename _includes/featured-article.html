@@ -1,20 +1,22 @@
 <section class="pt-5 pb-5">
   <div class="container">
     <article class="row card  border-0 flex-md-row justify-content-between align-items-center card-top">
+{% for post in site.posts %} 
+{% if post.title contains "帛书版《老子五千言》" %}
         <a class="col-md-5  order-md-2 order-1 w-md-25" href="#">
-            <img class="img-fluid" src="https://via.placeholder.com/1100x1000/5fa9f8/ffffff" srcset="https://via.placeholder.com/1110x1000/5fa9f8/ffffff 2x" alt="Pic 8">
+            <img class="img-fluid" src="{{ post.image }}" srcset="{{ post.image }} 2x" alt="Pic 8">
         </a>
         <div class="card-body order-2 order-md-1 col-md-7">
             <div class=" text-uppercase font-weight-bold mb-4 text-warning">Featured Article</div>
             <h2 class="card-title display-4 font-weight-bold">
-                <a href="#" class="text-dark" title="Blog title">Best Easy Recipes for Breakfast Menus</a>
+                <a href="{{site.baseurl}}{{post.url}}" class="text-dark" title="{{ post.title }}"></a>
               </h2>
             <div class="card-text mb-4">
-                <p class="lead"> When you need some breakfast inspiration, try one of these easy breakfast recipes.</p>
+                <p class="lead">&nbsp;&nbsp; {{post.summary |  strip_html | strip_html | truncate: 32 }}</p>
             </div>
             <div class="mt-auto d-flex align-items-center pt-2">
                 <div class="mr-3">
-                    <img class="d-block img-fluid rounded-circle" src="https://via.placeholder.com/40x40/5fa9f8/ffffff " srcset="https://via.placeholder.com/120x120/5fa9f8/ffffff 2x" alt="user">
+                    <img class="d-block img-fluid rounded-circle" src="{{ post.image }} " srcset="{{ post.image }} 2x" alt="user">
                 </div>
                 <div class="d-block">
                     <div class="font-weight-bold">User Name</div>
@@ -22,6 +24,8 @@
                 </div>
             </div>
         </div>
+{% endif %}
+{% endfor %}     
     </article>
 </div>
 </section>
