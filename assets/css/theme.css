@@ -103,10 +103,6 @@ div#accordionExample {
 #button-addon1 {
   color: #ffc371;
 }
-
-i {
-  color: #ff4646cf;
-}
 .form-control.shadow-0:focus {
   box-shadow: none;
 }
