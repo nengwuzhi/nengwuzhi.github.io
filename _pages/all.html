@@ -13,12 +13,11 @@ type: page
   
 <div id="section1" class="py-5 section-1 container-fluid" style="padding-top:70px;padding-bottom:70px;padding-left:70px;padding-right:70px;">
         
-           <h1><i class="zmdi zmdi-archive"> 归档</i></h1>			
+           <h2><i class="zmdi zmdi-archive"> 归档</i></h2>			
          <hr>
         <ul>
 
           {% for post in site.posts %}
-
             {% unless post.next %}
               <h3 class="btn btn-sm btn-danger mb-1" id="y{{ post.date | date: '%Y' }}">{{ post.date | date: '%Y' }}</h3>
             {% else %}
@@ -42,7 +41,7 @@ type: page
         </ul>
 </div>
 <div id="section2" class="py-5 section-2 container-fluid" style="padding-top:70px;padding-bottom:70px;padding-left:70px;padding-right:70px;">
-      <h1><i class="fa fa-th-list"> 分类</i></h1>
+      <h2><i class="fa fa-th-list"> 分类</i></h2>
         <hr>
         <ul>  
              {% for category in site.categories %}
@@ -66,7 +65,7 @@ type: page
         </ul>
 </div>
 <div id="section3" class="py-5 section-3 container-fluid" style="padding-top:70px;padding-bottom:70px;padding-left:70px;padding-right:70px;">
-            <h1><i class="zmdi zmdi-label-heart"> 标签</i></h1>
+            <h2><i class="zmdi zmdi-label-heart"> 标签</i></h2>
         <hr>
         {% capture tags %}
           {% for tag in site.tags %}
