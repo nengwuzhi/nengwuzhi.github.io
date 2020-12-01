@@ -8,17 +8,17 @@ layout: alt
                     <div class="card shadow-sm">
 		{% include sticky_navbar.html %}     
                     <article>
-                        {% if page.type == "youtube" %}
+
                             {% if page.yt-video-id %}
                                 <div class="video_container">
                                     <iframe src="https://www.youtube.com/embed/{{page.yt-video-id}}?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
                                 </div>
                             {% endif %}
-                        {% elsif page.type == "image" or page.type == "gallery" %}
+
                             {% if page.featimg %}
                                 <img class="featimg" src="{{ site.media_folder | prepend: site.baseurl | replace: '', ''}}{{ page.featimg }}" alt="{{ page.featimg }}">
                             {% endif %}
-                            {% endif %}
+
                       
                        	  <h4 class="post_title">
                             {{ page.title }}
