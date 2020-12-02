@@ -22,7 +22,7 @@
 	
 
     {% for post.type == "博客" %} 
-	        {% if post.image %}
+
 <div class="postcontent">
         <a href="{{site.baseurl}}{{post.url}}">     
         <img class="card-img img-fluid w-100 mb-3 img-thumbnail shadow-sm rounded-0" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ post.image | absolute_url }}{% endif %}" alt="{{ post.title }}">             
@@ -43,7 +43,7 @@
                 </div> 
             </div>
            </div>
-{% endif %}   
+
  {% endfor %}
 </div>
 
