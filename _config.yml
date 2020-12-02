@@ -47,15 +47,17 @@ defaults:
 
   # all posts
   - scope:
-      path: "_posts"
+      path: "_posts/gallery"
     values:
-      layout: post
+      category: gallery 
+      layout: alt
       
   # all pages
   - scope:
-      path: "_pages"
+      path: "_posts/博客"
     values:
-      layout: page      
+      category: 博客
+      layout: post     
       
 # Syntax
 markdown: kramdown
