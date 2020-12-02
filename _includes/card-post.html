@@ -2,7 +2,7 @@
 <!-- Grid sizer -->
             <div class="grid-sizer col-md-4"></div>
 <div class="col-md-4 grid-item mb-3">  
-	{% for post.type == "博客" %} 
+
             {% if post.type == "youtube" %}
             {% if post.yt-video-id %}
             <div class="postcontent">
@@ -21,8 +21,7 @@
 </div>                          
 {% endunless %}
 	
-
-
+{% for post.type == "博客" %} 
 {% endfor %}
 <div class="postcontent">
         <a href="{{site.baseurl}}{{post.url}}">     
