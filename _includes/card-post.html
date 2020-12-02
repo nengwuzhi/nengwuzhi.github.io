@@ -5,20 +5,20 @@
             {% if post.yt-video-id %}
             <div class="postcontent">
                     <iframe width="100%" height="315" src="https://www.youtube.com/embed/{{ post.yt-video-id }}?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>                
- <div class="notraco">   
+            <div class="notraco">   
                   <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}" class="noline"><h2 class="card-title title">{{post.title}}</h2>
                   </a>  
            <small class="post-content small text-muted font-italic">{{ post.content | strip_html | truncatewords:25 }}</small>
                  <div class="more">                
                     <a href="{{site.baseurl}}{{post.url}}"><i class="fas fa-link m-1 text-primary" aria-hidden="true"></i></a> 
                  </div>  
-             </div>                  
-</div>                          
+            </div>                  
+            </div>                          
             {% endif %}
             {% endif %} 
 
 	    {% if post.type == "博客" %}
-<div class="postcontent">
+    <div class="postcontent">
         <a href="{{site.baseurl}}{{post.url}}">     
         <img class="card-img img-fluid w-100 mb-3 img-thumbnail shadow-sm rounded-0" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ post.image | absolute_url }}{% endif %}" alt="{{ post.title }}">             
             <div class="notraco">
@@ -36,7 +36,7 @@
                     <a href="{{site.baseurl}}{{post.url}}"><i class="fas fa-link m-1 text-primary" aria-hidden="true"></i></a> 
                 </div> 
             </div>
-</div>
+   </div>
 {% endif %} 
 
 
