@@ -2,22 +2,11 @@
                <div class="grid-sizer col-lg-4 col-md-6"></div>
 <!-- Grid item -->
         <div class="col-lg-4 col-md-6 grid-item mb-4">
-            {% if post.type == "youtube" %}
+ {% if post.type == "youtube" %}
             {% if post.yt-video-id %}
             <div class="postcontent">
                     <iframe width="100%" height="315" src="https://www.youtube.com/embed/{{ post.yt-video-id }}?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>                
-            <div class="notraco">   
-                  <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}" class="noline"><h2 class="card-title title">{{post.title}}</h2>
-                  </a>  
-           <small class="post-content small text-muted font-italic">{{ post.content | strip_html | truncatewords:25 }}</small>
-                 <div class="more">                
-                    <a href="{{site.baseurl}}{{post.url}}"><i class="fas fa-link m-1 text-primary" aria-hidden="true"></i></a> 
-                 </div>  
-            </div>                  
-            </div>                          
             {% endif %}
-
-
  {% elsif post.type == "博客" %}   
         <div class="postcontent">
         <a href="{{site.baseurl}}{{post.url}}">     
@@ -39,6 +28,6 @@
             </div>
          </div>
 
-        {% endif %} 
+ {% endif %} 
 </div>
 
