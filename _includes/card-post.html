@@ -8,16 +8,16 @@
  <div class="notraco">   
                   <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}" class="noline"><h2 class="card-title title">{{post.title}}</h2>
                   </a>  
-            {% endif %}
-            {% endif %} 
- {% unless post.image %}
+
+
            <small class="post-content small text-muted font-italic">{{ post.content | strip_html | truncatewords:25 }}</small>
                  <div class="more">                
                     <a href="{{site.baseurl}}{{post.url}}"><i class="fas fa-link m-1 text-primary" aria-hidden="true"></i></a> 
                 </div>  
 </div>                  
 </div>                          
-{% endunless %}
+            {% endif %}
+            {% endif %} 
 
     {% if post.image %} 
 <div class="postcontent">
