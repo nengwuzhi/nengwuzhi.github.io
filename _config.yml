@@ -6,7 +6,6 @@ logotext: 'assets/images/能无知乎.png'
 favicon: 'assets/images/china-01_01.png'
 baseurl: ''
 disqus: 'demowebsite'
-weibo_username: nengwuzhi
 email: 'miandenglu@protonmail.com'
 paginate: 10
 paginate_path: /page/:num/
@@ -15,7 +14,6 @@ categories_dir: categories
 author_dir: /author
 include: ["_pages"]
 
-
 authors:  
   author1:
     name: 能无知
@@ -23,7 +21,8 @@ authors:
     avatar: assets/images/avatar1.png
     bio: "言有宗，事有君。夫唯无知，是以我不知！"
     Source-Title: "道可道，非常道。"
-    email: mailto:author1thunaseer@gmail.com
+    email: 'miandenglu@protonmail.com'
+    weibo_username: nengwunao
     twitter: https://twitter.com/nengwuzhi
     instagram: https://www.instagram.com/nengwuzhi/  
   author2:
@@ -32,7 +31,8 @@ authors:
     avatar: assets/images/avatar2.png
     bio: "一切有为法，如梦幻泡影，如露亦如电，应作如是观。"
     Source-Title: "应无所住，而生其心。"
-    email: mailto:author2chemmengath@gmail.com
+    email: 'miandenglu@protonmail.com'
+    weibo_username: nengwunao
     twitter: https://twitter.com/nengwuwei
     instagram: https://www.instagram.com/nengwuwei/
 # Plugins
@@ -44,7 +44,6 @@ plugins:
  
 # Defaults
 defaults:
-
   # all posts
   - scope:
       path: "_posts/gallery"
