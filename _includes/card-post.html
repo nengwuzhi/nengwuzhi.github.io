@@ -4,7 +4,7 @@
 		       {% for post in site.categories.博客 %}
 						<li class='post'>
 							{% if post.image %}
-								<a href='{{site.baseurl}}{{post.url}}'><img class='post-image' src="{{post.image}}" /></a>
+								<a href='{{site.baseurl}}{{post.url}}'><img class='card-img img-fluid w-100 mb-3 img-thumbnail shadow-sm rounded-0' src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ post.image | absolute_url }}{% endif %}" /></a>
 							{% endif %}
 							<div class="postcontent">
 					<a href='{{post.url}}'><h1 class='post-title'>{{post.title}}</h1></a>
