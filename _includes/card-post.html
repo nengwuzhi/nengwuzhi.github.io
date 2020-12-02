@@ -1,19 +1,17 @@
 
-<!-- Grid sizer -->
-            <div class="grid-sizer col-md-4"></div>
-<div class="col-md-4 id='posts' grid-item mb-3">     
-        {% for post in site.categories.博客 %}
+				<div id='posts' class="card-columns">
+				<ul>
+		       {% for post in site.categories.blog %}
 						<li class='post'>
 							{% if post.image %}
-								<a href='{{ post.url | prepend: site.baseurl | replace: '//', '/'}}" class="noline"'><img class='card-img img-fluid w-100 mb-3 img-thumbnail shadow-sm rounded-0' src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ post.image | absolute_url }}{% endif %}" /></a>
+								<a href='{{post.url}}'><img class='post-image' src="{{post.image}}" /></a>
 							{% endif %}
-							<div class="notraco">
+							<div class="postcontent">
 					<a href='{{post.url}}'><h1 class='post-title'>{{post.title}}</h1></a>
 
 								<div class='post-content'>{{post.summary}}</div>
 							</div>
 						</li>
 					{% endfor %}
-</div>
-</div>
-			
+				</ul>	
+						</div>		
