@@ -49,14 +49,14 @@ defaults:
   - scope:
       path: "_posts/gallery"
     values:
-      category: gallery 
+      type: gallery 
       layout: alt
       
   # all pages
   - scope:
       path: "_posts/博客"
     values:
-      category: 博客
+      type: "博客"
       layout: post     
       
 # Syntax
