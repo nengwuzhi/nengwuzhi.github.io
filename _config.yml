@@ -56,7 +56,7 @@ defaults:
       path: "_posts/博客"
     values:
       type: "博客"
-      layout: post     
+      layout: default     
       
 # Syntax
 markdown: kramdown
