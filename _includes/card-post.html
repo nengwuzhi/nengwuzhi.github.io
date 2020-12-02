@@ -1,7 +1,8 @@
 
 <!-- Grid sizer -->
             <div class="grid-sizer col-md-4"></div>
-<div class="col-md-4 grid-item mb-3">     
+<div class="col-md-4 grid-item mb-3">  
+	{% for post.type == "博客" %} 
             {% if post.type == "youtube" %}
             {% if post.yt-video-id %}
             <div class="postcontent">
@@ -22,7 +23,7 @@
 	
 
 
-
+{% endfor %}
 <div class="postcontent">
         <a href="{{site.baseurl}}{{post.url}}">     
         <img class="card-img img-fluid w-100 mb-3 img-thumbnail shadow-sm rounded-0" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ post.image | absolute_url }}{% endif %}" alt="{{ post.title }}">             
