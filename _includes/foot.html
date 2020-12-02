@@ -13,27 +13,22 @@
 
 <script>
 $(function () {
-
     // Initate masonry grid
     var $grid = $('.gallery-wrapper').masonry({
         temSelector: '.grid-item',
         columnWidth: '.grid-sizer',
         percentPosition: true,
     });
-
     // Initate imagesLoaded
     $grid.imagesLoaded().progress( function() {
         $grid.masonry('layout');
-    });
-    
+    });    
 });</script>
  
-
 <!--search-->
 <script src="{{site.baseurl}}/assets/js/search/search.js"></script>
 
 <!--dark-mode-style-->
 <script src="{{site.baseurl}}/assets/js/dark_mode_style.js"></script>
-
 
 </footer>
