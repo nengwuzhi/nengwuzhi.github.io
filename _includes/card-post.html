@@ -10,10 +10,17 @@
             {% endif %}
             {% endif %} 
     {% unless post.image %} 
-        <a href="{{site.baseurl}}{{post.url}}"  class="d-block p-3">   
-           <small class="post-content small text-muted font-italic">{{ post.content | strip_html | truncatewords:25 }}</small>
-        <div class="more mr-2 mb-2">                
-            <i class="fa fa-arrow-circle-right text-white" aria-hidden="true"></i>
+            <div class="notraco">
+              <p class='post-content small text-muted font-italic'>{{post.summary}}</p>
+                 <div class="showcat">
+            {% for category in post.categories %}
+              <a class="btn btn-sm btn-danger mb-1" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">
+                {{ category }}
+              </a>
+            {% endfor %}
+             </div>  
+        <div class="more">                
+                    <a href="{{site.baseurl}}{{post.url}}"><i class="fas fa-link m-1 text-primary" aria-hidden="true"></i></a> 
         </div> 
         </a>
 </div>                  
