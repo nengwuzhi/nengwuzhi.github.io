@@ -11,8 +11,9 @@ type: page
     </h1>
 <!-- Gallery Section-->
     <section class="pt-5 pb-5 gallery no-padding">    
-<div id='posts' class="card-columns">
+<div class="card-columns">
 		       {% for post in site.categories.gallery %}
+		<li class=''>
                               {% if post.image %}
 
                     <div class="item">
@@ -21,6 +22,7 @@ type: page
                     <div class="overlay d-flex align-items-center justify-content-center"><i class="fas fa-search-plus"></i></div></a></div>
 
           		{% endif %}
+	        </li>
          {% endfor %}
             </div>
     </section>
