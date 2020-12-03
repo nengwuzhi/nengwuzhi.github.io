@@ -14,8 +14,8 @@ summary: 画册一的摘要。
 <!-- Gallery Section-->
     <section class="pt-5 pb-5 gallery no-padding">    
       <div class="row">
-		       {% for post in site.categories.gallery %}
-                              {% if post.image %}
+          {% for image in site.static_files %}
+    {% if image.path contains '_posts/gallery/gallery-1' %}
                 <div class="mix col-lg-3 col-md-3 col-sm-6">
                     <div class="item">
                        <a href="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ post.image | absolute_url }}{% endif %}" data-fancybox="gallery" class="image">
