@@ -8,8 +8,6 @@
  <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}" class="noline"><h2 class="card-title title ml-2">{{post.title}}</h2>
                   </a> 
                         <div class="notraco">   
-
-
            <small class="post-content small text-muted font-italic">{{ post.content | strip_html | truncatewords:25 }}</small>
                  <div class="more">                
                     <a href="{{site.baseurl}}{{post.url}}"><i class="fas fa-link m-1 text-primary" aria-hidden="true"></i></a> 
