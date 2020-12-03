@@ -18,7 +18,7 @@ summary: 画册一的摘要。
                               {% if post.image %}
                 <div class="mix col-lg-3 col-md-3 col-sm-6">
                     <div class="item">
-                        <a href="{{post.image}}" data-fancybox="gallery" class="image">
+                       <a href="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ post.image | absolute_url }}{% endif %}" data-fancybox="gallery" class="image">
                 <img src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ post.image | absolute_url }}{% endif %}" alt="{{ post.title }}" class="img-fluid">
                     <div class="overlay d-flex align-items-center justify-content-center"><i class="fa fa-search-plus"></i></div></a>
 			   <h2 class="card-title title">{{ post.title }}</h2>
