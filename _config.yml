@@ -55,7 +55,7 @@ defaults:
   - scope:
       path: "_posts/博客"
     values:
-      type: "博客"
+      category: "博客"
       layout: default     
       
 # Syntax
