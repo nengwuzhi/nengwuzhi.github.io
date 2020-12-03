@@ -40,7 +40,7 @@
           </div>
          </div>     
                                     <div class="card-body postcontent">
-		<a href="{{site.baseurl}}{{post.url}}"><h3 class="card-title title font-weight-bold">{{ post.title }}</h3></a>    
+		<a href="{{site.baseurl}}{{post.url}}"><h3 class="card-title title">{{ post.title }}</h3></a>    
                                     <div class="notraco">
                              <p class="card-text text-sm-left"> &nbsp;&nbsp; {{post.summary |  strip_html | strip_html | truncate: 32 }}</p>
                                     </div>
@@ -80,7 +80,7 @@
           </div>
          </div>     
                                     <div class="card-body postcontent">
-        <a href="{{site.baseurl}}{{post.url}}"><h3 class="card-title title font-weight-bold">{{ post.title }}</h3></a>    
+        <a href="{{site.baseurl}}{{post.url}}"><h3 class="card-title title">{{ post.title }}</h3></a>    
                                     <div class="notraco">
                              <p class="card-text text-sm-left"> &nbsp;&nbsp; {{post.summary |  strip_html | strip_html | truncate: 32 }}</p>
                                     </div>
@@ -100,8 +100,8 @@
                                 <div class="card">
                                     <img class="img-fluid" alt="{{ post.image }}" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=ee8417f0ea2a50d53a12665820b54e23">
                                     <div class="card-body">
-                                        <h4 class="card-title">{{post.title}}</h4>
-                             <p class="card-text text-sm-left"> &nbsp;&nbsp; {{post.summary |  strip_html | strip_html | truncate: 32 }}</p>
+                                        <h4 class="card-title">Special title treatment</h4>
+                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                                     </div>
 
                                 </div>
