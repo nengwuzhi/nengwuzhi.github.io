@@ -18,8 +18,8 @@ summary: 画册三的摘要。
     {% if image.path contains 'assets/gallery/gallery-3' %}
                 <div class="mix col-lg-3 col-md-3 col-sm-6">
                     <div class="item">
-                        <a href="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ post.image | absolute_url }}{% endif %}" data-fancybox="gallery" class="image">
-                <img src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ post.image | absolute_url }}{% endif %}" alt="..." class="img-fluid">
+                        <a href="{{ site.baseurl }}{{ image.path }}" data-fancybox="gallery" class="image">
+                <img src="{{ site.baseurl }}{{ image.path }}" alt="..." class="img-fluid">
                     <div class="overlay d-flex align-items-center justify-content-center"><i class="fas fa-search-plus"></i></div></a></div>
                     </div>
           {% endif %}
