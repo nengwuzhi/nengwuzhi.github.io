@@ -11,7 +11,7 @@ type: page
     </h1>
 <!-- Gallery Section-->
     <section class="pt-5 pb-5 gallery no-padding">    
-
+      <div class="row">
 	{% for post in site.categories.gallery %}
                         {% if post.image %}
   <div class="card mb-4">
@@ -22,5 +22,5 @@ type: page
 </div>
           		{% endif %}
          {% endfor %}
-
+</div>
     </section>
