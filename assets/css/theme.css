@@ -145,12 +145,6 @@ div#accordionExample {
 * Bootstrap 4 Contact us form
 * ==========================================
 */
-.contact-container{
-    max-width: 400px;
-    width: 100%;
-    margin: 0 auto;
-    position: relative;
-}
 #contactus {
     font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
     background: #F9F9F9;
@@ -182,7 +176,6 @@ fieldset {
     padding: 0;
     width: 100%
 }
-
 #contactus input[type="text"],
 #contactus input[type="email"],
 #contactus input[type="tel"],
