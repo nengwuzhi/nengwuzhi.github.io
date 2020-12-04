@@ -5,6 +5,40 @@ icon: images
 permalink: "/gallery"
 type: page
 ---
+
+<head>
+<style>
+.container {
+    background: #FF678C;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column wrap;
+    height: 80vh;
+    margin-bottom: 5vh;
+    text-align: center;
+    text-transform: uppercase;
+    width: 90vw
+}
+
+.card {
+    align-items: center;
+    background: white;
+    background-size: cover;
+    background-position: center;
+    border: 5px solid white;
+    box-sizing: border-box;
+    color: white;
+    display: flex;
+    flex-grow: 0;
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    height: 50%;
+    justify-content: center;
+    outline: 5px solid white;
+    text-shadow: 0 0 5px black; 
+</style>
+</head>
 {% include menu-header.html  %}  
 <h1 class="logo-1">
       凡所有相 ⚡ 皆是虚妄
@@ -15,12 +49,11 @@ type: page
 	{% for post in site.categories.gallery %}
                         {% if post.image %}
   <div class="col-xs-6 col-sm-6 card mb-4">
-                    <div class="item">
-                        <a href="{{site.baseurl}}{{post.url}}" class="image"><h2 class="card-title title">{{ post.title }}</h2>    
-<img src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ post.image | absolute_url }}{% endif %}" alt="{{ post.title }}" class="img-fluid">
-                    <div class="overlay d-flex align-items-center justify-content-center"><i class="fas fa-search-plus"></i></div></a></div>
-</div>
-          		{% endif %}
+                    <div class="item" data-container>
+  <div class="card" data-card style="background-image: url('{% if post.image contains "://" %}{{ post.image }}{% else %}{{ post.image | absolute_url }}{% endif %}')"><h2 class="card-title title">{{ post.title }}</h2></div>
+          </div>
+       </div>		
+	      {% endif %}
          {% endfor %}
 </div>
     </section>
