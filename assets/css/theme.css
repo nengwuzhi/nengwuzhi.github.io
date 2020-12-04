@@ -566,7 +566,7 @@ code {
     text-shadow: none;
 }
 p,li {
-  max-width: max-content;
+    /* max-width: max-content; */
   font-size: 21px;
   font-weight: 300;
   color: #000;
