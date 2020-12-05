@@ -13,8 +13,8 @@
             <div class="notraco">
               <p class='post-content small text-muted font-italic'>{{post.summary}}</p>
                  <div class="showcat">
-            {% for category in post.categories %}
-              <a class="btn btn-sm btn-danger mb-1" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">
+            {% for tag in post.tags %}
+              <a class="btn btn-sm btn-danger mb-1" href="{{site.baseurl}}/all.html#{{ tag | downcase }}">
                 {{ category }}
               </a>
             {% endfor %}
