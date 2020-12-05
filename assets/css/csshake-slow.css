@@ -29,7 +29,7 @@ h1 {
 
 .at-item {
   animation-name: text-shadow-multicolor;
-  animation-duration: 2s;
+  animation-duration: 5s;
   animation-timing-function: ease;
   animation-delay: 0s;
   animation-iteration-count: infinite;
