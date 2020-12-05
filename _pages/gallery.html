@@ -23,6 +23,109 @@ type: page
     transform: scale(2, 2);
     cursor: pointer
 }
+.snip {
+  font-family: 'Raleway', sans-serif;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 230px;
+  max-width: 315px;
+  width: 100%;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: left;
+}
+.snip * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.snip:before {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  top: 100%;
+  content: '';
+  background-color: rgba(51, 51, 51, 0.9);
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  -webkit-transition-delay: 0.25s;
+  transition-delay: 0.25s;
+}
+.snip figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.snip h4,
+.snip h5 {
+  margin: 0;
+  opacity: 0;
+  letter-spacing: 1px;
+}
+.snip h4 {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+  -webkit-transition-delay: 0.05s;
+  transition-delay: 0.05s;
+  margin-bottom: 5px;
+}
+.snip h5 {
+  font-weight: normal;
+  background-color: #ae895d;
+  padding: 3px 10px;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.snip a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+.snip:hover:before,
+.snip.hover:before {
+  top: 10px;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.snip:hover h4,
+.snip.hover h4,
+.snip:hover h5,
+.snip.hover h5 {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+}
+.snip:hover h4,
+.snip.hover h4 {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+.snip:hover h5,
+.snip.hover h5 {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}	
+	
 </style>
 </head>
 {% include menu-header.html  %}  
@@ -30,16 +133,17 @@ type: page
       凡所有相 ⚡ 皆是虚妄
     </h1>
 <!-- Gallery Section-->
-    <section class="pt-5 pb-5 gallery no-padding">    
-      <div class="row">
+    <section class="pt-5 pb-5 gallery">  
+	     <div class="row">    
 	{% for post in site.categories.gallery %}
                         {% if post.image %}
-        <div class="col-md-4">
-		<div class="image"> 
- <a href="{{site.baseurl}}{{post.url}}">
- <img class="card-img card img-fluid w-100 mb-3 img-thumbnail shadow-sm rounded-0" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ post.image | absolute_url }}{% endif %}" alt="{{ post.title }}">   
-<h2 class="card-title title">{{ post.title }}</h2>/a>
-	 </div>
+        <figure class="col-md-4 image">
+	 <figcaption>
+	    <h5 class="card-title title">{{ post.title }}</h5>
+	</figcaption>
+	     <a href="{{site.baseurl}}{{post.url}}"></a>
+	</figure> 
+
        </div>		
 	      {% endif %}
          {% endfor %}
