@@ -148,7 +148,7 @@
                       {% else %}
                         {% assign color = 8 | minus: base %}
                       {% endif %}
-    <a class="sidebar" href="#{{ tag | first }}" style="font-size: {{ size }}pt; color: #{{ color }}{{ color }}{{ color }};">{{ tag[0] }}</a>
+    <a class="sidebar" href="#{{ tag | first }}" style="font-size: {{ size }}pt; color: #{{ color }}{{ color }}{{ color }};">{{ tag[0] }}<span class="badge">{{ category | last | size }}</span></a>
     {% endfor %}            
                      </p>
             </div>
