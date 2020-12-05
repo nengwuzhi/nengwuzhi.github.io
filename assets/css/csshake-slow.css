@@ -1,9 +1,3 @@
-div.at-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
 .at-item {
   color: #3079ed;
   animation-name: text-shadow-multicolor;
