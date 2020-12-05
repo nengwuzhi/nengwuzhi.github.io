@@ -15,7 +15,7 @@
                  <div class="showcat">
             {% for tag in post.tags %}
               <a class="btn btn-sm btn-danger mb-1" href="{{site.baseurl}}/all.html#{{ tag | downcase }}">
-                {{ category }}
+                {{ tag }}
               </a>
             {% endfor %}
              </div>  
