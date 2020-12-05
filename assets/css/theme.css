@@ -16,8 +16,8 @@ body, code, pre {
   background-color: #333333;
 }
 :root {
-  --shadow-color: #FF9E9E;
-  --shadow-color-light: white;
+    --shadow-color: #ff9797;
+    --shadow-color-light: #fbe2cd;
 }
 
 .bordered-link {
