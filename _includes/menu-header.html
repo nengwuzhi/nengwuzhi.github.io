@@ -34,20 +34,15 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="download"><i class="fas fa-th-list mr-1"></i>分类 <span class="caret"></span></a>
           <div class="dropdown-menu" aria-labelledby="download">
-  
                     <a href="{{ root_url }}/{{ site.all_dir }}#{{ category | first }}" class="dropdown-item" cate="All">
                         All&nbsp;<span class=""> {{site.posts | size}}</span>
                     </a>
             <div class="dropdown-divider"></div>
    	      {% for category in site.categories %}
-
             <a class="dropdown-item" href="{{ root_url }}/{{ site.all_dir }}#{{ category | first }}" cate="{{ category | first }}">
                         {{ category | first }}&nbsp;<span class="categories-badge">{{ category | last | size }}</span>
             </a>
-
               {% endfor %}  
-
-
           </div>
         </li>
       </ul>
@@ -57,8 +52,7 @@
   <div class="search" style="display:inline-block;position:relative;">
 	     <div style="position:absolute;right:4px;top:1px;cursor:pointer;display:none;" class="search-clear">
 		<button type="button" class="close" aria-hidden="true">
-			<span class="lnr lnr-cross"></span>
-			
+			<i class="fas fa-times"></i>			
 		</button>
 	     </div>  
 	 <i class="search-start"></i>
