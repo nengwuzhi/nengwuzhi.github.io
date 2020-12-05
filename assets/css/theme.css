@@ -152,29 +152,6 @@ div#accordionExample {
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24)
 }
 
-#contactus {}
-
-#contactus h3 {
-    display: block;
-    font-size: 30px;
-    font-weight: 300;
-    margin-bottom: 10px
-}
-
-#contactus h4 {
-    margin: 5px 0 15px;
-    display: block;
-    font-size: 13px;
-    font-weight: 400
-}
-
-fieldset {
-    border: medium none !important;
-    margin: 0 0 10px;
-    min-width: 100%;
-    padding: 0;
-    width: 100%
-}
 #contactus input[type="text"],
 #contactus input[type="email"],
 #contactus input[type="tel"],
