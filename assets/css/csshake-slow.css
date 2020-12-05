@@ -38,7 +38,7 @@ h1 {
 }
 @keyframes text-shadow-multicolor {
   0%{
-    text-shadow: 0 0px 20px #ffd9eb;
+    text-shadow: 0 0px 20px radial-gradient(ellipse at center, rgba(224,21,21,0) 0%, rgba(224,25,25,1) 2%, rgba(238,128,128,0) 49%, rgba(255,241,241,1) 100%);
   }
   50% {
     text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
