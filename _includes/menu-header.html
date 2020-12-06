@@ -32,16 +32,19 @@
                 {% endfor %}  
  
 	<li class="nav-item dropdown">
-		{% if page.url == '{{ site.gallery }}' %}
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="download"><i class="far fa-images mr-1"></i>相册</a>
-		  {% else %}
-           <a class="active nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="download"><i class="far fa-images mr-1"></i>相册</a>
-                    {% endif %}
 		
           <div class="dropdown-menu" aria-labelledby="download">
-		    <a href="{{site.gallery | first }}" class="dropdown-item" cate="{{site.gallery | first }}">
+		 {% if page.url == '{{ site.gallery }}' %}
+		    <a href="{{site.gallery | first }}" class="active dropdown-item" cate="{{site.gallery | first }}">
                     所有分类
                     </a>
+			                       {% else %}    
+		   <a href="{{site.gallery | first }}" class="dropdown-item" cate="{{site.gallery | first }}">
+                    所有分类
+                    </a>
+			                    {% endif %}    
+			    
             <div class="dropdown-divider"></div>
 	{% for post in site.categories.gallery %}
           {% if post.image %}
