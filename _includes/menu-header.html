@@ -38,17 +38,13 @@
 		   <li> <a class="dropdown-item" href="#" cate="All">All&nbsp;<span>{{site.posts | size}}</span></a></li>
             <div class="dropdown-divider"></div>
    	      {% for category in site.categories %}
-	                    {% for posts in category  %}
-        <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#" cate="{{ category | first }}">
-		 {{ category | first }}&nbsp;<span class="categories-badge">{{ category | last | size }}</span></a>
 
-	     <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
-            </ul>
+            <a class="dropdown-item" href="{{ root_url }}/{{ site.all_dir }}#{{ category | first }}" cate="{{ category | first }}">
+                        {{ category | first }}&nbsp;<span class="categories-badge">{{ category | last | size }}</span>
+            </a>
 
-	</li>
-	                {% endfor %}  	
-	       {% endfor %}  	
+              {% endfor %}  
+ 	
         </ul>
 		
         </li>
