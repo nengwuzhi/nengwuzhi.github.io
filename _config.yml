@@ -8,6 +8,7 @@ baseurl: ''
 disqus: 'demowebsite'
 address: 'LONDON, shanghai 94126, cn'
 email: 'miandenglu@protonmail .com'
+phone: '+1 9485045958'
 paginate: 10
 paginate_path: /page/:num/
 all_dir: all/
