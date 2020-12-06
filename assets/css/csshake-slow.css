@@ -3,7 +3,10 @@ h1 {
   font-size: 65px;
   text-align: center;
 }
-
+:root {
+    --shadow-color: #ff9797;
+    --shadow-color-light: #fbe2cd;
+}
 .logo-1  {
   color: white;
   animation-name: text-shadow-multicolor;
