@@ -34,7 +34,7 @@
 	<li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="download"><i class="fas fa-th-list mr-1"></i>相册</a>
           <div class="dropdown-menu" aria-labelledby="download">
-
+		   <li> <a class="dropdown-item" href="{{site.gallery}}"><span>{{site.gallery}}</span></a></li>
             <div class="dropdown-divider"></div>
 	{% for post in site.categories.gallery %}
           {% if post.image %}
