@@ -34,15 +34,19 @@
         <li class="nav-item dropdown">
    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="download"><i class="fas fa-th-list mr-1"></i>分类 <span class="caret"></span></a>
 		
-          <ul class="dropdown-menu" aria-labelledby="download">
+       <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 		   <li> <a class="dropdown-item" href="#" cate="All">All&nbsp;<span>{{site.posts | size}}</span></a></li>
             <div class="dropdown-divider"></div>
    	      {% for category in site.categories %}
-           <li> <a class="dropdown-item" href="{{ root_url }}/{{ site.all_dir }}#{{ category | first }}" cate="{{ category | first }}">
-                        {{ category | first }}&nbsp;<span class="categories-badge">{{ category | last | size }}</span>
-           </a></li>
-              {% endfor %}  
-          </ul>
+        <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#" cate="{{ category | first }}">
+		 {{ category | first }}&nbsp;<span class="categories-badge">{{ category | last | size }}</span></a>
+
+	     <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="{{ root_url }}/{{ site.all_dir }}#{{ cat[0] }} ">{{ cat[0] }}</a></li>
+            </ul>
+	</li>
+	       {% endfor %}  	
+        </ul>
 		
         </li>
 			
