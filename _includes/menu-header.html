@@ -40,10 +40,15 @@
    	      {% for category in site.categories %}
         <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#" cate="{{ category | first }}">
 		 {{ category | first }}&nbsp;<span class="categories-badge">{{ category | last | size }}</span></a>
-
+                {% for posts in category  %}
+                    {% for post in posts %}
+                        {% if post.url %}
 	     <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="{{ root_url }}/{{ site.all_dir }}#{{ post.title }} ">{{ post.title }}</a></li>
+              <li><a class="dropdown-item" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
             </ul>
+		       {% endif %}
+                    {% endfor %}
+                {% endfor %}
 	</li>
 	       {% endfor %}  	
         </ul>
