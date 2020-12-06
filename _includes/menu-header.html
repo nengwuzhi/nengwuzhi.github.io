@@ -32,17 +32,18 @@
                 {% endfor %}  
  
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="download"><i class="fas fa-th-list mr-1"></i>分类 <span class="caret"></span></a>
-          <div class="dropdown-menu" aria-labelledby="download">
-		   <a class="dropdown-item" href="#" cate="All">All&nbsp;<span>{{site.posts | size}}</span></a>
+   <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="download"><i class="fas fa-th-list mr-1"></i>分类 <span class="caret"></span></a>
+		
+          <ul class="dropdown-menu" aria-labelledby="download">
+		   <li> <a class="dropdown-item" href="#" cate="All">All&nbsp;<span>{{site.posts | size}}</span></a></li>
             <div class="dropdown-divider"></div>
    	      {% for category in site.categories %}
-
-            <a class="dropdown-item" href="{{ root_url }}/{{ site.all_dir }}#{{ category | first }}" cate="{{ category | first }}">
+           <li> <a class="dropdown-item" href="{{ root_url }}/{{ site.all_dir }}#{{ category | first }}" cate="{{ category | first }}">
                         {{ category | first }}&nbsp;<span class="categories-badge">{{ category | last | size }}</span>
-            </a>
+           </a></li>
               {% endfor %}  
-          </div>
+          </ul>
+		
         </li>
 			
       </ul>
