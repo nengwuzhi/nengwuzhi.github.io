@@ -32,7 +32,12 @@
                 {% endfor %}  
  
 	<li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="download"><i class="far fa-images mr-1"></i>相册</a>
+		{% if page.url == '{{site.gallery | first }}' %}
+          <a class="active nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="download"><i class="far fa-images mr-1"></i>相册</a>
+		  {% else %}
+           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="download"><i class="far fa-images mr-1"></i>相册</a>
+                    {% endif %}
+		
           <div class="dropdown-menu" aria-labelledby="download">
 		    <a href="{{site.gallery | first }}" class="dropdown-item" cate="{{site.gallery | first }}">
                     所有分类
