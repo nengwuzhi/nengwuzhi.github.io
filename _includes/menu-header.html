@@ -30,23 +30,6 @@
                     </li>
                     {% endif %}
                 {% endfor %}  
- 
-	<li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="download"><i class="far fa-images mr-1"></i>相册</a>
-          <div class="dropdown-menu" aria-labelledby="download">
-		   <a href="{{site.gallery}}" class="dropdown-item" cate="{{site.gallery | first }}">
-                    所有分类
-                    </a>		    
-            <div class="dropdown-divider"></div>
-	{% for post in site.categories.gallery %}
-          {% if post.image %}
-            <a class="dropdown-item" href="{{site.baseurl}}{{post.url}}">
-                       {{ post.title }}
-            </a>
-	   {% endif %}
-         {% endfor %}
-          </div>
-        </li>    
 			    			    
         <li class="nav-item dropdown">
    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="download"><i class="fas fa-th-list mr-1"></i>分类<span class="caret"></span></a>	
