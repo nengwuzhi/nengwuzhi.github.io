@@ -1,8 +1,5 @@
-<!DOCTYPE html>
-<html lang="zh">
 <head>
 <style>
-
 #toTopBtn {
     position: fixed;
     bottom: 26px;
@@ -11,22 +8,18 @@
     padding: 21px;
     background-color: hsla(5, 76%, 62%, .8)
 }
-
 .js .cd-top--fade-out {
     opacity: .5
 }
-
 .js .cd-top--is-visible {
     visibility: visible;
     opacity: 1
 }
-
 .js .cd-top {
     visibility: hidden;
     opacity: 0;
     transition: opacity .3s, visibility .3s, background-color .3s
 }
-
 .cd-top {
     position: fixed;
     bottom: 20px;
@@ -47,8 +40,7 @@
     height: 5000px
 }
 </style>
-</head>
- 
+</head> 
 <body>
 <a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out" data-abc="true"></a>
 <div class="height"></div>
@@ -63,7 +55,6 @@ $('#toTopBtn').fadeIn();
 $('#toTopBtn').fadeOut();
 }
 });
-
 $('#toTopBtn').click(function() {
 $("html, body").animate({
 scrollTop: 0
@@ -73,4 +64,3 @@ return false;
 });</script>
 </footer>
 </body>
-</html>
