@@ -6,9 +6,9 @@
     <meta name="description" content="{{site.description}}">
     <meta name="robots" content="index,follow">
     <title>{{page.title}} | {{site.name}}</title>
+        {% seo %}
 <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.baseurl | prepend: site.url | replace: '//', '/' }}/feed.xml">
 <link rel="shortcut icon" type="image/x-icon" href="{{site.baseurl}}/{{site.favicon}}">
-    {% seo %}
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="{{site.baseurl}}/assets/css/theme.css">
 <link rel="stylesheet" href="{{site.baseurl}}/assets/css/bootstrap-toc.css">
