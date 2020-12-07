@@ -7,21 +7,21 @@
 <script>$("div.navbar.fixed-top").autoHidingNavbar();</script>
 <!-- toTop-->
 <script>
-$(document).ready(function() {
-$(window).scroll(function() {
-if ($(this).scrollTop() > 2000) {
-$('#toTopBtn').fadeIn();
-} else {
-$('#toTopBtn').fadeOut();
-}
-});
-
-$('#toTopBtn').click(function() {
-$("html, body").animate({
-scrollTop: 0
-}, 1000);
-return false;
-});
+$(document).ready(function(){
+	$(window).scroll(function () {
+			if ($(this).scrollTop() > 550) {
+				$('#back-to-top').fadeIn();
+			} else {
+				$('#back-to-top').fadeOut();
+			}
+		});
+		// scroll body to 0px on click
+		$('#back-to-top').click(function () {
+			$('body,html').animate({
+				scrollTop: 0
+			}, 400);
+			return false;
+		});
 });</script>
           <!-- masonry -->
 <script src="https://unpkg.com/imagesloaded@4.1.4/imagesloaded.pkgd.min.js" ></script>
