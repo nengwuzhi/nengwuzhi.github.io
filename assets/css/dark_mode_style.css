@@ -1,13 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
-body {
-  font-family: Raleway, sans-serif;
-  font-size: 18px;
-  line-height: 1.7;
-  background-color: #eaeaea;
-  color: #333;
-  -webkit-transition: background-color 800ms ease;
-  transition: background-color 800ms ease;
-}
+
 body.dark {
   background-color: #222;
   color: #eaeaea;
@@ -19,11 +10,6 @@ body.dark .footer {
 body.dark img {
   -webkit-filter: brightness(70%);
           filter: brightness(70%);
-}
-
-h2 {
-  font-size: 3rem;
-  line-height: 1.2;
 }
 
 img {
