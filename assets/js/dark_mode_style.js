@@ -6,37 +6,31 @@
 var darkMode;
 
 if (localStorage.getItem('dark-mode')) {  
-  // if dark mode is in storage, set variable with that value
+  // 如果存储模式为暗模式，使用该值设置变量
   darkMode = localStorage.getItem('dark-mode');  
 } else {  
-  // if dark mode is not in storage, set variable to 'light'
+  // 如果没有存储暗模式，将变量设置为“亮”
   darkMode = 'light';  
 }
 
-// set new localStorage value
+//设置新的本地存储值
 localStorage.setItem('dark-mode', darkMode);
 
-
 if (localStorage.getItem('dark-mode') == 'dark') {
-  // if the above is 'dark' then apply .dark to the body
-  $('body').addClass('dark'); 
-  $('article').addClass('dark');
-  $('.vertical-nav').addClass('dark'); 
-  // hide the 'dark' button
+  // 如果上述内容为“深色”，则将.dark应用于身体
+  $('body').addClass('dark');  
+  // 隐藏“dark”按钮
   $('.dark-button').hide();
-  // show the 'light' button
+  // 显示“light”按钮
   $('.light-button').show();
 }
 
-
-// Toggle dark UI
+// Toggle dark UI切换黑暗的用户界面
 
 $('.dark-button').on('click', function() {  
   $('.dark-button').hide();
   $('.light-button').show();
-  $('body').addClass('dark');
-  $('article').addClass('dark');
-  $('.vertical-nav').addClass('dark');
+  $('body').addClass('dark');  
   // set stored value to 'dark'
   localStorage.setItem('dark-mode', 'dark');
 });
@@ -45,16 +39,12 @@ $('.light-button').on('click', function() {
   $('.light-button').hide();
   $('.dark-button').show();
   $('body').removeClass('dark');
-  $('article').removeClass('dark');
-  $('.vertical-nav').removeClass('dark');
   // set stored value to 'light'
   localStorage.setItem('dark-mode', 'light');   
 });
 
-
-
 //--------------------------------------------------
-// Below is all that is neede for the basic toggle
+// 以下是基本切换所需的全部
 //--------------------------------------------------
 
 // $('.dark-button').on('click', function() {  
