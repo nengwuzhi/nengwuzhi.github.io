@@ -1,5 +1,17 @@
+<!DOCTYPE html>
+<html lang="zh">
 <head>
+ <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"> 
+
 <style>
+body {
+    background-color: #9575CD
+}
+
+
+
 #toTopBtn {
     position: fixed;
     bottom: 26px;
@@ -8,18 +20,22 @@
     padding: 21px;
     background-color: hsla(5, 76%, 62%, .8)
 }
+
 .js .cd-top--fade-out {
     opacity: .5
 }
+
 .js .cd-top--is-visible {
     visibility: visible;
     opacity: 1
 }
+
 .js .cd-top {
     visibility: hidden;
     opacity: 0;
     transition: opacity .3s, visibility .3s, background-color .3s
 }
+
 .cd-top {
     position: fixed;
     bottom: 20px;
@@ -36,15 +52,25 @@
     background-color: hsla(5, 76%, 62%, .8);
     background-color: hsla(var(--cd-color-3-h), var(--cd-color-3-s), var(--cd-color-3-l), 0.8)
 }
+
 .height {
     height: 5000px
 }
 </style>
-</head> 
+</head>
+
+
 <body>
 <a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out" data-abc="true"></a>
-<div class="height"></div>
+<div class="height">
+
+</div>
 <!-- Resources-->
+<footer>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 <script>
 $(document).ready(function() {
 $(window).scroll(function() {
@@ -54,6 +80,7 @@ $('#toTopBtn').fadeIn();
 $('#toTopBtn').fadeOut();
 }
 });
+
 $('#toTopBtn').click(function() {
 $("html, body").animate({
 scrollTop: 0
@@ -61,4 +88,6 @@ scrollTop: 0
 return false;
 });
 });</script>
+</footer>
 </body>
+</html>
