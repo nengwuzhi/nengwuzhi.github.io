@@ -78,7 +78,6 @@ div#accordionExample {
 .form-control:focus {
   box-shadow: none;
 }
-
 .form-control-underlined {
   border-width: 0;
   border-bottom-width: 1px;
@@ -492,9 +491,6 @@ hr.hr-text::before {
 
 ::marker {
     font-size: small;
-}
-html {
-  scroll-behavior: smooth;
 }
 
 blockquote {
