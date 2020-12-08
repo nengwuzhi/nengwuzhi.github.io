@@ -257,16 +257,13 @@ article ul li,article ol li {
 article ol {
 	list-style: decimal;
 }
-.sidebar {
-    width: calc(25% - 20px);
-    float: left;
-}
 .sidebar.sticky-top.sticky-top-offset {
     top: 0px;
     height: max-content;
     overflow-x: hidden;
     overflow-y: auto;
     z-index: auto;
+    float: left;
 }
 a.sidebar {
     padding: 0.4rem 0.8rem;
