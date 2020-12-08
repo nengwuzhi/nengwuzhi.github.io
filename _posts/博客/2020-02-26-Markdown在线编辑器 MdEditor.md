@@ -1,6 +1,5 @@
 ---
 author: someone
-layout: post_full
 title: Markdown使用教程
 image: assets/images/08.jpg
 tags: [Markdown]
