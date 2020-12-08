@@ -18,7 +18,9 @@ html {
   border: 1px solid lightgray;
   background-color: #333333;
 }
-
+.card-header {
+    padding: .60rem 1.25rem;
+}
 .bordered-link {
   display: inline-block;
   padding: 8px;
