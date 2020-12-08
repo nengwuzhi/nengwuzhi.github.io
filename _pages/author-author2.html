@@ -15,10 +15,10 @@ permalink: '/author-能无为.html'
                 <img alt="{{ site.authors.author2.name }}" src="{{site.baseurl}}/{{ site.authors.author2.avatar }}" class="rounded-circle" height="100" width="100">
             </div>
         </div>
-        <h4 class="font-weight-bold spanborder"><span>Posts by {{page.title}}</span></h4>
+        <h4 class="font-weight-bold spanborder"><span>Posts by {{page.title}}</span>
             {% assign posts = site.posts | where:"author","author2" %}
             {% for post in posts %} 
-            <a class="title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            <a class="title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h4>
             {% include main-loop-card.html %}
             <hr class="dotted"> 
             {% endfor %}
