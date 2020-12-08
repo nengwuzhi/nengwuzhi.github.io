@@ -1,3 +1,32 @@
+[data-theme="dark"] {
+  background-color: #111 !important;
+  color: #eee;
+}
+
+[data-theme="dark"] .bg-light {
+  background-color: #333 !important;
+}
+
+[data-theme="dark"] .bg-white {
+  background-color: #000 !important;
+}
+
+[data-theme="dark"] .bg-black {
+  background-color: #eee !important;
+}
+
+.wrapper{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	width: 400px;
+	margin: 50vh auto 0;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-transform: translateY(-50%);
+	        transform: translateY(-50%);
+}
+
 .switch_box{
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -63,3 +92,7 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+
+
+
