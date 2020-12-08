@@ -14,13 +14,7 @@
 [data-theme="dark"] .bg-black {
   background-color: #eee !important;
 }
-[data-theme="dark"] a {
-    color: #ffffxx;
-    background-color: transparent;
-}
-[data-theme="dark"] .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
-    color: #ffffff;
-}
+
 .wrapper{
 	display: -webkit-box;
 	display: -ms-flexbox;
