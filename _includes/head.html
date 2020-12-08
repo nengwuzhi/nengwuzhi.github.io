@@ -9,7 +9,7 @@
         {% seo %}
 <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.baseurl | prepend: site.url | replace: '//', '/' }}/feed.xml">
 <link rel="shortcut icon" type="image/x-icon" href="{{site.baseurl}}/{{site.favicon}}">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.1/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'bootstrap4.0.0/css/bootstrap.min.css' %}" id="default-theme">
 <link rel="stylesheet" href="{{site.baseurl}}/assets/css/theme.css">
     <!--dark-mode-style-->
 <link rel="stylesheet" href="{{site.baseurl}}/assets/css/dark-mode.css">
