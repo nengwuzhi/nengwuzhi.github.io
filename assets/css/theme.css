@@ -201,11 +201,7 @@ div#accordionExample {
 .itemTitle a{font-weight:bold; color: #ecf0f1 !important; text-decoration: none; }
 .itemTitle a:hover{ text-decoration:underline }
 .itemDate{font-size:11px;color:#AAAAAA;} 
-.content {
-    padding: 20px;
-    margin-left: auto!important;
-    margin-right: auto!important;
-}
+
 .content_container {
 	width: 75%;
         float: right;
