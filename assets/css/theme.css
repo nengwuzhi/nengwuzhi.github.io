@@ -262,7 +262,6 @@ article ol {
     height: max-content;
     overflow-x: hidden;
     overflow-y: auto;
-    z-index: auto;
     float: left;
 }
 a.sidebar {
