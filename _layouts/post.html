@@ -2,8 +2,12 @@
 layout: alt
 ---
 
-		{% include Accordion.html %}     
-    {% assign author = site.authors[page.author] %}
+  <div class="row-fluid">
+    <div class="span2">
+		{% include Accordion.html %}   
+    </div>
+    <div class="span10">
+        {% assign author = site.authors[page.author] %}
                 <div class="content_container">
                     <div class="card shadow-sm">
 		{% include sticky_navbar.html %}     
@@ -67,4 +71,8 @@ layout: alt
             </div> 
        </div>  
 
+    </div>
+  </div>
 
+  
+  
