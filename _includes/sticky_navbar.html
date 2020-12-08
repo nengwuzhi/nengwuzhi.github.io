@@ -10,11 +10,15 @@
                     </a>
     		</li>
 
+		{% for my_page in site.pages %}
+                    {% if my_page.type == 'page' %}
                     <li class="nav-item small">
                         <a class="nav-link" href="{{ my_page.url | prepend: site.baseurl }}">
                             {{ my_page.title }}
                         </a>
                     </li>  
+	           {% endif %}
+                {% endfor %}  
  
         <li class="nav-item dropdown small">
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="download">分类 <span class="caret"></span></a>
