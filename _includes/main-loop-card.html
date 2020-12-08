@@ -1,11 +1,10 @@
 <div class="mb-5 d-flex justify-content-between main-loop-card">
 <div class="pr-3">
-
             <p class='post-content small text-muted font-italic'>{{post.summary}}</p>
 	<small class="d-block text-muted">
 		In <span class="catlist">
 		{% for category in post.categories %}
-		<a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/{{ site.category_dir }}#{{ category | downcase }}">{{ category }}</a><span class="sep">, </span>
+		<a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/{{ site.all_dir }}#{{ category | first }}">{{ category }}</a><span class="sep">, </span>
 		{% endfor %}
 		</span>
 	</small>
