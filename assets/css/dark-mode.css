@@ -14,7 +14,10 @@
 [data-theme="dark"] .bg-black {
   background-color: #eee !important;
 }
-
+a {
+    color: #ffffff;
+    background-color: transparent;
+}
 .wrapper{
 	display: -webkit-box;
 	display: -ms-flexbox;
