@@ -292,7 +292,6 @@ a.sidebar:hover, a.sidebar:focus {
 }
 .header {
     background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%);
-    /* background-image: linear-gradient(to right, rgb(222 222 222) 0%,#d14 100%); */
 }
 span.badge {
     color: #fff;
