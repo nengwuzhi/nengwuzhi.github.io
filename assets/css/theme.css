@@ -700,8 +700,6 @@ button.submit {
   }
 }
 
-
-
 a:hover {
 	text-decoration: none;
 }
@@ -709,6 +707,7 @@ a:hover {
 a,.a:hover {
 	-webkit-transition:all 0.2s;
 	transition: all 0.2s;
+	color: #f5f8fb;
 }
 .container-fluid {
 	width:94%;
