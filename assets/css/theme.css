@@ -776,16 +776,9 @@ footer.footer {
 }
 .card {
     transition: ease .1s;
+    border-radius: inherit;
 }
-.card-pin:hover .overlay {
-	opacity:.5;
-	border:5px solid #f3f3f3;
-	-webkit-transition:ease .2s;
-	transition:ease .1s;
-	background-color:#000000;
-	cursor:-webkit-zoom-in;
-	cursor: zoom-in;
-}
+
 .more {
 	color:white;
 	font-size:14px;
@@ -797,12 +790,7 @@ footer.footer {
 	transform:translate(-20%,-20%);
 	-ms-transform: translate(-50%,-50%);
 }
-.card-pin .card-title {
-	color:#ffffff;
-	text-align:center;
-	font-size:1.2em;
-    margin-bottom:0;
-}
+
 .card-pin.raco .card-title {
     text-align: left;
 }
@@ -904,7 +892,6 @@ article .card-body {
      transition: all 0.2s;
     position: relative;
 }
-
 .grid-item:hover .fa:before {    
      -webkit-animation: pulse 2s ease-in;
     -moz-animation: pulse 2s ease-in;
