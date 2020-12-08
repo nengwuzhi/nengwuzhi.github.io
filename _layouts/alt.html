@@ -4,9 +4,11 @@
 <body data-spy="scroll" data-target="#toc" data-offset="50">
 	
      <!-- Content -->
-<div class="container-fluid">
-        {{ content }} 
-       </div>            
+<div class="row">
+  <div class="span4"> {% include Accordion.html %}  </div>
+  <div class="span8">{{ content }} </div>
+</div>
+          
   {% include footer-social.html %}  
   {% include back-to-top.html %}     
       <!--  jQuery first, then Popper.js, then Bootstrap JS -->
