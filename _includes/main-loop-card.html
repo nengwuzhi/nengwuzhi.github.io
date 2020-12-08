@@ -1,5 +1,5 @@
-<div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
+<div class="mb-5 py-2 d-flex justify-content-between main-loop-card">
+
             <p class='post-content small text-muted font-italic'>{{post.summary}}</p>
 	<small class="d-block text-muted">
 		In <span class="catlist">
@@ -12,7 +12,6 @@
 	<small class="text-muted">
 		{{ post.date | date: '%b %d, %Y' }}
 	</small>
-</div>
 {% if post.image %}
 	<div class="col-md-3 pr-0 text-right">
 	<a href="{{site.baseurl}}{{post.url}}">
