@@ -202,33 +202,6 @@ div#accordionExample {
 .itemTitle a:hover{ text-decoration:underline }
 .itemDate{font-size:11px;color:#AAAAAA;} 
 
-.content_container {
-	width: 75%;
-        float: right;
-        text-indent: 0px;
-}
-.content_container .meta {
-    margin: 20px 0;
-    padding: 10px 0;
-    border-top: 1px solid rgb(0 0 0 / 20%);
-    border-bottom: 1px solid rgb(0 0 0 / 20%);
-}
-.content_container article p {
-    padding: 0;
-}
-.content_container .post_title {
-	color: #505879;
-	padding: 10px 0;
-}
-
-.content_container .post_nav .prev {
-	float: left;
-}
-
-.content_container .post_nav .next {
-	float: right;
-}
-
 article .archive {
 	list-style: none;
 	padding: 0;
