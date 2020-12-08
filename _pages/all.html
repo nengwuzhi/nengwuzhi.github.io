@@ -5,7 +5,7 @@ permalink: /all/
 icon: archive
 ---
 		<div class="row-fluid">
-				<div class="span4">
+				<div class="span4 mx-auto sticky-top sticky-top-offset">
 		    {% include Accordion.html  %}    
 				</div>
 				<div class="span8">
@@ -13,12 +13,10 @@ icon: archive
 	<div class="content_container card shadow-sm">
 {% include sticky_navbar.html  %}  
   
-<div id="section1" class="py-5 section-1 container-fluid" style="padding-top:70px;padding-bottom:70px;padding-left:70px;padding-right:70px;">
-        
+<div id="section1" class="py-5 section-1 container-fluid" style="padding-top:70px;padding-bottom:70px;padding-left:70px;padding-right:70px;">     
            <h2><i class="zmdi zmdi-archive"> 归档</i></h2>			
          <hr>
         <ul>
-
           {% for post in site.posts %}
             {% unless post.next %}
               <h3 class="btn btn-sm btn-danger mb-1" id="y{{ post.date | date: '%Y' }}">{{ post.date | date: '%Y' }}</h3>
@@ -29,13 +27,11 @@ icon: archive
                 <h3 class="btn btn-sm btn-danger mb-1" id="y{{ post.date | date: '%Y' }}">{{ post.date | date: '%Y' }}</h3>
               {% endif %}
             {% endunless %}
-
             <li>
                 <time>
                 {{ post.date | date:"%F" }} .
                 </time>
                 <a class="title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-
         {% include main-loop-card.html %}
             <hr class="dotted">   
             </li>
