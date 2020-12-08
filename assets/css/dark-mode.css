@@ -14,13 +14,7 @@
 [data-theme="dark"] .bg-black {
   background-color: #eee !important;
 }
-p, li {
-    font-size: 21px;
-    font-weight: 300;
-    color: #ff4646;
-    font-family: "Menlo", "Monaco", "Consolas", "Courier New", "monospace", "Helvetica";
-    line-height: 1.6;
-}
+
 .switch_box{
 	display: -webkit-box;
 	display: -ms-flexbox;
