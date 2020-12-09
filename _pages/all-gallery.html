@@ -139,7 +139,7 @@ type: page
 	<div class="hover hover-1 text-white rounded"><img src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ post.image | absolute_url }}{% endif %}" alt="{{ post.title }}">
           <div class="hover-overlay"></div>
           <div class="hover-1-content px-5 py-4">
-        <h3 class="hover-1-title text-uppercase font-weight-bold mb-0">{{ post.title }}</h3></a>
+        <h3 class="hover-1-title text-uppercase font-weight-bold text-center mb-0">{{ post.title }}</h3></a>
             <p class="hover-1-description font-weight-light mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
           </div>
         </div>
@@ -152,7 +152,7 @@ type: page
 
 	
   <section id="画册一" class="pt-5 pb-5 gallery no-padding">  
-<h3 class="font-weight-bold mb-0">Demo 1</h3>
+<h3 class="font-weight-bold text-center mb-0">Demo 1</h3>
 <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>    
       <div class="row">    
     {% for image in site.static_files %}
@@ -169,7 +169,7 @@ type: page
     </section>
 
   <section id="图片-人物" class="pt-5 pb-5 gallery no-padding">
-<h3 class="font-weight-bold mb-0">Demo 1</h3>
+<h3 class="font-weight-bold text-center mb-0">Demo 1</h3>
 <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>    
       <div class="row">
     {% for image in site.static_files %}
@@ -186,7 +186,7 @@ type: page
     </section>
 
     <section id="图片-宗教" class="pt-5 pb-5 gallery no-padding"> 
-<h3 class="font-weight-bold mb-0">Demo 1</h3>
+<h3 class="font-weight-bold text-center mb-0">Demo 1</h3>
 <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>   
       <div class="row">      
     {% for image in site.static_files %}
