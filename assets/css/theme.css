@@ -428,7 +428,7 @@ hr.hr-text::before {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, rgb(246 197 249) 0%,rgb(232 117 97) 50%,rgb(232 66 35) 51%,rgb(253 118 28) 75%,rgb(228 46 9) 100%); 
+  background: linear-gradient(to bottom, rgb(253 208 233) 0%,rgb(232 117 97) 50%,rgb(232 66 35) 51%,rgb(253 118 28) 75%,rgb(228 46 9) 100%); 
 }
 /*
 *
