@@ -43,7 +43,7 @@ type: page
 	{% for post in site.categories.gallery %}
           {% if post.image %}
         <figure class="col-md-4 image snip">
-<a href="{{site.baseurl}}{{post.url}}">     
+<a href="#{{ post.title }}">     
         <img class="card-img img-fluid w-100 mb-3 img-thumbnail shadow-sm rounded-0" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ post.image | absolute_url }}{% endif %}" alt="{{ post.title }}">             
  <h2 class="card-title title ml-2">{{ post.title }}</h2></a>	
 	</figure> 	
