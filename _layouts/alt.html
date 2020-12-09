@@ -19,24 +19,7 @@
 	
 	<!-- Bootstrap core JavaScript -->
   {% include foot.html %}  
-	<!-- toTop-->
-<script>
-$(document).ready(function(){
-	$(window).scroll(function () {
-			if ($(this).scrollTop() > 1000) {
-				$('#back-to-top').fadeIn();
-			} else {
-				$('#back-to-top').fadeOut();
-			}
-		});
-		// scroll body to 0px on click
-		$('#back-to-top').click(function () {
-			$('body,html').animate({
-				scrollTop: 0
-			}, 400);
-			return false;
-		});
-});</script>
+
 <script src="{{site.baseurl}}/assets/js/jquery.fancytree.ui-deps.js"></script>
 <script src="{{site.baseurl}}/assets/js/jquery.fancytree.min.js"></script>
 	<!--加载文档时添加代码以初始化树: -->
