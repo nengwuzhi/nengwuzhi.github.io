@@ -18,6 +18,9 @@ body, code, pre {
   z-index: 1;
   bottom: 0;
 }
+html {
+  scroll-behavior: smooth;
+}
 #mynetwork {
   width: 800px;
   height: 800px;
