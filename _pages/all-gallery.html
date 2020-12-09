@@ -6,8 +6,6 @@ permalink: "/all-gallery"
 type: page
 ---
 <style>
-
-
 /* DEMO GENERAL ============================== */
 .hover {
   overflow: hidden;
@@ -37,7 +35,6 @@ type: page
   position: relative;
   z-index: 99;
 }
-
 
 /* DEMO 1 ============================== */
 .hover-1 img {
@@ -128,6 +125,28 @@ type: page
       凡所有相 ⚡ 皆是虚妄
 </h1>
   </header>
+
+ <!-- DEMO 1 -->
+  <div class="py-5">
+    <h3 class="font-weight-bold mb-0">Demo 1</h3>
+    <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    <div class="row">
+      <!-- DEMO 1 Item-->
+	{% for post in site.categories.gallery %}
+          {% if post.image %}
+      <div class="col-lg-4 mb-3 mb-lg-0">
+        <div class="hover hover-1 text-white rounded"><img src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ post.image | absolute_url }}{% endif %}" alt="{{ post.title }}">
+          <div class="hover-overlay"></div>
+          <div class="hover-1-content px-5 py-4">
+            <a href="#{{ post.title }}"><h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">图片</span>{{ post.title }}</h3></a>
+            <p class="hover-1-description font-weight-light mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+        </div>
+      </div>
+	  {% endif %}
+       {% endfor %}    
+    </div>
+  </div>
 
 <!-- Gallery Section-->
     <section class="pt-5 pb-5 gallery">  
