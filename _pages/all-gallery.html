@@ -37,6 +37,21 @@ type: page
 </h1>
   </header>
 
+<!-- Gallery Section-->
+    <section class="pt-5 pb-5 gallery">  
+	     <div class="row">    
+	{% for post in site.categories.gallery %}
+          {% if post.image %}
+        <figure class="col-md-4 image snip">
+<a href="{{site.baseurl}}{{post.url}}">     
+        <img class="card-img img-fluid w-100 mb-3 img-thumbnail shadow-sm rounded-0" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ post.image | absolute_url }}{% endif %}" alt="{{ post.title }}">             
+ <h2 class="card-title title ml-2">{{ post.title }}</h2></a>	
+	</figure> 	
+	   {% endif %}
+         {% endfor %}
+</div>
+      
+    </section>  
   <section id="about">
     <div class="container">
       <div class="row">
