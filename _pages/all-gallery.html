@@ -5,7 +5,24 @@ icon: images
 permalink: "/all-gallery"
 type: page
 ---
+<style>
+.image {
+    border: 2px solid #fff;
+    width: 100%;
+    overflow: hidden
+}
+	
+.image img {
+    width: 100%;
+    height: 500;
+    transition: all 2s ease-in-out
+}
 
+.image:hover img {
+    transform: scale(2, 2);
+    cursor: pointer
+}
+</style>
   <header>
 {% include menu-header.html  %}  
 <h1 class="logo-1">
