@@ -262,9 +262,6 @@ article ul li,article ol li {
 	padding-left: 0px;
 }
 
-article ol {
-	list-style: decimal;
-}
 .sticky-top.sticky-top-offset {
     top: 0px;
     height: max-content;
@@ -291,12 +288,6 @@ a.sidebar:hover, a.sidebar:focus {
     background: #ef9696;
     color: #ef9696;
     text-decoration: none;
-}
-.widget {
-	margin: 0;
-}
-.text-small {
-    font-size: 0.9rem !important;
 }
 .header {
     background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%);
