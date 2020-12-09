@@ -23,21 +23,7 @@
                                 <div class="card grid-item">
                                    <img class="img-fluid" alt="{{ post.image }}" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ post.image | absolute_url }}{% endif %}">
 
-                                  <div class="wrapcat flex-container">
-    
-<figcaption>
-        <span class="pinme">
-                <h5 class="mb-3">{{post.title}}</h5>
-                <p class="mb-3 lead">
-                    {{ post.excerpt | strip_html | strip_html | truncate: 30 }}
-                </p>
-             <div class="btn-group">
-		 <button type="button" class="btn btn-success"><a href="{{site.baseurl}}{{post.url}}">阅读全部</a></button>
-		 <button type="button" class="btn btn-default">Samsung</button>
-	     </div>             
-        </span>
-  </figcaption>                                    
-          </div>
+
          </div>     
                                     <div class="card-body postcontent">
 		<a href="{{site.baseurl}}{{post.url}}"><h3 class="card-title title">{{ post.title }}</h3></a>    
