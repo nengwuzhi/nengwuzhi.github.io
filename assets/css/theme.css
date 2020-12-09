@@ -9,9 +9,6 @@ body, code, pre {
     font-weight: 300;
     line-height: 1.5;
 }
-html {
-  scroll-behavior: smooth;
-}
 .figcaption {
   position: absolute;
   top: 40px;
