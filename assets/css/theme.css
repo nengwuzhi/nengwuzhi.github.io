@@ -12,6 +12,15 @@ body, code, pre {
 html {
   scroll-behavior: smooth;
 }
+.figcaption {
+  position: absolute;
+  top: 40px;
+  bottom: 40px;
+  left: 40px;
+  right: 40px;
+  z-index: 1;
+  bottom: 0;
+}
 #mynetwork {
   width: 800px;
   height: 800px;
