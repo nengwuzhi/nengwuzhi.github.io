@@ -75,12 +75,12 @@ $(function() {
         var searchTerm = $(this).val();
 
         // remove any old highlighted terms
-        $('p').removeHighlight();
+        $('body').removeHighlight();
 
         // disable highlighting if empty
         if ( searchTerm ) {
             // highlight the new term
-            $('p').highlight( searchTerm );
+            $('body').highlight( searchTerm );
         }
     });
 });
