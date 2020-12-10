@@ -17,22 +17,22 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="row">
- {% for post in site.posts %} 
+{% for post in site.posts %} 
 {% if post.tags contains "名著" %}
                             <div class="col-md-4 mb-3">
-<div class="postcontent">
-        <a href="{{site.baseurl}}{{post.url}}">     
-        <img class="img-fluid" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ post.image | absolute_url }}{% endif %}" alt="{{ post.title }}">             
- <h2 class="card-title title ml-2">{{ post.title }}</h2></a>
+                                <div class="card grid-item">
+                                   <img class="img-fluid" alt="{{ post.image }}" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ post.image | absolute_url }}{% endif %}" >
 
-            <div class="notraco">
-             <p class="card-text text-sm-left"> &nbsp;&nbsp; {{post.summary |  strip_html | strip_html | truncate: 32 }}</p>
-
-            </div>
-           </div>                    
+         </div>     
+                                    <div class="card-body postcontent">
+        <a href="{{site.baseurl}}{{post.url}}"><h3 class="card-title title">{{ post.title }}</h3></a>    
+                                    <div class="notraco">
+                             <p class="card-text text-sm-left"> &nbsp;&nbsp; {{post.summary |  strip_html | strip_html | truncate: 32 }}</p>
+                                    </div>
+                                    </div>                      
     </div>
 {% endif %}
-{% endfor %}                          
+{% endfor %}                                    
 
                         </div>
                     </div>
