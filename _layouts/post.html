@@ -18,12 +18,10 @@ layout: alt
                         <img class="rounded-circle" src="/{{author.avatar}}" alt="{{author.name}}" width="70"/>
                         {% endif %}
 		<small class="ml-3">{{ author.name }} <span><a target="_blank" href="{{site.baseurl}}/author-{{ author.name | slugify }}" class="btn btn-outline-info btn-sm btn-round ml-1">查看作者</a></span>
-                            <span class="text-muted d-block mt-1"><i class="fa fa-calendar mr-1"></i>{{ page.date | date: "%F" }} · 字数-{{ content | strip_html | strip_newlines | split: "" | size }} · 预计{% include meta-read-time.html %}</span>
-						</small>
-	    				
-
+                   <span class="text-muted d-block mt-1"><i class="fa fa-calendar mr-1"></i>{{ page.date | date: "%F" }} · 字数-{{ content | strip_html | strip_newlines | split: "" | size }} · 预计{% include meta-read-time.html %}</span>
+		</small>
           </div>
-					
+		<hr class="dashed">			
                         <div class="post_content">
                             {{ content }}
 			<hr data-content="AND" class="hr-text">
@@ -43,8 +41,7 @@ layout: alt
             <!-- Comments -->
             {% if page.comments != false %}
                 {% include comments.html %}
-            {% endif %}		    
-			    
+            {% endif %}		    		    
                        <div class="post_nav">
                         {% if page.previous.url %}
                         <a class="prev" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}"><i class="fa fa-angle-left"></i><span class="short">上一篇</span></a>
@@ -52,8 +49,7 @@ layout: alt
                         {% if page.next.url %}
                         <a class="next" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}"><span class="short">下一篇</span><i class="fa fa-angle-right"></i></a>
                         {% endif %}
-                      </div>  
-			    		    
+                      </div>  		    		    
 	    </article>	    
           </div> 
        </div>  
