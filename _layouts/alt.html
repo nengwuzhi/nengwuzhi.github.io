@@ -16,7 +16,33 @@
   {% include back-to-top.html %}  
 	
 	<!-- Bootstrap core JavaScript -->
-  {% include foot.html %}  	
+          <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>		
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+<!-- toTop-->
+<script>
+$(document).ready(function(){
+	$(window).scroll(function () {
+			if ($(this).scrollTop() > 1000) {
+				$('#back-to-top').fadeIn();
+			} else {
+				$('#back-to-top').fadeOut();
+			}
+		});
+		// scroll body to 0px on click
+		$('#back-to-top').click(function () {
+			$('body,html').animate({
+				scrollTop: 0
+			}, 400);
+			return false;
+		});
+});</script>
+
+<!--search-->
+<script src="{{site.baseurl}}/assets/js/search/search.js"></script>
+	
 <script src="{{site.baseurl}}/assets/js/jquery.fancytree.ui-deps.js"></script>
 <script src="{{site.baseurl}}/assets/js/jquery.fancytree.min.js"></script>
 	<!--加载文档时添加代码以初始化树: -->
