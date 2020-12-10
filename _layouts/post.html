@@ -66,23 +66,5 @@ layout: alt
           </div> 
        </div>  
     </div>
-     <!--contentsearch-->
-<script src="{{site.baseurl}}/assets/js/search/search-highlight.js"></script>
-<script type="text/javascript">
-$(function() {
-    $('#text-search').bind('keyup change', function(ev) {
-        // pull in the new value
-        var searchTerm = $(this).val();
-
-        // remove any old highlighted terms
-        $('body').removeHighlight();
-
-        // disable highlighting if empty
-        if ( searchTerm ) {
-            // highlight the new term
-            $('body').highlight( searchTerm );
-        }
-    });
-});
-</script>
+     
   
