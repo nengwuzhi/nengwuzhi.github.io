@@ -362,7 +362,7 @@ span.badge {
 */
 
 hr.dashed {
-    border-top: 2px dashed #999;
+    border-top: 2px dashed #99999999;
 }
 
 hr.dotted {
