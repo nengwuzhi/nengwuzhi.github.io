@@ -42,7 +42,25 @@ $(document).ready(function(){
 
 <!--search-->
 <script src="{{site.baseurl}}/assets/js/search/search.js"></script>
-	
+	<!--contentsearch-->
+<script src="{{site.baseurl}}/assets/js/search/search-highlight.js"></script>
+<script type="text/javascript">
+$(function() {
+    $('#text-search').bind('keyup change', function(ev) {
+        // pull in the new value
+        var searchTerm = $(this).val();
+
+        // remove any old highlighted terms
+        $('body').removeHighlight();
+
+        // disable highlighting if empty
+        if ( searchTerm ) {
+            // highlight the new term
+            $('body').highlight( searchTerm );
+        }
+    });
+});
+</script>
 <script src="{{site.baseurl}}/assets/js/jquery.fancytree.ui-deps.js"></script>
 <script src="{{site.baseurl}}/assets/js/jquery.fancytree.min.js"></script>
 	<!--加载文档时添加代码以初始化树: -->
