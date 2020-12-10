@@ -708,11 +708,7 @@ a,.a:hover {
 	transition: all 0.2s;
 	color: #f5f8fb;
 }
-.container-fluid {
-	width:94%;
-	margin:0px auto;
-	max-width: 94%;
-}
+
 .border-round-0 {
 	border-radius: 0;
 }
@@ -793,9 +789,6 @@ footer.footer {
 	-ms-transform: translate(-50%,-50%);
 }
 
-.card-pin.raco .card-title {
-    text-align: left;
-}
 .notraco {
     color: #333;
     border: 0;
@@ -812,14 +805,6 @@ footer.footer {
     font-style: normal;
 }
 
-.social {
-	position:relative;
-	-webkit-transform:translateY(-50%);
-	transform: translateY(-50%);
-}
-.social .fa {
-	margin:0 3px;
-}
 article .card-body {
 	padding:1.25rem 2rem;
 }
