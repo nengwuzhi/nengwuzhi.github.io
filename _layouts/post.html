@@ -1,7 +1,6 @@
 ---
 layout: alt
 ---
-
   <div class="row-fluid">
     <div class="span4 mx-auto sticky-top sticky-top-offset">
 		{% include Accordion.html %}   
@@ -22,9 +21,7 @@ layout: alt
                             <span class="text-muted d-block mt-1"><i class="fa fa-calendar mr-1"></i>{{ page.date | date: "%F" }} · 字数-{{ content | strip_html | strip_newlines | split: "" | size }} · 预计{% include meta-read-time.html %}</span>
 						</small>
 				
-
             <div class="widget ml-auto">
-
        <div class="p-1 bg-light rounded rounded-pill shadow-sm">
             <div class="input-group">
               <div class="input-group-prepend">
@@ -34,8 +31,7 @@ layout: alt
             </div>
           </div>		    	    
        </div>
-          </div>
-			    
+          </div>		    
                         <div class="post_content">
                             {{ content }}
 			<hr data-content="AND" class="hr-text">
@@ -67,9 +63,8 @@ layout: alt
                       </div>  
 			    		    
 	    </article>	    
-            </div> 
+          </div> 
        </div>  
-
     </div>
 
   
