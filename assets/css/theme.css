@@ -376,7 +376,8 @@ hr.hr-text {
     background: #999;
 }
 hr {
-  border-top: 1px dotted #8c8b8b
+  border-top: 1px dashed #8c8b8b;
+  border-bottom: 1px dashed #fff;
 }
 
 ::selection {
