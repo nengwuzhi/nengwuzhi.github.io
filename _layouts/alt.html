@@ -51,12 +51,12 @@ $(function() {
         var searchTerm = $(this).val();
 
         // remove any old highlighted terms
-        $('body').removeHighlight();
+        $('p').removeHighlight();
 
         // disable highlighting if empty
         if ( searchTerm ) {
             // highlight the new term
-            $('body').highlight( searchTerm );
+            $('p').highlight( searchTerm );
         }
     });
 });
