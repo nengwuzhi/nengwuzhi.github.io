@@ -15,6 +15,15 @@ all_dir: all/
 author_dir: /author
 include: ["_pages"]
 
+jekyll_admin:
+  hidden_links:
+    - posts
+    - pages
+    - staticfiles
+    - datafiles
+    - configuration
+  homepage: "pages"
+  
 authors:  
   author1:
     name: 能无知
