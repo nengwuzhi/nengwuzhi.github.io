@@ -15,17 +15,6 @@
             <div class="card-text mb-4">
                 <p class="lead">&nbsp;&nbsp; {{post.summary |  strip_html | strip_html | truncate: 100 }}</p>
             </div>
-            <div class="mt-auto d-flex align-items-center pt-2">
-                <div class="mr-3">
-                           {% if author.avatar %}
-                    <img class="d-block img-fluid rounded-circle" src="/{{author.avatar}}" srcset="/{{author.avatar}} 2x" alt="user">
-                             {% endif %}
-                </div>
-                <div class="d-block">
-                    <div class="font-weight-bold">{{ author.name }} </div>
-                    <div class="text-grey">{{ page.date | date: "%F" }}</div>
-                </div>
-            </div>
         </div>
 {% endif %}
 {% endfor %}     
