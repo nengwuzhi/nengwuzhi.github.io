@@ -51,6 +51,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-seo-tag
+  - jekyll-admin
  
 # Defaults
 defaults:
