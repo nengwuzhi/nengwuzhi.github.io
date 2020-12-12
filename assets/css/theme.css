@@ -24,6 +24,9 @@ body, pre {
 html {
   scroll-behavior: smooth;
 }
+mark{
+ background-color:#c0ffc8;
+}
 #mynetwork {
   width: 800px;
   height: 800px;
