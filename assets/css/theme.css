@@ -458,8 +458,8 @@ blockquote {
 }
 
 code {
-	font-family: 'Source Code Pro','Courier New',monospace;
-	    background: #fff;
+    background: rgba(255,0,0,.2);
+    color: #ff0064;
     padding: 0.2rem;
     border-radius: 0.1rem;
     text-shadow: none;
