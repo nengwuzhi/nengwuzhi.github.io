@@ -462,8 +462,8 @@ code {
 }
 p,li {
   font-size: 20px;
-  font-weight: 300;
-  color: #000;
+  font-weight: 400;
+  color: #353535;
   font-family: "Menlo", "Monaco", "Consolas", "Courier New", "monospace", "Helvetica";
   line-height: 1.6;
 }
