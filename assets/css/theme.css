@@ -24,10 +24,23 @@ body, pre {
 html {
   scroll-behavior: smooth;
 }
-mark{
- background-color:#c0ffc8;
+mark {
+    background: #0277bd;
+    color: #fafafa;
+    font-size: .9375em;
+    line-height: 1em;
+    border-radius: .125rem;
+    padding: 0.125em 0.25em;
 }
-
+mark.Danger {
+    background: #dc3545;
+}
+mark.Warning {
+    background: #e0a800;
+}
+mark.Primary {
+    background: #007bff;
+}
 #mynetwork {
   width: 800px;
   height: 800px;
