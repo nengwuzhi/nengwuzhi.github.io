@@ -32,13 +32,13 @@ mark {
     border-radius: .125rem;
     padding: 0.125em 0.25em;
 }
-mark.Danger {
+mark.danger {
     background: #dc3545;
 }
-mark.Warning {
+mark.warning {
     background: #e0a800;
 }
-mark.Primary {
+mark.primary {
     background: #007bff;
 }
 #mynetwork {
