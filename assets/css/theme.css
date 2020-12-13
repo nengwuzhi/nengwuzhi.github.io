@@ -472,7 +472,7 @@ blockquote {
     background-position-y: 10px;
 }
 blockquote.h3 {
-    background: left;
+    background: none;
 }
 code {
     background: rgba(255,0,0,.2);
