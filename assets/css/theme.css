@@ -464,8 +464,6 @@ hr {
 }
 
 blockquote {
-    margin-left: 5%;
-
     box-sizing: border-box;
     border-left: 3px solid #ea6d6d;
 }
