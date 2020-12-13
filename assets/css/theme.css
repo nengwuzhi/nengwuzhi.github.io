@@ -471,7 +471,9 @@ blockquote {
     background-position-x: 10px;
     background-position-y: 10px;
 }
-
+blockquote.h3 {
+    background: left;
+}
 code {
     background: rgba(255,0,0,.2);
     color: #ff0064;
