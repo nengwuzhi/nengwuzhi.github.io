@@ -467,6 +467,7 @@ blockquote {
     padding: 10px;
     box-sizing: border-box;
     border-left: 3px solid #ea6d6d;
+    background: #dedede;
 }
 
 code {
