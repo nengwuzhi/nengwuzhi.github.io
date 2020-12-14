@@ -27,7 +27,7 @@ icon: archive
                 <h3 class="btn btn-sm btn-danger mb-1" id="y{{ post.date | date: '%Y' }}">{{ post.date | date: '%Y' }}</h3>
               {% endif %}
             {% endunless %}
-            <li>
+            <li><hr class="dotted">
                 <time>
                       {{ post.date | date:"%F" }} {{ post.date | date: "%a" }}.
                 </time>
@@ -47,14 +47,13 @@ icon: archive
                 {% for posts in category  %}
                     {% for post in posts %}
                         {% if post.url %}
-                        <li>
+                        <li><hr class="dotted">
                             <time>
                             {{ post.date | date:"%F" }} {{ post.date | date: "%a" }}.
                             </time>
                             <a class="title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-
          {% include main-loop-card.html %}
-                           <hr class="dotted">
+                             <hr class="dotted">
                         </li>
                         {% endif %}
                     {% endfor %}
@@ -76,13 +75,13 @@ icon: archive
         {% for tag in sortedtags %}
           <h3 class="btn btn-sm btn-danger mb-1" id="{{ tag }}">{{ tag }}</h3>
           {% for post in site.tags[tag] %}
-            <li>
+            <li><hr class="dotted">
                 <time>
                 {{ post.date | date:"%F" }} {{ post.date | date: "%a" }}.
                 </time>
                 <a class="title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>          
                 {% include main-loop-card.html %}
-            <hr class="dotted">  
+                 <hr class="dotted">  
             </li>
           {% endfor %}
         {% endfor %}
