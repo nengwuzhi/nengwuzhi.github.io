@@ -27,7 +27,7 @@ icon: archive
                 <h3 class="btn btn-sm btn-danger mb-1" id="y{{ post.date | date: '%Y' }}">{{ post.date | date: '%Y' }}</h3>
               {% endif %}
             {% endunless %}
-            <li><hr class="dotted">
+            <li>
                 <time>
                       {{ post.date | date:"%F" }} {{ post.date | date: "%a" }}.
                 </time>
@@ -47,7 +47,7 @@ icon: archive
                 {% for posts in category  %}
                     {% for post in posts %}
                         {% if post.url %}
-                        <li><hr class="dotted">
+                        <li>
                             <time>
                             {{ post.date | date:"%F" }} {{ post.date | date: "%a" }}.
                             </time>
@@ -75,7 +75,7 @@ icon: archive
         {% for tag in sortedtags %}
           <h3 class="btn btn-sm btn-danger mb-1" id="{{ tag }}">{{ tag }}</h3>
           {% for post in site.tags[tag] %}
-            <li><hr class="dotted">
+            <li>
                 <time>
                 {{ post.date | date:"%F" }} {{ post.date | date: "%a" }}.
                 </time>
