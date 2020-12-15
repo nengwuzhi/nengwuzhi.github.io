@@ -1,21 +1,8 @@
-{% if post.layout != post %}
-  {% assign words = content | strip_html | strip_newlines | split: "" | size | number_of_words %}
-  {% if words < 180 %}
-    少于 1 分钟 读完
-  {% elsif words < 360 %}
-    1 分钟 读完
-  {% else %}
-    {{ words | divided_by:180 }} minute read
-  {% endif %}
-{% endif %}
-
-{% if post.layout == post %}
-  {% assign words = content | strip_html | number_of_words %}
-  {% if words < 180 %}
-    少于 1 分钟 读完
-  {% elsif words < 360 %}
-    1 分钟 读完
-  {% else %}
-    {{ words | divided_by:180 }} 分钟 读完
-  {% endif %}
-{% endif %}
+<script>var text = $('.entry-content').text().length;
+var text_num = read_time/400;
+var read_time = Math.round(read_time);
+if(read_time>1){
+        $('#read-time').text('预计阅读时间'+read_time+'分钟');
+}else{
+        $('#read-time').text('预计阅读时间 1 分钟');
+}</script>
