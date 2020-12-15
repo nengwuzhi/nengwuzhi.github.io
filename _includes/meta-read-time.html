@@ -1,8 +1,16 @@
-<script>var text = $('.entry-content').text().length;
-var text_num = read_time/400;
-var read_time = Math.round(read_time);
-if(read_time>1){
-        $('#read-time').text('预计阅读时间'+read_time+'分钟');
-}else{
-        $('#read-time').text('预计阅读时间 1 分钟');
-}</script>
+<script>
+$(function(){ 
+//      获取当前页面URI
+        var pathName = window.location.pathname;
+// 		通过URL中特征字符串判断当前浏览是不是文章页
+		if (pathName.indexOf('topic') > -1) {
+		  //  计算文章内容字符数
+		    var content_num=$(".topic-content").text().replace(/\s/g, "").length;
+		  //  计算阅读时间 很简单除以400取值就行了
+		  //    400这个值可任意修改你觉得适合的
+		    var content_min=Math.ceil(content_num/400);
+		  //  追加到文章内容最前显示
+            $('.topic-content').prepend('<p>本文总共 <b>'+content_num+'</b> 字 · 阅读全文大约需要 <b>'+content_min+'</b> 分钟</p>');
+		}
+});
+</script>
