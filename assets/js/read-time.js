@@ -1,7 +1,6 @@
 <script>
 //      获取当前页面URI
         var pathName = window.location.pathname;
-// 		通过URL中特征字符串判断当前浏览是不是文章页
 		if (pathName.indexOf('post/') > -1) {
 		  //  计算文章内容字符数
 		  //    .xx为本站文章内容div
