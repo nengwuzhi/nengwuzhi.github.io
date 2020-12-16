@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
     {% include head.html %}  
-<body data-spy="scroll" data-target="#toc" data-offset="50">
-	
+<body data-spy="scroll" data-target="#toc" data-offset="50">	
      <!-- Content -->
 <div class="container-fluid">
 	<div class="row-fluid py-5">
@@ -10,8 +9,8 @@
                  {{ content }} 
 		</div>
 	</div>
+	  {% include fog.html %}  
 </div>
-  {% include fog.html %}  
   {% include footer-social.html %}  
   {% include back-to-top.html %}  
 
