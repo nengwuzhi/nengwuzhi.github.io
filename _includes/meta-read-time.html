@@ -1,26 +1,30 @@
 {% if post.layout != post %}
   {% assign words = content | strip_html | strip_newlines | split: "" | size | number_of_words %}
-  {% if words < 180 % }
-    少于 1 分钟 读完
-  {% elsif words < 360 %}
-    1 分钟 读完
-  {% elsif words < 720 %}
-    2 分钟 读完
+  {% if words < 1800 % }
+    少于 10 分钟 读完
+  {% elsif words < 3600 %}
+    10 分钟 读完
+  {% elsif words < 7200 %}
+    20 分钟 读完
+  {% elsif words < 10800 %}
+    30 分钟 读完                     
   {% else %}
-    {{ words | divided_by:900 }} minute read
+    超过{{ words | divided_by:10800 }} minute read
   {% endif %}
 {% endif %}
 
 {% if post.layout == post %}
   {% assign words = content | strip_html | number_of_words %}
-  {% if words < 180 %}
-    少于 1 分钟 读完
-  {% elsif words < 360 %}
-    1 分钟 读完
- {% elsif words < 720 %}
-    2 分钟 读完
+  {% if words < 1800 % }
+    少于 10 分钟 读完
+  {% elsif words < 3600 %}
+    10 分钟 读完
+  {% elsif words < 7200 %}
+    20 分钟 读完
+  {% elsif words < 10800 %}
+    30 分钟 读完                     
   {% else %}
-    {{ words | divided_by:900 }} 分钟 读完
+    超过{{ words | divided_by:10800 }} minute read
   {% endif %}
 {% endif %}
 
