@@ -25,6 +25,9 @@ body, pre {
 html {
   scroll-behavior: smooth;
 }
+footer {
+    background: url(https://images.pexels.com/photos/3801066/pexels-photo-3801066.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500) no-repeat;
+}
 mark {
     background: #0277bd;
     color: #fafafa;
