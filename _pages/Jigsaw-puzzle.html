@@ -254,25 +254,7 @@ let uploadFile;
   }
 
 uploadFile = function(ocallBack, ooptions) {
-/* loads a file asynchronously
-at the end of the process, calls the function 'callBack' with an object :
 
-{fail: string} in case of failure, where string gives the reason of the failure
-or
-{success : string, file: file} where string is the content of the image file
-   file represents the loaded file, and may be tested for file.type, file.name...
-
-CAUTION ! If the user clicks 'cancel' when loading a file, nothing happens.
-
-options is an object, with 0, one or more of the following properties :
-accept : string to pass as "accept" attribute to the load file button, such as '.txt' or 'image/*'
-            default : no value (will accept  * . * )
-readMethod : 'readAsText' or 'readAsDataURL' - default is readAsText
-image: if provided, must be an Image element. If possible, the data is loaded
-with readAsDataURL, no matter the value of readMethod, and option.image.src is set to the data.
-The function then returns normally as defined above.
-Normally, a 'load' event should be triggered on the image.
-*/
 
   options = ooptions;
   callBack = ocallBack;
@@ -291,16 +273,6 @@ function Side() {
   this.points = []; // real points or Bezier curve points
 } // Side
 
-/*
-draws the path corresponding to a side
-Parameters :
-  ctx : canvas context
-  shiftx, shifty : position shift used to create shadow effect
-  backwards : boolean, must be true for bottom and left sides, which must be drawn
-      from the last point to the first
-  withoutMoveTo : to decide whether to do a moveTo to the first point. Without MoveTo
-  must be done only for the first side of a piece, not for the following ones
-*/
 
 Side.prototype.drawPath = function(ctx, shiftx, shifty, backwards, withoutMoveTo) {
 
@@ -372,17 +344,7 @@ Piece.prototype.drawPath = function (ctx, shiftx, shifty, withoutBeginPath) {
 
 } //
 
-// -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -   -
-/*
-creates and returns a div for an individual piece, with a canvas with shadow, and a part of the picture
-canvas and div are three times the average size of pieces
-puzzle object given in parameters provides required elements
-scale and x and y offsets allow to scale and truncate picture to actual size
-*/
-// crée et rend un div pour pièce individuelle, avec un canvas avec ombre et extrait de l'image
-// le canvas et le div font trois fois la width et la height moyennes des pièces
-// l'objet puzzle donné en entrée donne les éléments nécessaires
-// l'échelle et les offsets x et y permettent de mettre à l'échelle et tronquer l'image réelle pour l'adapter au plateau
+
 
 Piece.prototype.createDivPiece = function(puzzle, scale, offsx, offsy) {
 
@@ -492,12 +454,7 @@ function PolyPiece(initialPiece, z, puzz) {
 } // PolyPiece
 
 // -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -   -
-/*
-  this method
-    - adds pieces of otherPoly to this PolyPiece
-    - adjusts coordinates of new pieces to make the consistent with this polyPiece
-    - does not re - evaluate the z - index of the polyPieces
-*/
+
 
 PolyPiece.prototype.merge = function(otherPoly) {
 
@@ -597,20 +554,6 @@ function Puzzle(params) {
 Puzzle.MARGIN1 = 5;
 //--------------------------------------------------------------
 
-/*
-The given parameter if an object with the following properties :
- -  img, which may be:
-  string type : an image url
-  object type : an image object (with a ready loaded image)
- -  width : width available for the picture
- -  height : width available for the picture. The script will use the
-width x height space as smartly as possible
- -  npieces : number of pieces. May be any (sensible) integer, the script
-will choose a number of columns and rows to have pieces as square as possible,
-and an actual total number of pieces as close as possible to this integer.
- -  idiv : div which will contail the game
-
-*/
 
 Puzzle.prototype.createPuzzle = function(params){
 
@@ -1451,17 +1394,7 @@ Puzzle.prototype.computenxAndny = function() {
 //---------------------------------------------------------------------------- -
 //---------------------------------------------------------------------------- -
 
-/* algorithm to determine the boundary of a PolyPiece
-  input : a table of cells, hopefully defining a 'good' PolyPiece, i.e. all connected together
-  every cell is given as an object {kx: indice, ky: indice} representing an element of a 2D array.
 
-  returned value : table of Loops, because the boundary may be made of several
-simple loops : there may be a 'hole' in a PolyPiece
-every loop is a list of consecutive edges,
-every edge if an object {kp: index, edge: b} where kp is the index of the cell ine
-the input array, and edge the side (0(top), 1(right), 2(bottom), 3(left))
-every edge contains kx and ky too, normally not used here
-*/
 
 function lookForLoops (tbCases) {
 
@@ -1507,13 +1440,6 @@ function lookForLoops (tbCases) {
   let edgeNumber; // number of edge found during research
   let potNext;
 
-// table of tries
-// used to determine what is the next edge to try when walking around a loop
-// contient 1 élément par edge, en fonction du edge sur lequel on se trouve
-//  chaque élément contient 3 tentatives à essayer dans l'ordre pour toujours tourner dans le même sens
-//  chaque tentative contient le dkx et le dky pour indiquer la position du voisin concerné
-//   et un edge pour dire quel est le prochain edge
-// (avec ce tableau, les bords sont parcourus dans le sens où le programme les dessine)
 
   let tbTentatives = [
   // if we are on edge 0 (top)
