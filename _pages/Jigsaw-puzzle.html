@@ -254,6 +254,25 @@ let uploadFile;
   }
 
 uploadFile = function(ocallBack, ooptions) {
+/* loads a file asynchronously
+at the end of the process, calls the function 'callBack' with an object :
+
+{fail: string} in case of failure, where string gives the reason of the failure
+or
+{success : string, file: file} where string is the content of the image file
+   file represents the loaded file, and may be tested for file.type, file.name...
+
+CAUTION ! If the user clicks 'cancel' when loading a file, nothing happens.
+
+options is an object, with 0, one or more of the following properties :
+accept : string to pass as "accept" attribute to the load file button, such as '.txt' or 'image/*'
+            default : no value (will accept  * . * )
+readMethod : 'readAsText' or 'readAsDataURL' - default is readAsText
+image: if provided, must be an Image element. If possible, the data is loaded
+with readAsDataURL, no matter the value of readMethod, and option.image.src is set to the data.
+The function then returns normally as defined above.
+Normally, a 'load' event should be triggered on the image.
+*/
 
   options = ooptions;
   callBack = ocallBack;
@@ -650,7 +669,11 @@ on number of pieces
   this.canvMobile.style.visibility = 'visible';
   this.canvMobile.width = parseFloat(this.divBoard.style.width);
   this.canvMobile.height = parseFloat(this.divBoard.style.height);
+  this.canvMobile.style.position = "absolute";
+  this.canvMobile.style.top = "0px";
+  this.canvMobile.style.left = "0px";
 
+  this.canvMobile.style.zIndex = 50000;
 
   this.dCoupling = 10; // distance for pieces to couple together, in pixels (on each x and y axis)
 
@@ -663,16 +686,16 @@ on number of pieces
     this.menu = new Menu({
       parentDiv: this.divGame,
       idDivMenu: "divmenu",
-      title: "菜单",
+      title: "MENU",
       lineOffset: 30,
       lineStep: 30,
       lines: [
-        {text: "上传 图片", func: this.loadImage()},
-        {text: "12 块", func: this.returnFunct(12)},
-        {text: "25 块", func: this.returnFunct(25)},
-        {text: "50 块", func: this.returnFunct(50)},
-        {text: "100 块", func: this.returnFunct(100)},
-        {text: "200 块", func: this.returnFunct(200)}
+        {text: "load image", func: this.loadImage()},
+        {text: "12 piece", func: this.returnFunct(12)},
+        {text: "25 piece", func: this.returnFunct(25)},
+        {text: "50 piece", func: this.returnFunct(50)},
+        {text: "100 piece", func: this.returnFunct(100)},
+        {text: "200 piece", func: this.returnFunct(200)}
       ]
     });
   }
