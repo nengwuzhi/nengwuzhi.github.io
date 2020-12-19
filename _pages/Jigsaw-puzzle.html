@@ -38,7 +38,8 @@ type: page
     font-weight: bold;
     position: absolute;
     top: 0px;
-    left: 30px;
+    left: 25px;
+    font-size: 15px;
     background-color: rgba(255,255,180,0.7);
     padding: 15px;
     border-radius: 5px;
@@ -634,11 +635,11 @@ on number of pieces
     this.menu = new Menu({
       parentDiv: this.divGame,
       idDivMenu: "divmenu",
-      title: "MENU",
+      title: "菜单",
       lineOffset: 30,
       lineStep: 30,
       lines: [
-        {text: "load image", func: this.loadImage()},
+        {text: "上载 图片", func: this.loadImage()},
         {text: "12 piece", func: this.returnFunct(12)},
         {text: "25 piece", func: this.returnFunct(25)},
         {text: "50 piece", func: this.returnFunct(50)},
