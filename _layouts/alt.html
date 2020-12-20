@@ -71,24 +71,7 @@ $(document).ready(function(){
     <!-- fancybox-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-	
-    <!-- Feed -->
-<script type="text/javascript" src="{{site.baseurl}}/assets/js/FeedEk.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function () {
-       		$('#divRss').FeedEk({
-				FeedUrl: 'http://www.ftchinese.com/rss/feed', MaxCount: 5, ShowDesc: false, ShowPubDate: true, DescCharacterLimit: 120
-			});
 
-			$('#divRss2').FeedEk({
-				FeedUrl: 'https://cn.nytimes.com/rss/', MaxCount: 1, ShowDesc: true, ShowPubDate: true, DescCharacterLimit: 50
-			});
-
-			$('#divRss3').FeedEk({
-				FeedUrl: 'https://jquery-plugins.net/rss', MaxCount: 2, DateFormat: 'MM-dd-yyyy HH:mm', DateFormatLang: 'en'
-			});
-    });
-</script>
 <!--pageContent-->
 <script src="{{site.baseurl}}/assets/js/bootstrap-toc.min.js"></script>	
 <!--search-->
