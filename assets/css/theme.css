@@ -44,7 +44,7 @@ mark.primary {
 }
 #mynetwork {
   width: 100%;
-  height: max-content;
+  height: 700px;
   border: 1px solid lightgray;
   background-color: #333333;
 }
