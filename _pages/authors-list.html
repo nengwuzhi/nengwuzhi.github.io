@@ -8,11 +8,6 @@ type: page
 <head>
      <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css">
 <style>
-.testimonial2 h5 {
-    line-height: 22px;
-    font-size: 18px;
-		font-weight: 400;
-}
 button:focus {
     outline: none;
 }
@@ -30,13 +25,14 @@ button:focus {
 }
 
 .testimonial2 .testi2 .image-thumb {
-  background: url(http://pngimg.com/uploads/smoke/smoke_PNG55216.png) no-repeat top center;
+  background: url(floral_frame_PNG294.png) no-repeat top center;
   text-align: center;
   padding: 10% 0;
+  background-size:60%;  
 }
 
 .testimonial2 .testi2 .image-thumb img {
-  width: 400px;
+  width: 300px;
 }
 
 .testimonial2 .testi2 .owl-dots {
@@ -64,6 +60,10 @@ button:focus {
   opacity: 1;
 }
 
+@media (max-width: 767px) {
+  .testimonial2 .testi2 .owl-dots {
+    top: 0px;
+  }
 }
 
 .testimonial2 .btn-md {
@@ -77,6 +77,7 @@ button:focus {
     background: #ff4d7e !important;
     border: 1px solid #ff4d7e !important;
 }
+
 </style>
 
 </head>
@@ -246,7 +247,7 @@ $(function() {
             
             
 <!--Section: Contact v.2-->
-<section class="mb-4">
+
 
     <!--Section heading-->
     <h2 class="h1-responsive font-weight-bold text-center my-4">联系我们</h2>
@@ -282,4 +283,4 @@ $(function() {
 
     </div>
 
-</section>
+
