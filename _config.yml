@@ -28,7 +28,7 @@ authors:
   author1:
     name: 能无知
     site: https://nengwuzhi.github.io/
-    avatar: assets/images/avatar1.png
+    avatar: assets/images/avatar1.jpg
     bio: "言有宗，事有君。夫唯无知，是以我不知！"
     Source-Title: "道可道，非常道。"
     email: 'miandenglu@protonmail.com'
@@ -38,7 +38,7 @@ authors:
   author2:
     name: 能无为
     site: https://nengwuwei.com/
-    avatar: assets/images/avatar2.png
+    avatar: assets/images/avatar2.jpg
     bio: "一切有为法，如梦幻泡影，如露亦如电，应作如是观。"
     Source-Title: "应无所住，而生其心。"
     email: 'miandenglu@protonmail.com'
