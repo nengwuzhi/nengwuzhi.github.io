@@ -4,7 +4,7 @@
             {% if post.type == "video" %}
             {% if post.video-id %}
             <div class="postcontent">
-                    <iframe width="100%" height="315" src="http://open.iqiyi.com/developer/player_js/coopPlayerIndex.html?vid={{ post.video-id }}&accessToken=2.ef9c39d6c7f1d5b44768e38e5243157d&appKey=8c634248790d4343bcae1f66129c1010&appId=1368&height=100%&width=100%" frameborder="0" allowfullscreen="true" width="100%" height="100%"></iframe>
+<iframe src="http://open.iqiyi.com/developer/player_js/coopPlayerIndex.html?vid={{ post.yt-video-id }}&accessToken=2.ef9c39d6c7f1d5b44768e38e5243157d&appKey=8c634248790d4343bcae1f66129c1010&appId=1368&height=100%&width=100%" frameborder="0" allowfullscreen="true" width="100%" height="100%"></iframe>
  <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}" class="noline"><h2 class="card-title title ml-2">{{post.title}}</h2>
                   </a> 
             {% endif %}
