@@ -3,10 +3,9 @@
 <div class="col-md-4 grid-item mb-3">     
 	  {% if post.type == "youtube" %}
             {% if post.yt-video-id %}
-                <div class="video_container">
+
                     <iframe src="https://www.youtube.com/embed/{{ post.yt-video-id }}?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
-                </div>
-            {% endif %}
+
             <div class="postcontent">
  <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}" class="noline"><h2 class="card-title title ml-2">{{post.title}}</h2>
                   </a> 
