@@ -5,7 +5,7 @@
 body, pre {
     background: #eee;
     background-image:  linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
-    font-family: Arial,Menlo,一意孤行,roboto,PingFang,Microsoft JhengHei,noto sans sc,noto sans tc,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,sans-serif,Monaco,Consolas,Courier New,monospace, Helvetica,Tahom,WenQuanYi Micro Hei,文泉驿微米黑,STXihei,华文细黑,Microsoft YaHei,微软雅黑, SimSun, 宋体, Heiti, 黑体,sans-serif;
+    font-family: PT Sans Narrow,Arial,Menlo,一意孤行,roboto,PingFang,Microsoft JhengHei,noto sans sc,noto sans tc,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,sans-serif,Monaco,Consolas,Courier New,monospace, Helvetica,Tahom,WenQuanYi Micro Hei,文泉驿微米黑,STXihei,华文细黑,Microsoft YaHei,微软雅黑, SimSun, 宋体, Heiti, 黑体,sans-serif;
     font-weight: 300;
     line-height: 1.5;
     overflow-x: hidden; 
