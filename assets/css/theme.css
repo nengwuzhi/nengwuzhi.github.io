@@ -766,6 +766,7 @@ footer.footer {
 .card {
     transition: ease .1s;
     border-radius: inherit;
+    background-color: transparent;
 }
 
 .more {
