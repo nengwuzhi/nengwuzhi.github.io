@@ -280,7 +280,6 @@ article ul li,article ol li {
 }
 
 .sticky-top.sticky-top-offset {
-    top: 0px;
     height: max-content;
     overflow-x: hidden;
     overflow-y: auto;
