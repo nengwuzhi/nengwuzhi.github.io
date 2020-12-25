@@ -1,6 +1,6 @@
 [data-theme="dark"] {
-  color: #443e2d;
-  background-image: linear-gradient(to bottom, #e1eec3, #f05053);
+     color: #cecece;
+    background-image: linear-gradient(to bottom, #444, #442121);
 }
 
 [data-theme="dark"] .bg-light {
