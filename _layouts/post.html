@@ -2,10 +2,10 @@
 layout: alt
 ---
   <div class="row-fluid">
-    <div class="span4 mx-auto sticky-top sticky-top-offset" id="sidebar">
+    <div class="span4 vertical-nav mx-auto sticky-top sticky-top-offset" id="sidebar">
 		{% include Accordion.html %}   
     </div>
-    <div class="span8" id="content">
+    <div class="span8 page-content" id="content">
         {% assign author = site.authors[page.author] %}
                     <div class="card shadow-sm">
 		{% include sticky_navbar.html %}     
