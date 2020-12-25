@@ -139,9 +139,9 @@
                         {% assign size = base | plus: 10 %}
                       {% endif %}
                       {% if remain == 0 or remain == 1 %}
-                        {% assign color = 8 | minus: base %}
+                        {% assign color = 9 | minus: base %}
                       {% else %}
-                        {% assign color = 7 | minus: base %}
+                        {% assign color = 8 | minus: base %}
                       {% endif %}
     <a class="sidebar" href="#{{ tag | first }}" style="font-size: {{ size }}pt; color: #{{ color }}{{ color }}{{ color }};">{{ tag[0] }}<span class="badge badge-primary badge-pill">{{ tag | last | size }}</span></a>
     {% endfor %}            
