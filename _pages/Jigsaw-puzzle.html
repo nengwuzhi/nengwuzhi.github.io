@@ -1256,9 +1256,7 @@ Puzzle.prototype.mouseMoveGame = function(event) {
 } // Puzzle.prototype.mouseMoveGame
 
 // -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -   -
-// searches the pieces whick was clicked on
-// event is the click event
-// returned value : (index of PolyPiece + piece) or false (if not on a piece)
+
 
 Puzzle.prototype.lookForPiece = function(event) {
 
@@ -1275,10 +1273,7 @@ Puzzle.prototype.lookForPiece = function(event) {
 } // Puzzle.prototype.lookForPiece
 
 // -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -   -
-// emphasizes a polyPiece
-// its idividualpieces are masked (style.visibility = "hidden")
-// but they are collectively drawn on canvMobile
-// parameter : polyPiece index
+
 
 Puzzle.prototype.emphasize = function(npp) {
 
@@ -1350,13 +1345,7 @@ Puzzle.prototype.near  = function (p1, p2, dx, dy) {
   return true;
 } // near
 
-// fin class puzzle
 
-// -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -   -
-/* computes the number of lines and columns of the puzzle,
-  finding the best compromise between the requested number of pieces
-  and a square shap for pieces
-*/
 
 Puzzle.prototype.computenxAndny = function() {
 
@@ -1438,8 +1427,6 @@ function lookForLoops (tbCases) {
   let tries; // tries counter
   let edgeNumber; // number of edge found during research
   let potNext;
-
-
   let tbTentatives = [
   // if we are on edge 0 (top)
     [
