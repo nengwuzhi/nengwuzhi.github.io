@@ -279,11 +279,6 @@ article ul li,article ol li {
 	padding-left: 0px;
 }
 
-.sticky-top.sticky-top-offset {
-    height: max-content;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
 a.sidebar {
     padding: 0.4rem 0.8rem;
     text-transform: uppercase;
