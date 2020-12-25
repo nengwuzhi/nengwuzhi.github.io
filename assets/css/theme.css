@@ -284,8 +284,6 @@ article ul li,article ol li {
     height: max-content;
     overflow-x: hidden;
     overflow-y: auto;
-    float: left;
-    width: calc(22% - 20px);
 }
 a.sidebar {
     padding: 0.4rem 0.8rem;
