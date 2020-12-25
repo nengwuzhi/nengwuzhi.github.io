@@ -5,11 +5,11 @@
 
 [data-theme="dark"] .bg-light {
   background-color: #021438 !important;
-  background-image: linear-gradient(to left, #1e130c, #9a8478);
 }
 
 [data-theme="dark"] .bg-white {
   background-color: #8ea1b5 !important;
+  background-image: linear-gradient(to left, #1e130c, #9a8478);
 }
 
 [data-theme="dark"] .bg-black {
