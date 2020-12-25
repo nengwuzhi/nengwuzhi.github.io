@@ -21,7 +21,7 @@ nav[data-toggle="toc"] .nav-link.active:focus {
   padding-left: 18px;
   font-weight: bold;
   color: #ff6262!important;
-  border-right: 2px solid #3e4449;
+  border-right: 2px solid #4e5861;
 }
 
 /* Nav: second level (shown on .active) */
