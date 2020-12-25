@@ -703,7 +703,7 @@ a:hover {
 a,.a:hover {
 	-webkit-transition:all 0.2s;
 	transition: all 0.2s;
-	color: #f5f8fb;
+	color: #c5c5c5;
 }
 
 .border-round-0 {
