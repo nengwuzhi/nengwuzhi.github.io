@@ -59,6 +59,41 @@
     </div>
 </div>
          
+<!--Section: Contact v.2-->
+    <!--Section heading-->
+<div class="modal fade mt-3" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="col-md-9 mb-md-0 mb-5">
+       <form id="contactus" action="" method="post">    
+        <h3>联系表单<p class="text-center w-responsive mx-auto mb-5">你有任何问题吗？请不要犹豫，直接与我们联系。我们会尽快回复，以为您提供帮助。</p></h3>
+        <fieldset> <input placeholder="姓名" type="text" tabindex="1" required autofocus> </fieldset>
+        <fieldset> <input placeholder="邮箱地址" type="email" tabindex="2" required> </fieldset>
+        <fieldset> <input placeholder="电话号码" type="tel" tabindex="3" required> </fieldset>
+        <fieldset> <textarea placeholder="在这里输入你的消息..." tabindex="5" required></textarea> </fieldset>
+        <fieldset> <button name="submit" class="btn btn-outline-secondary" type="提交" id="contactus-submit" data-submit="...Sending">发送</button> </fieldset>
+    </form>
+</div>
+        <!--Grid column-->
+        <div class="col-md-3 text-center" id="contactus">
+            <ul class="list-unstyled mb-0">
+                <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                    <p>{{ site.address }}</p>
+                </li>
+
+                <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                    <p>{{ site.phone }}</p>
+                </li>
+
+                <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                    <p>{{ site.email }}</p>
+                </li>
+            </ul>
+        </div>
+        <!--Grid column-->
+
+    </div>     
+         
+         
+         
         </div>
       </div>
     </div>
