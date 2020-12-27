@@ -680,8 +680,6 @@ footer.footer {
 	background-color: #008CBA;
 }
 .card {
-    transition: ease .1s;
-    border-radius: inherit;
     background-color: transparent;
 }
 
