@@ -49,6 +49,16 @@ mark.primary {
   border: 1px solid lightgray;
   background-color: #333333;
 }
+ 
+.right-image {
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
 .card-header {
     padding: .57rem 1.25rem;
 }
