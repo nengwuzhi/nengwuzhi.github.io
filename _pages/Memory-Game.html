@@ -1,17 +1,20 @@
----
-title: "记忆游戏"
-layout: alt
-icon: games
-permalink: "/Memory-Game"
----
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>记忆游戏</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
+
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
+
 /*
  * Styles for the deck of cards
  */
@@ -122,6 +125,7 @@ permalink: "/Memory-Game"
 /*
  * Styles for congratulations modal
  */
+
 
 .overlay {
 	position: fixed;
@@ -640,7 +644,6 @@ function closeModal(){
     });
 }
 
-
 // @desciption for user to play Again 
 function playAgain(){
     modal.classList.remove("show");
@@ -657,3 +660,5 @@ for (var i = 0; i < cards.length; i++){
 </script>
 </body>
 </html>
+
+
