@@ -59,9 +59,7 @@ mark.primary {
   bottom: 0;
   top: 0;
 }
-.card-header {
-    padding: .57rem 1.25rem;
-}
+
 ul.card-text {
     margin: 0px;
     list-style-type: none;
