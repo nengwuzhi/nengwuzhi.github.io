@@ -5,7 +5,30 @@ icon: feather
 permalink: "/featured-tabs"
 type: page
 ---
-                            {% include menu-header.html %}  
+ <style>
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+
+/* Rounded tabs */
+
+@media (min-width: 576px) {
+  .rounded-nav {
+    border-radius: 50rem !important;
+  }
+}
+
+@media (min-width: 576px) {
+  .rounded-nav .nav-link {
+    border-radius: 50rem !important;
+  }
+}
+</style>
+{% include menu-header.html %}  
 <section class="py-5">
     <div class="container py-5">
         <div class="row justify-content-between">
