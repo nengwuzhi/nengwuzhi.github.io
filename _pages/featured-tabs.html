@@ -29,60 +29,39 @@ type: page
 }
 </style>
 {% include menu-header.html %}  
-<section class="py-5">
-    <div class="container py-5">
-        <div class="row justify-content-between">
-            <div class="col col-md-12 pr-md-5 pl-md-5">
-                <div class="bd-example bd-example-tabs">
-                    <ul class="nav nav-pills  flex-column justify-content-center flex-sm-row mb-3" id="pills-tab" role="tablist">
-                        <li class=" border border-light  rounded text-sm-center nav-item mr-md-1">
-                            <a class="btn btn-dark nav-link pt-md-3 pb-md-3 pr-md-5 pl-md-5 active show" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="false"><i class="fa fa-laptop fa-lg " aria-hidden="true"></i> gallery</a>
-                        </li>
-                        <li class=" border border-light  rounded text-sm-center mr-md-1 nav-item ">
-                            <a class="btn btn-dark nav-link pt-md-3 pb-md-3 pr-md-5 pl-md-5" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false"><i class="fas fa-music"></i> Player</a>
-                        </li>
-                        <li class=" border border-light  rounded text-sm-center  nav-item mr-md-1">
-                            <a class="btn btn-dark nav-link pt-md-3 pb-md-3 pr-md-5 pl-md-5" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false"><i class="fas fa-boxes"></i> 资源</a>
-                        </li>
-                        <li class=" border border-light  rounded text-sm-center mr-md-1 nav-item">
-                            <a class="btn btn-dark nav-link pt-md-3 pb-md-3 pr-md-5 pl-md-5" id="pills-info-tab" data-toggle="pill" href="#pills-info" role="tab" aria-controls="pills-info" aria-selected="true"><i class="fas fa-map-signs"></i> 导图</a>
-                        </li>
-                    </ul>
-                    <div class="tab-content pt-5 pb-5" id="pills-tabContent">
-                        <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                            <div class="container-fluid">
-
-                                      {% include gallery.html %}  
-
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                            <div class="container-fluid">
-
-                                      {% include music-Player.html %}  
-                                       
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-                            <div class="container-fluid">
-
-                                      {% include fancytree.html %}                                  
-
-                            </div>
-                        </div>
-                        <div class="tab-pane fade active show" id="pills-info" role="tabpanel" aria-labelledby="pills-info-tab">
-                            <div class="container-fluid">
-
-                                      {% include network.html %}  
-
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
+<div class="p-5 bg-white rounded shadow mb-5">
+    <!-- Rounded tabs -->
+    <ul id="myTab" role="tablist" class="nav nav-tabs nav-pills flex-column flex-sm-row text-center bg-light border-0 rounded-nav">
+      <li class="nav-item flex-sm-fill">
+        <a id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true" class="nav-link border-0 text-uppercase font-weight-bold active">Home</a>
+      </li>
+      <li class="nav-item flex-sm-fill">
+        <a id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false" class="nav-link border-0 text-uppercase font-weight-bold">Profile</a>
+      </li>
+      <li class="nav-item flex-sm-fill">
+        <a id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false" class="nav-link border-0 text-uppercase font-weight-bold">Contact</a>
+      </li>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+      <div id="home" role="tabpanel" aria-labelledby="home-tab" class="tab-pane fade px-4 py-5 show active">
+        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="text-muted mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div id="profile" role="tabpanel" aria-labelledby="profile-tab" class="tab-pane fade px-4 py-5">
+        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="text-muted mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div id="contact" role="tabpanel" aria-labelledby="contact-tab" class="tab-pane fade px-4 py-5">
+        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
     </div>
-</section>
-
+    <!-- End rounded tabs -->
+  </div>
 
