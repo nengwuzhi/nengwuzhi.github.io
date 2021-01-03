@@ -226,7 +226,7 @@ type: page
   <figcaption>
     <h3>{{ image.title }}</h3>
   </figcaption>
- <a href="{{ site.baseurl }}{{ image.path }}" data-fancybox="gallery" class="image">
+ <a href="{{ site.baseurl }}{{ image.path }}" data-fancybox="gallery" class="img-fluid">
 </figure>    
           {% endif %}
          {% endfor %}
@@ -244,7 +244,7 @@ type: page
   <figcaption>
     <h3>{{ image.title }}</h3>
   </figcaption>
- <a href="{{ site.baseurl }}{{ image.path }}" data-fancybox="gallery" class="image">
+ <a href="{{ site.baseurl }}{{ image.path }}" data-fancybox="gallery" class="img-fluid">
 </figure> 
           {% endif %}
          {% endfor %}
@@ -254,7 +254,7 @@ type: page
     <section id="图片-宗教" class="px-5 py-5 section-3"> 
 <h3 class="font-weight-bold ml-2">图片-宗教</h3>
 <p class="font-italic text-muted mb-4">“若以色见我，以音声求我，是人行邪道，不能见如来。”</p>   
-      <div class="row">      
+   
     {% for image in site.static_files %}
     {% if image.path contains 'assets/gallery/宗教' %}
 <figure class="snip">
@@ -262,11 +262,11 @@ type: page
   <figcaption>
     <h3>{{ image.title }}</h3>
   </figcaption>
- <a href="{{ site.baseurl }}{{ image.path }}" data-fancybox="gallery" class="image">
+ <a href="{{ site.baseurl }}{{ image.path }}" data-fancybox="gallery" class="img-fluid">
 </figure> 
           {% endif %}
          {% endfor %}
-            </div>
+
     </section>
 
 {% include fog.html %}
