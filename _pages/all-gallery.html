@@ -72,7 +72,115 @@ type: page
 .hover-1:hover .hover-overlay {
   opacity: 0;
 }
+/* back hover ============================== */
+.snip {
+  font-family: 'Raleway', Arial, sans-serif;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 230px;
+  max-width: 315px;
+  width: 100%;
+  color: #000000;
+  text-align: left;
+  font-size: 16px;
+  background: #ffffff;
+}
 
+.snip *,
+.snip:before,
+.snip:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.snip img {
+  max-width: 100%;
+  backface-visibility: hidden;
+  vertical-align: top;
+}
+
+.snip:before,
+.snip:after {
+  content: '';
+  background-color: #000;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.snip:before {
+  width: 300px;
+  height: 2px;
+}
+
+.snip:after {
+  height: 300px;
+  width: 2px;
+}
+
+.snip figcaption {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.snip h3 {
+  font-weight: 400;
+  padding: 8px 15px;
+  margin: 0;
+  opacity: 0;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+}
+
+.snip a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.snip:hover img,
+.snip.hover img {
+  zoom: 1;
+  filter: alpha(opacity=25);
+  -webkit-opacity: 0.25;
+  opacity: 0.25;
+}
+
+.snip:hover:before,
+.snip.hover:before,
+.snip:hover:after,
+.snip.hover:after {
+  opacity: 1;
+}
+
+.snip:hover:before,
+.snip.hover:before {
+  width: 50px;
+}
+
+.snip:hover:after,
+.snip.hover:after {
+  height: 50px;
+}
+
+.snip:hover h3,
+.snip.hover h3 {
+  -webkit-transform: translateY(0%);
+  transform: translateY(0%);
+  opacity: 1;
+}
+	
 </style>
   <header>
 {% include menu-header.html  %}  
@@ -90,9 +198,9 @@ type: page
     <div class="row">
       <!-- DEMO 1 Item-->
 	{% for post in site.categories.gallery %}
-          {% if post.image %}
+          {% if post.image %}    
       <div class="col-lg-4 mb-3 mb-lg-0">
-  <a class="nav-link" href="#{{ post.title }}">
+  <a class="nav-link" href="{{ post.title }}">
 	<div class="hover hover-1 text-white rounded"><img src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ post.image | absolute_url }}{% endif %}" alt="{{ post.title }}">
           <div class="hover-overlay"></div>
           <div class="hover-1-content px-5 py-4">
@@ -104,19 +212,24 @@ type: page
 	  {% endif %}
        {% endfor %}    
     </div>
-  </div>	
+  </div>
+
+
   <section id="画册一" class="px-5 py-5 section-1">  
 <h3 class="font-weight-bold ml-2">画册一</h3>
 <p class="font-italic text-muted mb-4">“何以故？是诸众生无复我相、人相、众生相、寿者相；无法相，亦无非法相。”</p>    
       <div class="row">    
     {% for image in site.static_files %}
     {% if image.path contains 'assets/gallery/gallery-1' %}
-                <div class="col-lg-3 col-md-4 col-6 col-sm">
-                    <div class="item">
-                        <a href="{{ site.baseurl }}{{ image.path }}" data-fancybox="gallery" class="image">
-                <img src="{{ site.baseurl }}{{ image.path }}" alt="..." class="img-fluid">
-                    <div class="overlay d-flex align-items-center justify-content-center"><i class="fas fa-search-plus"></i></div></a></div>
-                    </div>
+		    
+<figure class="snip">
+ <img src="{{ site.baseurl }}{{ image.path }}" alt="..." class="img-fluid">
+  <figcaption>
+    <h3>{{ post.title }}</h3>
+  </figcaption>
+ <a href="{{ site.baseurl }}{{ image.path }}" data-fancybox="gallery" class="image">
+</figure>    
+
           {% endif %}
          {% endfor %}
             </div>
