@@ -119,14 +119,6 @@ type: page
   left: 0;
   bottom: 0;
 }
-.snip h3 {
-  font-weight: 400;
-  padding: 8px 15px;
-  margin: 0;
-  opacity: 0;
-  -webkit-transform: translateY(100%);
-  transform: translateY(100%);
-}
 
 .snip:hover img,
 .snip.hover img {
@@ -153,13 +145,6 @@ type: page
   height: 50px;
 }
 
-.snip:hover h3,
-.snip.hover h3 {
-  -webkit-transform: translateY(0%);
-  transform: translateY(0%);
-  opacity: 1;
-}
-	
 </style>
   <header>
 {% include menu-header.html  %}  
@@ -202,7 +187,6 @@ type: page
 <figure class="snip col-lg-3 col-md-4 col-6 col-sm">
 <img src="{{ site.baseurl }}{{ image.path }}" alt="..." class="img-fluid"/>
   <figcaption>
-    <h3>{{ image.title }}</h3>  
   </figcaption>
  <a href="{{ site.baseurl }}{{ image.path }}" data-fancybox="gallery" class="image">
 </a>
@@ -241,7 +225,6 @@ type: page
 <figure class="snip col-lg-3 col-md-4 col-6 col-sm">
 <img src="{{ site.baseurl }}{{ image.path }}" alt="..." class="img-fluid"/>
   <figcaption>
-    <h3>{{ image.title }}</h3>    
   </figcaption>
  <a href="{{ site.baseurl }}{{ image.path }}" data-fancybox="gallery" class="image">
 </a>
