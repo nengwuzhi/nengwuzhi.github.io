@@ -236,19 +236,19 @@ type: page
   <section id="图片-人物" class="px-5 py-5 section-2">
 <h3 class="font-weight-bold ml-2">图片-人物</h3>
 <p class="font-italic text-muted mb-4">“一切有为法，如梦幻泡影，如露亦如电，应作如是观。”</p>    
-      <div class="row">
+<figure class="snip">
     {% for image in site.static_files %}
     {% if image.path contains 'assets/gallery/人物' %}
-<figure class="snip">
+
  <img src="{{ site.baseurl }}{{ image.path }}" alt="..." class="img-fluid">
   <figcaption>
     <h3>{{ image.title }}</h3>
   </figcaption>
  <a href="{{ site.baseurl }}{{ image.path }}" data-fancybox="gallery" class="image">
-</figure> 
+
           {% endif %}
          {% endfor %}
-            </div>
+</figure> 
     </section>
 
     <section id="图片-宗教" class="px-5 py-5 section-3"> 
