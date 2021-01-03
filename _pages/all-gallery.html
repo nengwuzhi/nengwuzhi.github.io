@@ -218,7 +218,7 @@ type: page
   <section id="画册一" class="px-5 py-5 section-1">  
 <h3 class="font-weight-bold ml-2">画册一</h3>
 <p class="font-italic text-muted mb-4">“何以故？是诸众生无复我相、人相、众生相、寿者相；无法相，亦无非法相。”</p>    
-      <div class="row">    
+   
     {% for image in site.static_files %}
     {% if image.path contains 'assets/gallery/gallery-1' %}		    
 <figure class="snip">
@@ -230,7 +230,7 @@ type: page
 </figure>    
           {% endif %}
          {% endfor %}
-            </div>
+
     </section>
 
   <section id="图片-人物" class="px-5 py-5 section-2">
