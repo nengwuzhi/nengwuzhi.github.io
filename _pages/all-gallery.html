@@ -73,20 +73,7 @@ type: page
   opacity: 0;
 }
 /* back hover ============================== */
-.snip {
-  font-family: 'Raleway', Arial, sans-serif;
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
-  margin: 10px;
-  min-width: 230px;
-  max-width: 315px;
-  width: 100%;
-  color: #000000;
-  text-align: left;
-  font-size: 16px;
-  background: #ffffff;
-}
+
 
 .snip *,
 .snip:before,
@@ -214,7 +201,7 @@ type: page
       <div class="row">    
     {% for image in site.static_files %}
     {% if image.path contains 'assets/gallery/gallery-1' %}
-<figure class="snip">
+<figure class="snip col-lg-3 col-md-4 col-6 col-sm">
 <img src="{{ site.baseurl }}{{ image.path }}" alt="..." class="img-responsive"/>
   <figcaption>
   </figcaption>
@@ -233,7 +220,7 @@ type: page
       <div class="row">
     {% for image in site.static_files %}
     {% if image.path contains 'assets/gallery/人物' %}
-<figure class="snip">
+<figure class="snip col-lg-3 col-md-4 col-6 col-sm">
 <img src="{{ site.baseurl }}{{ image.path }}" alt="..." class="img-responsive"/>
   <figcaption>
   </figcaption>
@@ -252,7 +239,7 @@ type: page
       <div class="row">      
     {% for image in site.static_files %}
     {% if image.path contains 'assets/gallery/宗教' %}
-<figure class="snip">
+<figure class="snip col-lg-3 col-md-4 col-6 col-sm">
 <img src="{{ site.baseurl }}{{ image.path }}" alt="..." class="img-responsive"/>
   <figcaption>
   </figcaption>
