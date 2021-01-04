@@ -43,7 +43,7 @@ mark.warning {
 mark.primary {
     background: #007bff;
 }
-a {
+.container a {
        display: inline-block;
         color: #2ab1ce;
         font-weight: 900;
@@ -53,7 +53,7 @@ a {
 	
 }
  
-a::after {
+.container a::after {
 	
     content: '';
     display: block;
