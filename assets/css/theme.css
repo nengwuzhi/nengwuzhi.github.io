@@ -43,7 +43,7 @@ mark.warning {
 mark.primary {
     background: #007bff;
 }
-.post-content a {
+.post_content a {
        display: inline-block;
         color: #2ab1ce;
         font-weight: 900;
@@ -53,7 +53,7 @@ mark.primary {
 	
 }
  
-.post-content a::after {
+.post_content a::after {
 	
     content: '';
     display: block;
@@ -63,11 +63,11 @@ mark.primary {
     transition: width .3s;
 	position:absolute;
 }
-.post-content a:hover::after {
+.post_content a:hover::after {
     width: 100%;	
     
 }
-.post-content a:hover {
+.post_content a:hover {
 	text-decoration:none;
 	color:red;
 	transition: color .5s;
