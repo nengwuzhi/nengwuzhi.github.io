@@ -43,7 +43,7 @@ mark.warning {
 mark.primary {
     background: #007bff;
 }
-.a {
+a {
        display: inline-block;
         color: #2ab1ce;
         font-weight: 900;
@@ -53,7 +53,7 @@ mark.primary {
 	
 }
  
-.a::after {
+a::after {
 	
     content: '';
     display: block;
@@ -63,7 +63,7 @@ mark.primary {
     transition: width .3s;
 	position:absolute;
 }
-.a:hover::after {
+a:hover::after {
     width: 100%;	
     
 }
@@ -71,12 +71,6 @@ a:hover {
 	text-decoration:none;
 	color:red;
 	transition: color .5s;
-}
-
-a,.a:hover {
-	-webkit-transition:all 0.2s;
-	transition: all 0.2s;
-	color: #9c9c9c;
 }
 
 #mynetwork {
