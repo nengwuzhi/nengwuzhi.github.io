@@ -13,13 +13,10 @@
 </div>
   {% include footer-social.html %}  
   {% include back-to-top.html %} 
-<script src="{{site.baseurl}}/assets/js/Sidebar-nav_core.js"></script>
-		
-<script>
-$(document).ready(function(){
-  $('[data-toggle="tooltip"]').tooltip();
-});
-</script>   
+<script src="{{site.baseurl}}/assets/js/Sidebar-nav_core.js"></script>	
+<script src="/assets/js/jquery.bootstrap-autohidingnavbar.js"></script>
+<script>$("div.navbar.fixed-top").autoHidingNavbar();</script>	
+	  
        <!-- toTop-->
 <script>
 $(document).ready(function(){
