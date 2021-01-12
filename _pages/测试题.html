@@ -1,11 +1,12 @@
----
-title: "测试题"
-layout: alt
-icon: images
-permalink: "/测试题"
----
+<!-- Code By Webdevtrick ( https://webdevtrick.com ) -->
+<html lang="en" >
 <head>
+  <meta charset="UTF-8">
+  <title>jQuery Quiz Program | Webdevtrick.com</title>
  <style>
+ @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,800");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
 .row:after {
   clear: both;
   content: "";
@@ -22,6 +23,13 @@ permalink: "/测试题"
   box-sizing: border-box;
 }
 
+body {
+  background: #fff;
+  font-family: 'Raleway';
+  line-height: 1.55;
+  color: #737373;
+  font-weight: 400;
+}
 body a {
   color: #27b198;
   text-decoration: none;
@@ -301,14 +309,14 @@ footer {
     </div>
   </section>
    <section data-quiz-item>
-     <div class="question">修行人应该读万卷书、行万里路吗?</div>
+     <div class="question">修行人应该认同“读万卷书、行万里路”这个观点吗?</div>
     <div class="choices" data-choices='["对","不对"]'>
     </div>
   </section>
   </div>
    <div class="row last">
   <section data-quiz-item>
-    <div class="question">顿法以何为宗？</div>
+    <div class="question">坛经以何为宗？</div>
     <div class="choices" data-choices='["心如空镜","无念"]'>
     </div>
   </section>
@@ -326,7 +334,7 @@ footer {
 <footer>
 <div id="emc-progress"></div>
 </footer>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
 // Code By Webdevtrick ( https://webdevtrick.com )
 (function($) {
@@ -430,4 +438,6 @@ $(document).emc({
   key: ["2","2","2","2","2","2","1", "1"]
 });
 </script>
-
+ 
+</body>
+</html>
